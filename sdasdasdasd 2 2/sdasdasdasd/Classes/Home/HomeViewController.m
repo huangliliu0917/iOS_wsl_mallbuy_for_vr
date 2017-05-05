@@ -292,6 +292,7 @@
     self.homeWebView.navigationDelegate = self;
     self.homeWebView.UIDelegate = self;
     self.homeWebView.tag = 100;
+
     //    self.homeWebView
     //    self.view = wk;
     [self.view addSubview:self.homeWebView];

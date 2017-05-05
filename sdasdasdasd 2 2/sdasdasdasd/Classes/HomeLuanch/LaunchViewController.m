@@ -176,6 +176,7 @@
     } failure:^(NSError *error) {
         
         [SVProgressHUD showErrorWithStatus:@"网络异常请检查网络"];
+        LWLog(@"%@", error);
 //        __weak LaunchViewController * wself = self;
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //            
@@ -261,6 +262,11 @@
     parame[@"customerid"] = HuoBanMallBuyApp_Merchant_Id;
     parame = [NSDictionary asignWithMutableDictionary:parame];
     //__weak LaunchViewController * wself = self;
+//    [UserLoginTool loginRequestPost:url parame:parame success:^(id json) {
+//       LWLog(@"%@",json);
+//    } failure:^(NSError *error) {
+//         LWLog(@"%@",error);
+//    }];
     [UserLoginTool loginRequestGet:url parame:parame success:^(id json) {
         LWLog(@"%@",json);
         NSArray *array = json[@"widgets"];

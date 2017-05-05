@@ -20,7 +20,7 @@
     NSString *timeSp = [NSString stringWithFormat:@"%lld", (long long)[timestamp timeIntervalSince1970] * 1000];  //转化为UNIX时间戳
     dict[@"appid"] = HuoBanMallBuyAppId;
     dict[@"timestamp"] = timeSp;
-    dict[@"operation"]=@"app";
+    dict[@"operation"]=@"ios";
     dict[@"version"]=AppVersion;
     
     //计算asign参数

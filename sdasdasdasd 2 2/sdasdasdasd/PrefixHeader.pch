@@ -41,15 +41,15 @@
 #define LWNewFeatureImageCount 1
 #define MallName @"好丝绸"
 /**消息中心  网络接口*/
-#define NoticeCenterMainUrl @"http://api.open.silk08.com"
+#define NoticeCenterMainUrl @"http://api.open.silk08.com:8080"
 /**网络  APP 标识*/
 #define NoticeCenterAppKey  @"app"
 /**网络  APP 签名秘药*/
-#define NoticeCenterAppSecure  @"21ff3104eb7a7bf3f2b663b8ab18eebe"
+#define NoticeCenterAppSecure  @"3f52fde1855463795f694b121092d6c7"
 //接口地址 .netwww.silk08.com
 #define AppOriginUrl  @"http://mallapi.silk08.com"
-#define HuoBanMallBuyAppId @"app"
-#define HuoBanMallBuyAppSecrect @"21ff3104eb7a7bf3f2b663b8ab18eebe"
+#define HuoBanMallBuyAppId @"73d29a4c9a6d389a0b7288ec27b4c4c4"
+#define HuoBanMallBuyAppSecrect @"9389e8a5c32eefa3134340640fb4ceaa"
 //ShareSDk数据统计
 #define HuoBanMallShareSdkAppId @"1d85f1143183c"
 #define HuoBanMallYouMeng @"590982c6717c1903360001af"

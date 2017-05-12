@@ -72,8 +72,8 @@
 #define TopNavTitleViewTitleColor ([UIColor whiteColor])
 
 #define ButtonTitleColor ([UIColor whiteColor])
-#define BudleId @"com.huobanmall.syq"
-#define urlS @"com.huobanmall.syq"
+#define BudleId @"com.huobanmall.hsc"
+#define urlS @"com.huobanmall.hsc"
 #define WBAPPVERSION @"2.0.0"
 
 

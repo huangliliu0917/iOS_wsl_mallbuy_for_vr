@@ -102,10 +102,25 @@
 
 
 @property (nonatomic, strong) NSTimer * timer;
+
+
+@property (nonatomic, strong) UIBarButtonItem * arItem;
+
 @end
 
 
 @implementation HomeViewController
+
+- (UIBarButtonItem *)arItem{
+    
+    if (_arItem == NULL) {
+        UIButton * arbtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
+        [arbtn setTitle:@"Ar" forState:UIControlStateNormal];
+        _arItem = [[UIBarButtonItem alloc] initWithCustomView:arbtn];
+    }
+    return _arItem;
+}
+
 
 
 
@@ -265,6 +280,16 @@
 }
 
 
+- (void) toAddNavagationRightBtnwithType:(int)type{
+    
+    
+    if (type == 1) {
+        self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.shareBtn],[self arItem]];
+    }else{
+        
+        self.navigationItem.rightBarButtonItems = @[[self arItem]];
+    }
+}
 
 
 - (void)viewDidLoad{
@@ -369,17 +394,21 @@
     
 
     
-    
     //UserCenter/Index.aspx
     self.navigationController.navigationBar.alpha = 0;
     self.navigationController.navigationBar.barTintColor = HuoBanMallBuyNavColor;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftOption];
+    
+    ;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftOption];
+    /**
+     * 为ar添加
+     */
     
     //集成刷新控件
     [self AddMjRefresh];
-    self.shareBtn.hidden = YES;
+//    self.shareBtn.hidden = YES;
     
-    self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.shareBtn]];
+//    self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.shareBtn]];
     
     
     //左侧返回到首页
@@ -1397,9 +1426,9 @@
             
             NSString *str = shareStr;
             if (str.length != 0) {
-                self.shareBtn.hidden = NO;
+                [self toAddNavagationRightBtnwithType:1];
             }else {
-                self.shareBtn.hidden = YES;
+                [self toAddNavagationRightBtnwithType:0];
             }
         }];
         LWLog(@"xxxx");

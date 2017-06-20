@@ -16,6 +16,9 @@ extern bool _skipPresent;
     ScreenOrientation   _curOrientation;
 
     BOOL                _recreateView;
+    UIButton           *_backBtn;
+    UIButton           *_photoBtn;
+    UIButton           *_screenshotBtn;
 }
 
 @synthesize contentOrientation  = _curOrientation;
@@ -68,9 +71,84 @@ extern bool _skipPresent;
 {
     CGRect  frame   = [UIScreen mainScreen].bounds;
     CGFloat scale   = UnityScreenScaleFactor([UIScreen mainScreen]);
-    if ((self = [super initWithFrame: frame]))
+    if ((self = [super initWithFrame: frame])) {
         [self initImpl: frame scaleFactor: scale];
+        [self configUI];
+    }
+    
     return self;
+}
+
+- (void)configUI {
+    _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _screenshotBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _backBtn.frame = CGRectMake(8, 15, 60, 60);
+    _photoBtn.frame = CGRectMake(15, self.bounds.size.height - 85, 60, 60);
+    _screenshotBtn.bounds = CGRectMake(15, 35, 100, 100);
+    _screenshotBtn.center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height - 55);
+    [_backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    [_photoBtn setImage:[UIImage imageNamed:@"photo"] forState:UIControlStateNormal];
+    [_screenshotBtn setImage:[UIImage imageNamed:@"camera"] forState:UIControlStateNormal];
+    [_backBtn addTarget:self action:@selector(backBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+    [_photoBtn addTarget:self action:@selector(photoBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+    [_screenshotBtn addTarget:self action:@selector(screenshotBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_backBtn];
+    [self addSubview:_photoBtn];
+    [self addSubview:_screenshotBtn];
+}
+
+- (void)backBtnClicked {
+    [[self getCurrentViewController] dismissViewControllerAnimated:NO completion:nil];
+}
+
+- (void)photoBtnClicked {
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
+    {
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+        imagePicker.allowsEditing = YES;
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [[self getCurrentViewController] presentViewController:imagePicker animated:YES completion:^{
+            
+            NSLog(@"打开相册");
+            
+        }];
+    }
+    else
+    {
+        NSLog(@"不能打开相册");
+    }
+}
+
+- (void)screenshotBtnClicked {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
+    
+    [formatter setDateFormat:@"YYYYMMddHHmmss"];
+    
+    //现在时间,你可以输出来看下是什么格式
+    
+    NSDate *datenow = [NSDate date];
+    
+    //----------将nsdate按formatter格式转成nsstring
+    
+    NSString *nowTimeStr = [formatter stringFromDate:datenow];
+    
+    UnitySendMessage("GameManager", "OnPhotoClick", [nowTimeStr UTF8String]);
+}
+
+- (UIViewController *)getCurrentViewController{
+    UIResponder *next = [self nextResponder];
+    do {
+        if ([next isKindOfClass:[UIViewController class]]) {
+            
+            return (UIViewController *)next;
+            
+        }
+        next = [next nextResponder];
+    } while (next != nil);
+    return nil;
 }
 
 - (void)layoutSubviews

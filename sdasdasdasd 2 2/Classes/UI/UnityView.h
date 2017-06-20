@@ -10,7 +10,7 @@
 @end
 #endif
 
-@interface UnityView : UnityRenderingView
+@interface UnityView : UnityRenderingView <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
 }
 

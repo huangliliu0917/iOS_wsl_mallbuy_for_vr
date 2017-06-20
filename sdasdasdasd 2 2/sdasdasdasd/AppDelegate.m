@@ -56,6 +56,7 @@
 #import "PushWebViewController.h"
 
 #import "LaunchViewController.h"
+#import "UnityAppController.h"
 
 
 @interface AppDelegate ()<WXApiDelegate,UIAlertViewDelegate>
@@ -87,6 +88,13 @@
     self.window.backgroundColor = [UIColor whiteColor];
     LaunchViewController * launchViewController = [[LaunchViewController alloc] init];
     self.window.rootViewController = launchViewController;
+    
+    
+    self.unityAppController = [[UnityAppController alloc] init];
+    [self.unityAppController application:application didFinishLaunchingWithOptions:launchOptions];
+    
+    
+    
     [self.window makeKeyAndVisible];
     [self setupInit];
 
@@ -530,6 +538,26 @@
         [self.currentVc.navigationController pushViewController:funWeb animated:YES];
     }
     
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [self.unityAppController applicationWillResignActive:application];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    [self.unityAppController applicationWillEnterForeground:application];
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [self.unityAppController applicationDidEnterBackground:application];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [self.unityAppController applicationDidBecomeActive:application];
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    [self.unityAppController applicationWillTerminate:application];
 }
 
 @end

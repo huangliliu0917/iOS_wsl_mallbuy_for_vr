@@ -9,6 +9,7 @@
 #import "PushWebViewController.h"
 #import <UIKit/UIKit.h>
 #import "PayModel.h"
+@class UnityAppController;
 
 
 #import "AdModel.h"
@@ -42,6 +43,7 @@
 /**当前控制器*/
 @property (nonatomic, strong) UIViewController * currentVc;
 
+@property (nonatomic, strong) UnityAppController *unityAppController;
 
 @end
 

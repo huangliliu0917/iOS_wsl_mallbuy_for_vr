@@ -115,7 +115,7 @@
     
     if (_arItem == NULL) {
         UIButton * arbtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
-        [arbtn setTitle:@"Ar" forState:UIControlStateNormal];
+        [arbtn setTitle:@"AR" forState:UIControlStateNormal];
         [arbtn addTarget:self action:@selector(ARBtnClicked) forControlEvents:UIControlEventTouchUpInside];
         _arItem = [[UIBarButtonItem alloc] initWithCustomView:arbtn];
     }

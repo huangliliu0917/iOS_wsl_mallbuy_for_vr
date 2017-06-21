@@ -5,6 +5,7 @@
 #include "Unity/GlesHelper.h"
 #include "Unity/DisplayManager.h"
 #include "Unity/UnityMetalSupport.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 extern bool _renderingInited;
 extern bool _unityAppReady;
@@ -120,7 +121,17 @@ extern bool _skipPresent;
     }
 }
 
+static SystemSoundID soundID = 1108;
 - (void)screenshotBtnClicked {
+    
+    dispatch_queue_t queen = dispatch_queue_create("audioQueen", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_async(queen, ^{
+        AudioServicesPlayAlertSoundWithCompletion(soundID, ^{
+            NSLog(@"播放完成");
+        });
+    });
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     
     // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
@@ -134,7 +145,9 @@ extern bool _skipPresent;
     //----------将nsdate按formatter格式转成nsstring
     
     NSString *nowTimeStr = [formatter stringFromDate:datenow];
-    
+        //    NSString *path = [[NSBundle mainBundle] pathForResource:@"u_takephoto" ofType:@"ogg"];
+        //    NSURL *url = [NSURL fileURLWithPath:path];
+        //    AudioServicesCreateSystemSoundID((__bridge CFURLRef _Nonnull)(url), &soundID);
     UnitySendMessage("GameManager", "OnPhotoClick", [nowTimeStr UTF8String]);
 }
 

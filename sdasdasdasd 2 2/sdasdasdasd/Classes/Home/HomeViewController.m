@@ -124,6 +124,7 @@
 
 - (void)ARBtnClicked {
     
+    UnityPause(false);
     [self presentViewController:UnityGetGLViewController() animated:NO completion:nil];
 }
 

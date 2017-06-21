@@ -100,7 +100,9 @@ extern bool _skipPresent;
 }
 
 - (void)backBtnClicked {
+
     [[self getCurrentViewController] dismissViewControllerAnimated:NO completion:nil];
+    UnityPause(true);
 }
 
 - (void)photoBtnClicked {

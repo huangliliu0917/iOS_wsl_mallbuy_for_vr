@@ -57,6 +57,7 @@
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"CannelLoginBackHome" object:nil];
     }];
+    [self clearARCache];
 }
 
 - (void)clearARCache {

@@ -13,6 +13,8 @@
 
 {
     NSString *_photoPath;
+    NSURLSessionDownloadTask *_download;
+    NSString *_videoPath;
 }
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
 - (void)saveImage:(NSString *)path;
@@ -20,6 +22,27 @@
 @end
 
 @implementation unityPlugin
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(quitAR) name:@"quitAR" object:nil];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"quitAR" object:nil];
+}
+
+- (void)quitAR {
+    
+    if (_download != nil && _download.state == NSURLSessionTaskStateRunning && _videoPath != nil) {
+        [_download cancel];
+        [[NSFileManager defaultManager] removeItemAtPath:_videoPath error:nil];
+    }
+}
 
 - (void)saveImage:(NSString *)path {
     
@@ -91,9 +114,12 @@
         
         NSURLSessionDownloadTask *download = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
             
+            NSLog(@"1111111111111%lld", downloadProgress.completedUnitCount);
+            
         } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
             
             NSString *savePath = [NSString stringWithFormat:@"%@%@.mp4",path, ID];
+            _videoPath = savePath;
             NSURL *url = [NSURL fileURLWithPath:savePath];
             return url;
             
@@ -121,6 +147,9 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
+        
+        NSLog(@"1111111111111%@", dic);
+        
         [self startDownload:dic[@"ar_url"] name:name  giftID:dic[@"id"]];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

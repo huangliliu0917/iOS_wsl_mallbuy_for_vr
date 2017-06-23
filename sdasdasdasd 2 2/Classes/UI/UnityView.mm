@@ -101,6 +101,7 @@ extern bool _skipPresent;
 
 - (void)backBtnClicked {
 
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"quitAR" object:nil];
     [[self getCurrentViewController] dismissViewControllerAnimated:NO completion:nil];
     UnityPause(true);
 }

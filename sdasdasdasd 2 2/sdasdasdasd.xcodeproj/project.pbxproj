@@ -147,7 +147,6 @@
 		C799BC8C1EBC9C1A00AA9E97 /* UnityAppController+UnityInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = C799BA2C1EBC9C1800AA9E97 /* UnityAppController+UnityInterface.mm */; };
 		C799BC8D1EBC9C1A00AA9E97 /* UnityAppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C799BA2E1EBC9C1800AA9E97 /* UnityAppController.mm */; };
 		C799BC8E1EBC9C1A00AA9E97 /* Il2CppOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C799BA321EBC9C1800AA9E97 /* Il2CppOptions.cpp */; };
-		C799BC911EBC9C1A00AA9E97 /* libiPhone-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C799BC0E1EBC9C1800AA9E97 /* libiPhone-lib.a */; };
 		C799BC921EBC9C1A00AA9E97 /* EasyARAppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C799BC111EBC9C1900AA9E97 /* EasyARAppController.mm */; };
 		C799BC931EBC9C1A00AA9E97 /* libAVProVideoiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C799BC121EBC9C1900AA9E97 /* libAVProVideoiOS.a */; };
 		C799BC941EBC9C1A00AA9E97 /* libEasyARUnity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C799BC131EBC9C1900AA9E97 /* libEasyARUnity.a */; };
@@ -464,7 +463,6 @@
 		C799BA2F1EBC9C1800AA9E97 /* UnityTrampolineConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnityTrampolineConfigure.h; sourceTree = "<group>"; };
 		C799BA301EBC9C1800AA9E97 /* Vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3.h; sourceTree = "<group>"; };
 		C799BA321EBC9C1800AA9E97 /* Il2CppOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Il2CppOptions.cpp; sourceTree = "<group>"; };
-		C799BC0E1EBC9C1800AA9E97 /* libiPhone-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiPhone-lib.a"; sourceTree = "<group>"; };
 		C799BC111EBC9C1900AA9E97 /* EasyARAppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EasyARAppController.mm; sourceTree = "<group>"; };
 		C799BC121EBC9C1900AA9E97 /* libAVProVideoiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAVProVideoiOS.a; sourceTree = "<group>"; };
 		C799BC131EBC9C1900AA9E97 /* libEasyARUnity.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEasyARUnity.a; sourceTree = "<group>"; };
@@ -760,7 +758,6 @@
 				60A216B31D925B5500A0FF1D /* ShareSDKUI.framework in Frameworks */,
 				C799BC941EBC9C1A00AA9E97 /* libEasyARUnity.a in Frameworks */,
 				EFA6D3B51C0451AD00B39B36 /* libicucore.tbd in Frameworks */,
-				C799BC911EBC9C1A00AA9E97 /* libiPhone-lib.a in Frameworks */,
 				A5ABAD583EAF5D812358EE78 /* libPods-sdasdasdasd.a in Frameworks */,
 				60A216B11D925B5500A0FF1D /* ShareSDKExtension.framework in Frameworks */,
 				60A216B01D925B5500A0FF1D /* ShareSDK.framework in Frameworks */,
@@ -1127,7 +1124,6 @@
 			isa = PBXGroup;
 			children = (
 				C799BA321EBC9C1800AA9E97 /* Il2CppOptions.cpp */,
-				C799BC0E1EBC9C1800AA9E97 /* libiPhone-lib.a */,
 				C799BC0F1EBC9C1800AA9E97 /* Plugins */,
 				C799BC151EBC9C1900AA9E97 /* RegisterFeatures.cpp */,
 				C799BC161EBC9C1900AA9E97 /* RegisterFeatures.h */,

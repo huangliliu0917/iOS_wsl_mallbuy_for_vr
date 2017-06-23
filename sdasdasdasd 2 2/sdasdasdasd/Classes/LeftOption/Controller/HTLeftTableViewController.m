@@ -52,7 +52,12 @@
 @implementation HTLeftTableViewController
 
 
-
+- (void)doCleanCache{
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"CannelLoginBackHome" object:nil];
+    }];
+}
 
 
 - (NSMutableArray *)groupArray{
@@ -125,7 +130,8 @@
             //            _topHeadView.secondLable1.text = json[@"data"][@"levelName"];
             if ([json[@"data"][@"menusCode"] integerValue] == 1) {
                 
-                NSArray * lefts = [LeftMenuModel mj_objectArrayWithKeyValuesArray:json[@"data"][@"home_menus"]];
+                NSMutableArray * lefts = [LeftMenuModel mj_objectArrayWithKeyValuesArray:json[@"data"][@"home_menus"]];
+                 LeftMenuModel * fash = [LeftMenuModel LeftMenuModelWithId:3 andIcon:nil andname:@"清除缓存" andtag:nil andUrl:nil];
                 [wself.groupArray removeAllObjects];
                 [wself toGroupsByTime:lefts];
                 
@@ -429,6 +435,10 @@
             
             [[NSNotificationCenter defaultCenter] postNotificationName:@"CannelLoginBackHome" object:nil];
         }];
+        
+    }else if ([models.menu_name isEqualToString:@"清除缓存"]) {
+        
+        [self doCleanCache];
         
     }else {
         //绑定微信

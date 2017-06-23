@@ -16,4 +16,6 @@
 @property(nonatomic,strong) NSString * menu_tag;
 @property(nonatomic,strong) NSString * menu_url;
 
+
++ (instancetype) LeftMenuModelWithId:(int)menu_group andIcon:(NSString *)menu_icon andname:(NSString *)menu_name andtag:(NSString *)menu_tag andUrl:(NSString *)menu_url;
 @end

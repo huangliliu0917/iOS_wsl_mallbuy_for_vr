@@ -29,6 +29,7 @@
 		70CE6C993C5EA4214E3834DF /* libPods-sdasdasdasdUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF41E2BF2687D13CE3A8708C /* libPods-sdasdasdasdUITests.a */; };
 		A5ABAD583EAF5D812358EE78 /* libPods-sdasdasdasd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D010A5F8BD61438DD111EE4 /* libPods-sdasdasdasd.a */; };
 		AEDF1D33635CADDA117974F0 /* libPods-sdasdasdasdTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 294BA303E2DC6426C4856943 /* libPods-sdasdasdasdTests.a */; };
+		C723A7D01EFD0D6900D00014 /* libiPhone-lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C723A7CF1EFD0D6900D00014 /* libiPhone-lib.a */; };
 		C756A91F1EF8BECE00B29877 /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C756A91E1EF8BECE00B29877 /* MediaToolbox.framework */; };
 		C756A9211EF8BEE000B29877 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C756A9201EF8BEE000B29877 /* AudioToolbox.framework */; };
 		C756A9231EF8BEE700B29877 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C756A9221EF8BEE700B29877 /* AVFoundation.framework */; };
@@ -301,6 +302,7 @@
 		ACF9CE19FF0913C78BBF377F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B016B458709B0BB7CC87B4E2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B2CA2476854D5BB3A46CB1C3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C723A7CF1EFD0D6900D00014 /* libiPhone-lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiPhone-lib.a"; sourceTree = "<group>"; };
 		C756A91E1EF8BECE00B29877 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
 		C756A9201EF8BEE000B29877 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C756A9221EF8BEE700B29877 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -748,6 +750,7 @@
 				EFA6D3C11C0451DE00B39B36 /* libsqlite3.tbd in Frameworks */,
 				EFA6D3BF1C0451D300B39B36 /* AdSupport.framework in Frameworks */,
 				EFA6D3BD1C0451CB00B39B36 /* ImageIO.framework in Frameworks */,
+				C723A7D01EFD0D6900D00014 /* libiPhone-lib.a in Frameworks */,
 				60A216B41D925B5500A0FF1D /* libWeChatSDK.a in Frameworks */,
 				EFA6D3BB1C0451C400B39B36 /* JavaScriptCore.framework in Frameworks */,
 				60A216B71D925B5500A0FF1D /* MOBFoundation.framework in Frameworks */,
@@ -1124,6 +1127,7 @@
 			isa = PBXGroup;
 			children = (
 				C799BA321EBC9C1800AA9E97 /* Il2CppOptions.cpp */,
+				C723A7CF1EFD0D6900D00014 /* libiPhone-lib.a */,
 				C799BC0F1EBC9C1800AA9E97 /* Plugins */,
 				C799BC151EBC9C1900AA9E97 /* RegisterFeatures.cpp */,
 				C799BC161EBC9C1900AA9E97 /* RegisterFeatures.h */,
@@ -1800,6 +1804,7 @@
 				EFA6D3731C04514500B39B36 /* Frameworks */,
 				EFA6D3741C04514500B39B36 /* Resources */,
 				A36A243969E3E9094C07BFEF /* [CP] Copy Pods Resources */,
+				47D13FB8FB6D61E69B0EC280 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1927,6 +1932,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sdasdasdasd/Pods-sdasdasdasd-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		47D13FB8FB6D61E69B0EC280 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sdasdasdasdUITests/Pods-sdasdasdasdUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9E144A2569D9EAF1FACF5B2C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1969,7 +1989,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C756A91D1EF8BE3000B29877 /* ShellScript */ = {
@@ -2010,7 +2030,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D814B7AABFCE183B0F340B79 /* [CP] Embed Pods Frameworks */ = {
@@ -2040,7 +2060,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

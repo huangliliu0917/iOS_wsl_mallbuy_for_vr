@@ -7,7 +7,7 @@
 //
 #import <AFNetworking.h>
 
-#define BASE_URL(path) [NSString stringWithFormat:@"http://106.14.59.8/api/%@", path]
+#define BASE_URL(path) [NSString stringWithFormat:@"http://183.129.165.54:8081/api/%@", path]
 
 @interface unityPlugin : NSObject
 
@@ -109,7 +109,7 @@
                 UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
             }
         }];
-         [download resume];
+        [download resume];
     }
 }
 

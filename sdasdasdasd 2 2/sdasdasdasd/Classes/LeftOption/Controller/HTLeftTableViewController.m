@@ -59,6 +59,15 @@
     }];
 }
 
+- (void)clearARCache {
+    
+    NSString *path = [NSString stringWithFormat:@"%@/Documents/videoDownload", NSHomeDirectory()];
+    dispatch_queue_t concurrentQueen = dispatch_queue_create("", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(concurrentQueen, ^{
+        
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    });
+}
 
 - (NSMutableArray *)groupArray{
     

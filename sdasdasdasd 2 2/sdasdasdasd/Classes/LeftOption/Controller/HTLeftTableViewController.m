@@ -57,8 +57,18 @@
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"CannelLoginBackHome" object:nil];
     }];
+    [self clearARCache];
 }
 
+- (void)clearARCache {
+    
+    NSString *path = [NSString stringWithFormat:@"%@/Documents/videoDownload", NSHomeDirectory()];
+    dispatch_queue_t concurrentQueen = dispatch_queue_create("com.huobanmall.hsc.queen", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(concurrentQueen, ^{
+        
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    });
+}
 
 - (NSMutableArray *)groupArray{
     

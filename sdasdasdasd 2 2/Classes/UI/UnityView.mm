@@ -75,9 +75,27 @@ extern bool _skipPresent;
     if ((self = [super initWithFrame: frame])) {
         [self initImpl: frame scaleFactor: scale];
         [self configUI];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(identifySucceed) name:@"IdentifySucceed" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoBack) name:@"videoBack" object:nil];
     }
     
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)identifySucceed {
+    [_backBtn setHidden:YES];
+    [_photoBtn setHidden:YES];
+    [_screenshotBtn setHidden:YES];
+}
+
+- (void)videoBack {
+    [_backBtn setHidden:NO];
+    [_photoBtn setHidden:NO];
+    [_screenshotBtn setHidden:NO];
 }
 
 - (void)configUI {

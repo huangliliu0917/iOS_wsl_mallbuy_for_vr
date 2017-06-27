@@ -103,6 +103,7 @@
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
         
         NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"IdentifySucceed" object:nil];
         
         UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
         
@@ -137,7 +138,7 @@
                 NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
                 
                 NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"IdentifySucceed" object:nil];
                 UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
             }
         }];
@@ -153,8 +154,6 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
-        
-        NSLog(@"1111111111111%@", dic);
         
         [self startDownload:dic[@"ar_url"] name:name  giftID:dic[@"id"]];
         
@@ -182,5 +181,9 @@ extern "C" {
     
     void getGiftPath(const char * name) {
         [getUnityPlugin() downloadVideo:[NSString stringWithFormat:@"%s", name]];
+    }
+    
+    void OnVideoPlayerReturnClick() {
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"videoBack" object:nil];
     }
 }

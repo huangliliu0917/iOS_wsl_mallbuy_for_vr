@@ -2787,6 +2787,8 @@ extern "C"  float Mathf_MoveTowards_m1130995897 (Il2CppObject * __this /* static
 extern "C"  void ForPlugins_photoSucceed_m4275032343 (Il2CppObject * __this /* static, unused */, String_t* ___photoPath0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Wanshili.ForPlugins::getGiftPath(System.String)
 extern "C"  void ForPlugins_getGiftPath_m3553763666 (Il2CppObject * __this /* static, unused */, String_t* ___name0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Wanshili.ForPlugins::videoRerurnEvent()
+extern "C"  void ForPlugins_videoRerurnEvent_m3197051464 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // Wanshili.GameManager Wanshili.GameManager::get_Instance()
 extern "C"  GameManager_t1384011863 * GameManager_get_Instance_m293408930 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Wanshili.GameManager::set_Instance(Wanshili.GameManager)
@@ -2835,6 +2837,8 @@ extern "C"  void UIPageModule_set_Instance_m3607844083 (Il2CppObject * __this /*
 #define GameObject_GetComponent_TisVideoPlayerController_t1719929636_m918165166(__this, method) ((  VideoPlayerController_t1719929636 * (*) (GameObject_t1756533147 *, const MethodInfo*))GameObject_GetComponent_TisIl2CppObject_m4019817337_gshared)(__this, method)
 // System.Void System.Action::.ctor(System.Object,System.IntPtr)
 extern "C"  void Action__ctor_m2606471964 (Action_t3226471752 * __this, Il2CppObject * p0, IntPtr_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Wanshili.ForPlugins::OnVideoPlayerReturnClick()
+extern "C"  void ForPlugins_OnVideoPlayerReturnClick_m2280702336 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Delegate System.Delegate::Combine(System.Delegate,System.Delegate)
 extern "C"  Delegate_t3022476291 * Delegate_Combine_m3791207084 (Il2CppObject * __this /* static, unused */, Delegate_t3022476291 * p0, Delegate_t3022476291 * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Delegate System.Delegate::Remove(System.Delegate,System.Delegate)
@@ -18960,6 +18964,16 @@ extern "C"  void ForPlugins_getGiftPath_m3553763666 (Il2CppObject * __this /* st
 	____name0_marshaled = NULL;
 
 }
+extern "C" void DEFAULT_CALL videoRerurnEvent();
+// System.Void Wanshili.ForPlugins::videoRerurnEvent()
+extern "C"  void ForPlugins_videoRerurnEvent_m3197051464 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc) ();
+
+	// Native function invocation
+	reinterpret_cast<PInvokeFunc>(videoRerurnEvent)();
+
+}
 // System.Void Wanshili.ForPlugins::OnPhotoStore(System.String)
 extern "C"  void ForPlugins_OnPhotoStore_m1892931747 (Il2CppObject * __this /* static, unused */, String_t* ___path0, const MethodInfo* method)
 {
@@ -19016,6 +19030,35 @@ IL_0017:
 	}
 
 IL_0022:
+	{
+		return;
+	}
+}
+// System.Void Wanshili.ForPlugins::OnVideoPlayerReturnClick()
+extern "C"  void ForPlugins_OnVideoPlayerReturnClick_m2280702336 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	{
+		int32_t L_0 = Application_get_platform_m3989224144(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_0) == ((int32_t)8)))
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		int32_t L_1 = Application_get_platform_m3989224144(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_1) == ((uint32_t)((int32_t)11)))))
+		{
+			goto IL_0021;
+		}
+	}
+
+IL_0017:
+	{
+		ForPlugins_videoRerurnEvent_m3197051464(NULL /*static, unused*/, /*hidden argument*/NULL);
+		goto IL_0021;
+	}
+
+IL_0021:
 	{
 		return;
 	}
@@ -19885,6 +19928,7 @@ extern "C"  void UIPageModule_OnVideoReturn_m3659676753 (UIPageModule_t180385154
 		Il2CppObject * L_1 = __this->get_m_mainPage_5();
 		NullCheck(L_1);
 		InterfaceActionInvoker1< bool >::Invoke(0 /* System.Void Wanshili.IMainPageUIController::OnSourceLoading(System.Boolean) */, IMainPageUIController_t1153666173_il2cpp_TypeInfo_var, L_1, (bool)0);
+		ForPlugins_OnVideoPlayerReturnClick_m2280702336(NULL /*static, unused*/, /*hidden argument*/NULL);
 		return;
 	}
 }

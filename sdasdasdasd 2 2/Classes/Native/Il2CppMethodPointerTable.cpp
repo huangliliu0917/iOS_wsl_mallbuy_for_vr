@@ -13128,8 +13128,10 @@ extern "C" void VideoControl_Update_m2119686758 ();
 extern "C" void ForPlugins__ctor_m437117987 ();
 extern "C" void ForPlugins_photoSucceed_m4275032343 ();
 extern "C" void ForPlugins_getGiftPath_m3553763666 ();
+extern "C" void ForPlugins_videoRerurnEvent_m3197051464 ();
 extern "C" void ForPlugins_OnPhotoStore_m1892931747 ();
 extern "C" void ForPlugins_GetTheGiftPath_m1657746043 ();
+extern "C" void ForPlugins_OnVideoPlayerReturnClick_m2280702336 ();
 extern "C" void GameManager__ctor_m1951415239 ();
 extern "C" void GameManager_get_Instance_m293408930 ();
 extern "C" void GameManager_set_Instance_m4081175891 ();
@@ -13200,7 +13202,7 @@ extern "C" void XuanyanTechImageTargetBehaviour_OnTargetLost_m1006372200 ();
 extern "C" void XuanyanTechImageTargetBehaviour_OnTargetLoad_m579846499 ();
 extern "C" void XuanyanTechImageTargetBehaviour_OnTargetUnload_m2489658344 ();
 extern "C" void XuanyanTechImageTargetBehaviour_Start_m3379567795 ();
-extern const Il2CppMethodPointer g_MethodPointers[13186] = 
+extern const Il2CppMethodPointer g_MethodPointers[13188] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -26316,8 +26318,10 @@ extern const Il2CppMethodPointer g_MethodPointers[13186] =
 	ForPlugins__ctor_m437117987,
 	ForPlugins_photoSucceed_m4275032343,
 	ForPlugins_getGiftPath_m3553763666,
+	ForPlugins_videoRerurnEvent_m3197051464,
 	ForPlugins_OnPhotoStore_m1892931747,
 	ForPlugins_GetTheGiftPath_m1657746043,
+	ForPlugins_OnVideoPlayerReturnClick_m2280702336,
 	GameManager__ctor_m1951415239,
 	GameManager_get_Instance_m293408930,
 	GameManager_set_Instance_m4081175891,

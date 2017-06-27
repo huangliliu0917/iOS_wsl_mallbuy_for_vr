@@ -13161,6 +13161,9 @@ extern "C" void ScanPageUIController_Start_m2735978582 ();
 extern "C" void ScanPageUIController_Update_m3848431615 ();
 extern "C" void UIPageModule__ctor_m2622549375 ();
 extern "C" void UIPageModule_get_Instance_m1069565874 ();
+extern "C" void UIPageModule_set_Instance_m3607844083 ();
+extern "C" void UIPageModule_Awake_m101302798 ();
+extern "C" void UIPageModule_Start_m2790857571 ();
 extern "C" void UIPageModule_OnRecgnized_m306881865 ();
 extern "C" void UIPageModule_OnObjectCapture_m2452759603 ();
 extern "C" void UIPageModule_OnVideoPlay_m2764247977 ();
@@ -13197,9 +13200,7 @@ extern "C" void XuanyanTechImageTargetBehaviour_OnTargetLost_m1006372200 ();
 extern "C" void XuanyanTechImageTargetBehaviour_OnTargetLoad_m579846499 ();
 extern "C" void XuanyanTechImageTargetBehaviour_OnTargetUnload_m2489658344 ();
 extern "C" void XuanyanTechImageTargetBehaviour_Start_m3379567795 ();
-extern "C" void XuanyanTechImageTargetBehaviour_HideObjects_m60755614 ();
-extern "C" void XuanyanTechImageTargetBehaviour_ShowObjects_m2723965721 ();
-extern const Il2CppMethodPointer g_MethodPointers[13185] = 
+extern const Il2CppMethodPointer g_MethodPointers[13186] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -26348,6 +26349,9 @@ extern const Il2CppMethodPointer g_MethodPointers[13185] =
 	ScanPageUIController_Update_m3848431615,
 	UIPageModule__ctor_m2622549375,
 	UIPageModule_get_Instance_m1069565874,
+	UIPageModule_set_Instance_m3607844083,
+	UIPageModule_Awake_m101302798,
+	UIPageModule_Start_m2790857571,
 	UIPageModule_OnRecgnized_m306881865,
 	UIPageModule_OnObjectCapture_m2452759603,
 	UIPageModule_OnVideoPlay_m2764247977,
@@ -26384,6 +26388,4 @@ extern const Il2CppMethodPointer g_MethodPointers[13185] =
 	XuanyanTechImageTargetBehaviour_OnTargetLoad_m579846499,
 	XuanyanTechImageTargetBehaviour_OnTargetUnload_m2489658344,
 	XuanyanTechImageTargetBehaviour_Start_m3379567795,
-	XuanyanTechImageTargetBehaviour_HideObjects_m60755614,
-	XuanyanTechImageTargetBehaviour_ShowObjects_m2723965721,
 };

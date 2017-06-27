@@ -24867,12 +24867,12 @@ static void CubemapCube_t3596157482_CustomAttributesCacheGenerator(CustomAttribu
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		AddComponentMenu_t1099699699 * tmp = (AddComponentMenu_t1099699699 *)cache->attributes[0];
-		AddComponentMenu__ctor_m648737891(tmp, il2cpp_codegen_string_new_wrapper("AVPro Video/Cubemap Cube (VR)"), 400LL, NULL);
+		RequireComponent_t864575032 * tmp = (RequireComponent_t864575032 *)cache->attributes[0];
+		RequireComponent__ctor_m3475141952(tmp, il2cpp_codegen_type_get_object(MeshRenderer_t1268241104_0_0_0_var), NULL);
 	}
 	{
-		RequireComponent_t864575032 * tmp = (RequireComponent_t864575032 *)cache->attributes[1];
-		RequireComponent__ctor_m3475141952(tmp, il2cpp_codegen_type_get_object(MeshRenderer_t1268241104_0_0_0_var), NULL);
+		AddComponentMenu_t1099699699 * tmp = (AddComponentMenu_t1099699699 *)cache->attributes[1];
+		AddComponentMenu__ctor_m648737891(tmp, il2cpp_codegen_string_new_wrapper("AVPro Video/Cubemap Cube (VR)"), 400LL, NULL);
 	}
 	{
 		RequireComponent_t864575032 * tmp = (RequireComponent_t864575032 *)cache->attributes[2];
@@ -24903,12 +24903,12 @@ static void CubemapCube_t3596157482_CustomAttributesCacheGenerator_expansion_coe
 static void DisplayBackground_t4042404380_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
 {
 	{
-		AddComponentMenu_t1099699699 * tmp = (AddComponentMenu_t1099699699 *)cache->attributes[0];
-		AddComponentMenu__ctor_m648737891(tmp, il2cpp_codegen_string_new_wrapper("AVPro Video/Display Background"), 200LL, NULL);
+		ExecuteInEditMode_t3043633143 * tmp = (ExecuteInEditMode_t3043633143 *)cache->attributes[0];
+		ExecuteInEditMode__ctor_m495837196(tmp, NULL);
 	}
 	{
-		ExecuteInEditMode_t3043633143 * tmp = (ExecuteInEditMode_t3043633143 *)cache->attributes[1];
-		ExecuteInEditMode__ctor_m495837196(tmp, NULL);
+		AddComponentMenu_t1099699699 * tmp = (AddComponentMenu_t1099699699 *)cache->attributes[1];
+		AddComponentMenu__ctor_m648737891(tmp, il2cpp_codegen_string_new_wrapper("AVPro Video/Display Background"), 200LL, NULL);
 	}
 }
 static void DisplayIMGUI_t35468519_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
@@ -24953,12 +24953,12 @@ static void DisplayIMGUI_t35468519_CustomAttributesCacheGenerator__height(Custom
 static void DisplayUGUI_t2578908018_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
 {
 	{
-		AddComponentMenu_t1099699699 * tmp = (AddComponentMenu_t1099699699 *)cache->attributes[0];
-		AddComponentMenu__ctor_m648737891(tmp, il2cpp_codegen_string_new_wrapper("AVPro Video/Display uGUI"), 200LL, NULL);
+		ExecuteInEditMode_t3043633143 * tmp = (ExecuteInEditMode_t3043633143 *)cache->attributes[0];
+		ExecuteInEditMode__ctor_m495837196(tmp, NULL);
 	}
 	{
-		ExecuteInEditMode_t3043633143 * tmp = (ExecuteInEditMode_t3043633143 *)cache->attributes[1];
-		ExecuteInEditMode__ctor_m495837196(tmp, NULL);
+		AddComponentMenu_t1099699699 * tmp = (AddComponentMenu_t1099699699 *)cache->attributes[1];
+		AddComponentMenu__ctor_m648737891(tmp, il2cpp_codegen_string_new_wrapper("AVPro Video/Display uGUI"), 200LL, NULL);
 	}
 }
 static void DisplayUGUI_t2578908018_CustomAttributesCacheGenerator__mediaPlayer(CustomAttributesCache* cache)
@@ -25286,6 +25286,20 @@ static void MainPageUIController_t3639227850_CustomAttributesCacheGenerator_m_ti
 		SerializeField__ctor_m994129777(tmp, NULL);
 	}
 }
+static void UIPageModule_t1803851549_CustomAttributesCacheGenerator_m_mianUI(CustomAttributesCache* cache)
+{
+	{
+		SerializeField_t3073427462 * tmp = (SerializeField_t3073427462 *)cache->attributes[0];
+		SerializeField__ctor_m994129777(tmp, NULL);
+	}
+}
+static void UIPageModule_t1803851549_CustomAttributesCacheGenerator_m_playerUI(CustomAttributesCache* cache)
+{
+	{
+		SerializeField_t3073427462 * tmp = (SerializeField_t3073427462 *)cache->attributes[0];
+		SerializeField__ctor_m994129777(tmp, NULL);
+	}
+}
 static void VideoPlayerController_t1719929636_CustomAttributesCacheGenerator_m_returnButton(CustomAttributesCache* cache)
 {
 	{
@@ -25373,12 +25387,12 @@ static void VideoPlayerController_t1719929636_CustomAttributesCacheGenerator_m_m
 static void VideoPlayerController_t1719929636_CustomAttributesCacheGenerator_OnVideoReturnClick(CustomAttributesCache* cache)
 {
 	{
-		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[0];
-		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
+		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[0];
+		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
 	}
 	{
-		DebuggerBrowsableAttribute_t1386379234 * tmp = (DebuggerBrowsableAttribute_t1386379234 *)cache->attributes[1];
-		DebuggerBrowsableAttribute__ctor_m3729055103(tmp, 0LL, NULL);
+		CompilerGeneratedAttribute_t497097752 * tmp = (CompilerGeneratedAttribute_t497097752 *)cache->attributes[1];
+		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
 	}
 }
 static void VideoPlayerController_t1719929636_CustomAttributesCacheGenerator_VideoPlayerController_rotating_m1968685800(CustomAttributesCache* cache)
@@ -25437,7 +25451,7 @@ static void U3CPrivateImplementationDetailsU3E_t1486305142_CustomAttributesCache
 		CompilerGeneratedAttribute__ctor_m3017743394(tmp, NULL);
 	}
 }
-extern const CustomAttributesCacheGenerator g_AttributeGenerators[3019] = 
+extern const CustomAttributesCacheGenerator g_AttributeGenerators[3021] = 
 {
 	NULL,
 	g_mscorlib_Assembly_CustomAttributesCacheGenerator,
@@ -28437,6 +28451,8 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[3019] =
 	MainPageUIController_t3639227850_CustomAttributesCacheGenerator_m_scanePage,
 	MainPageUIController_t3639227850_CustomAttributesCacheGenerator_m_tipPage,
 	MainPageUIController_t3639227850_CustomAttributesCacheGenerator_m_tipText,
+	UIPageModule_t1803851549_CustomAttributesCacheGenerator_m_mianUI,
+	UIPageModule_t1803851549_CustomAttributesCacheGenerator_m_playerUI,
 	VideoPlayerController_t1719929636_CustomAttributesCacheGenerator_m_returnButton,
 	VideoPlayerController_t1719929636_CustomAttributesCacheGenerator_m_videoBar,
 	VideoPlayerController_t1719929636_CustomAttributesCacheGenerator_m_playButton,

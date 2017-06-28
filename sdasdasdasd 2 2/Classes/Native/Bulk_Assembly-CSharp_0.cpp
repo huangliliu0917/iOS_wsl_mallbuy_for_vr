@@ -861,7 +861,6 @@ extern const uint32_t StartEndPoint_IsVideoLoaded_m3956046501_MetadataUsageId;
 extern const uint32_t StartEndPoint_DoStart_m439541567_MetadataUsageId;
 extern const uint32_t StartEndPoint_DoCheckEnd_m2073926148_MetadataUsageId;
 extern const uint32_t StartEndPoint_DoCheckLoop_m3659073244_MetadataUsageId;
-extern Il2CppCodeGenString* _stringLiteral2818250890;
 extern const uint32_t VCR__ctor_m4059917470_MetadataUsageId;
 extern const uint32_t VCR_OnOpenVideoFile_m1391957356_MetadataUsageId;
 extern const uint32_t VCR_OnAutoStartChange_m822199352_MetadataUsageId;
@@ -2869,6 +2868,10 @@ extern "C"  void DateTime__ctor_m2857738939 (DateTime_t693205669 * __this, int32
 extern "C"  DateTime_t693205669  DateTime_AddMilliseconds_m1813199744 (DateTime_t693205669 * __this, double p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.DateTime::ToString(System.String)
 extern "C"  String_t* DateTime_ToString_m1473013667 (DateTime_t693205669 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.DateTime::.ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+extern "C"  void DateTime__ctor_m3153923094 (DateTime_t693205669 * __this, int32_t p0, int32_t p1, int32_t p2, int32_t p3, int32_t p4, int32_t p5, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.DateTime System.DateTime::AddSeconds(System.Double)
+extern "C"  DateTime_t693205669  DateTime_AddSeconds_m722082155 (DateTime_t693205669 * __this, double p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Animation::IsPlaying(System.String)
 extern "C"  bool Animation_IsPlaying_m1305767247 (Animation_t2068071072 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Animation::Play(System.String)
@@ -2885,10 +2888,6 @@ extern "C"  Vector3_t2243707580  Quaternion_get_eulerAngles_m3302573991 (Quatern
 extern "C"  void RectTransform_set_anchorMin_m4247668187 (RectTransform_t3349966182 * __this, Vector2_t2243707579  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.RectTransform::SetSizeWithCurrentAnchors(UnityEngine.RectTransform/Axis,System.Single)
 extern "C"  void RectTransform_SetSizeWithCurrentAnchors_m2368352721 (RectTransform_t3349966182 * __this, int32_t p0, float p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.DateTime::.ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-extern "C"  void DateTime__ctor_m3153923094 (DateTime_t693205669 * __this, int32_t p0, int32_t p1, int32_t p2, int32_t p3, int32_t p4, int32_t p5, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.DateTime System.DateTime::AddSeconds(System.Double)
-extern "C"  DateTime_t693205669  DateTime_AddSeconds_m722082155 (DateTime_t693205669 * __this, double p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Wanshili.VideoPlayerController/<rotating>c__Iterator0::.ctor()
 extern "C"  void U3CrotatingU3Ec__Iterator0__ctor_m1691604132 (U3CrotatingU3Ec__Iterator0_t3820082341 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.WaitForSeconds::.ctor(System.Single)
@@ -9930,16 +9929,18 @@ extern "C"  void VCR__ctor_m4059917470 (VCR_t3370853553 * __this, const MethodIn
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		__this->set__folder_10(_stringLiteral2818250890);
-		StringU5BU5D_t1642385972* L_0 = ((StringU5BU5D_t1642385972*)SZArrayNew(StringU5BU5D_t1642385972_il2cpp_TypeInfo_var, (uint32_t)2));
-		NullCheck(L_0);
-		ArrayElementTypeCheck (L_0, _stringLiteral436962187);
-		(L_0)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral436962187);
-		StringU5BU5D_t1642385972* L_1 = L_0;
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_0 = ((String_t_StaticFields*)String_t_il2cpp_TypeInfo_var->static_fields)->get_Empty_2();
+		__this->set__folder_10(L_0);
+		StringU5BU5D_t1642385972* L_1 = ((StringU5BU5D_t1642385972*)SZArrayNew(StringU5BU5D_t1642385972_il2cpp_TypeInfo_var, (uint32_t)2));
 		NullCheck(L_1);
-		ArrayElementTypeCheck (L_1, _stringLiteral539643736);
-		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral539643736);
-		__this->set__videoFiles_11(L_1);
+		ArrayElementTypeCheck (L_1, _stringLiteral436962187);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral436962187);
+		StringU5BU5D_t1642385972* L_2 = L_1;
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, _stringLiteral539643736);
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral539643736);
+		__this->set__videoFiles_11(L_2);
 		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -9955,52 +9956,49 @@ extern "C"  void VCR_OnOpenVideoFile_m1391957356 (VCR_t3370853553 * __this, cons
 	}
 	{
 		MediaPlayer_t797690829 * L_0 = __this->get__mediaPlayer_2();
-		String_t* L_1 = __this->get__folder_10();
-		StringU5BU5D_t1642385972* L_2 = __this->get__videoFiles_11();
-		int32_t L_3 = __this->get__VideoIndex_12();
-		NullCheck(L_2);
-		int32_t L_4 = L_3;
-		String_t* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
-		IL2CPP_RUNTIME_CLASS_INIT(Path_t41728875_il2cpp_TypeInfo_var);
-		String_t* L_6 = Path_Combine_m3185811654(NULL /*static, unused*/, L_1, L_5, /*hidden argument*/NULL);
+		StringU5BU5D_t1642385972* L_1 = __this->get__videoFiles_11();
+		int32_t L_2 = __this->get__VideoIndex_12();
+		NullCheck(L_1);
+		int32_t L_3 = L_2;
+		String_t* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
 		NullCheck(L_0);
-		L_0->set_m_VideoPath_3(L_6);
-		int32_t L_7 = __this->get__VideoIndex_12();
-		StringU5BU5D_t1642385972* L_8 = __this->get__videoFiles_11();
-		NullCheck(L_8);
-		__this->set__VideoIndex_12(((int32_t)((int32_t)((int32_t)((int32_t)L_7+(int32_t)1))%(int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_8)->max_length)))))));
-		MediaPlayer_t797690829 * L_9 = __this->get__mediaPlayer_2();
-		NullCheck(L_9);
-		String_t* L_10 = L_9->get_m_VideoPath_3();
+		L_0->set_m_VideoPath_3(L_4);
+		int32_t L_5 = __this->get__VideoIndex_12();
+		StringU5BU5D_t1642385972* L_6 = __this->get__videoFiles_11();
+		NullCheck(L_6);
+		__this->set__VideoIndex_12(((int32_t)((int32_t)((int32_t)((int32_t)L_5+(int32_t)1))%(int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_6)->max_length)))))));
+		MediaPlayer_t797690829 * L_7 = __this->get__mediaPlayer_2();
+		NullCheck(L_7);
+		String_t* L_8 = L_7->get_m_VideoPath_3();
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		bool L_11 = String_IsNullOrEmpty_m2802126737(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
-		if (!L_11)
+		bool L_9 = String_IsNullOrEmpty_m2802126737(NULL /*static, unused*/, L_8, /*hidden argument*/NULL);
+		if (!L_9)
 		{
-			goto IL_0066;
+			goto IL_005b;
 		}
 	}
 	{
+		MediaPlayer_t797690829 * L_10 = __this->get__mediaPlayer_2();
+		NullCheck(L_10);
+		MediaPlayer_CloseVideo_m2734021499(L_10, /*hidden argument*/NULL);
+		__this->set__VideoIndex_12(0);
+		goto IL_007e;
+	}
+
+IL_005b:
+	{
+		MediaPlayer_t797690829 * L_11 = __this->get__mediaPlayer_2();
 		MediaPlayer_t797690829 * L_12 = __this->get__mediaPlayer_2();
 		NullCheck(L_12);
-		MediaPlayer_CloseVideo_m2734021499(L_12, /*hidden argument*/NULL);
-		__this->set__VideoIndex_12(0);
-		goto IL_0089;
-	}
-
-IL_0066:
-	{
-		MediaPlayer_t797690829 * L_13 = __this->get__mediaPlayer_2();
-		MediaPlayer_t797690829 * L_14 = __this->get__mediaPlayer_2();
+		String_t* L_13 = L_12->get_m_VideoPath_3();
+		Toggle_t3976754468 * L_14 = __this->get__AutoStartToggle_8();
 		NullCheck(L_14);
-		String_t* L_15 = L_14->get_m_VideoPath_3();
-		Toggle_t3976754468 * L_16 = __this->get__AutoStartToggle_8();
-		NullCheck(L_16);
-		bool L_17 = Toggle_get_isOn_m366838229(L_16, /*hidden argument*/NULL);
-		NullCheck(L_13);
-		MediaPlayer_OpenVideoFromFile_m696192759(L_13, 2, L_15, L_17, /*hidden argument*/NULL);
+		bool L_15 = Toggle_get_isOn_m366838229(L_14, /*hidden argument*/NULL);
+		NullCheck(L_11);
+		MediaPlayer_OpenVideoFromFile_m696192759(L_11, 2, L_13, L_15, /*hidden argument*/NULL);
 	}
 
-IL_0089:
+IL_007e:
 	{
 		return;
 	}
@@ -20327,13 +20325,17 @@ extern "C"  void VideoPlayerController_Update_m2299482953 (VideoPlayerController
 	memset(&V_2, 0, sizeof(V_2));
 	DateTime_t693205669  V_3;
 	memset(&V_3, 0, sizeof(V_3));
+	DateTime_t693205669  V_4;
+	memset(&V_4, 0, sizeof(V_4));
+	DateTime_t693205669  V_5;
+	memset(&V_5, 0, sizeof(V_5));
 	{
 		MediaPlayer_t797690829 * L_0 = __this->get_m_mediaPlayer_13();
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
 		bool L_1 = Object_op_Implicit_m2856731593(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
 		if (!L_1)
 		{
-			goto IL_00b4;
+			goto IL_00fd;
 		}
 	}
 	{
@@ -20342,7 +20344,7 @@ extern "C"  void VideoPlayerController_Update_m2299482953 (VideoPlayerController
 		Il2CppObject * L_3 = MediaPlayer_get_Info_m3069707763(L_2, /*hidden argument*/NULL);
 		if (!L_3)
 		{
-			goto IL_00b4;
+			goto IL_00fd;
 		}
 	}
 	{
@@ -20353,7 +20355,7 @@ extern "C"  void VideoPlayerController_Update_m2299482953 (VideoPlayerController
 		float L_6 = InterfaceFuncInvoker0< float >::Invoke(0 /* System.Single RenderHeads.Media.AVProVideo.IMediaInfo::GetDurationMs() */, IMediaInfo_t1469385285_il2cpp_TypeInfo_var, L_5);
 		if ((!(((float)L_6) > ((float)(0.0f)))))
 		{
-			goto IL_00b4;
+			goto IL_00fd;
 		}
 	}
 	{
@@ -20388,62 +20390,74 @@ extern "C"  void VideoPlayerController_Update_m2299482953 (VideoPlayerController
 		String_t* L_22 = DateTime_ToString_m1473013667((&V_3), _stringLiteral1699032502, /*hidden argument*/NULL);
 		NullCheck(L_17);
 		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_17, L_22);
+		Text_t356221433 * L_23 = __this->get_m_totalTime_10();
+		DateTime__ctor_m3153923094((&V_4), ((int32_t)2017), 5, ((int32_t)11), 0, 0, 0, /*hidden argument*/NULL);
+		MediaPlayer_t797690829 * L_24 = __this->get_m_mediaPlayer_13();
+		NullCheck(L_24);
+		Il2CppObject * L_25 = MediaPlayer_get_Info_m3069707763(L_24, /*hidden argument*/NULL);
+		NullCheck(L_25);
+		float L_26 = InterfaceFuncInvoker0< float >::Invoke(0 /* System.Single RenderHeads.Media.AVProVideo.IMediaInfo::GetDurationMs() */, IMediaInfo_t1469385285_il2cpp_TypeInfo_var, L_25);
+		DateTime_t693205669  L_27 = DateTime_AddSeconds_m722082155((&V_4), (((double)((double)((float)((float)L_26/(float)(1000.0f)))))), /*hidden argument*/NULL);
+		V_5 = L_27;
+		String_t* L_28 = DateTime_ToString_m1473013667((&V_5), _stringLiteral1699032502, /*hidden argument*/NULL);
+		NullCheck(L_23);
+		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_23, L_28);
 	}
 
-IL_00b4:
+IL_00fd:
 	{
-		bool L_23 = __this->get_m_isHideUI_17();
-		if (L_23)
+		bool L_29 = __this->get_m_isHideUI_17();
+		if (L_29)
 		{
-			goto IL_0128;
+			goto IL_0171;
 		}
 	}
 	{
-		float L_24 = __this->get_m_timers_20();
-		float L_25 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_m_timers_20(((float)((float)L_24+(float)L_25)));
-		float L_26 = __this->get_m_timers_20();
-		if ((!(((float)L_26) > ((float)(4.5f)))))
+		float L_30 = __this->get_m_timers_20();
+		float L_31 = Time_get_deltaTime_m2233168104(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set_m_timers_20(((float)((float)L_30+(float)L_31)));
+		float L_32 = __this->get_m_timers_20();
+		if ((!(((float)L_32) > ((float)(4.5f)))))
 		{
-			goto IL_0123;
+			goto IL_016c;
 		}
 	}
 	{
-		Animation_t2068071072 * L_27 = __this->get_m_animations_19();
-		NullCheck(L_27);
-		bool L_28 = Animation_IsPlaying_m1305767247(L_27, _stringLiteral750601408, /*hidden argument*/NULL);
-		if (L_28)
+		Animation_t2068071072 * L_33 = __this->get_m_animations_19();
+		NullCheck(L_33);
+		bool L_34 = Animation_IsPlaying_m1305767247(L_33, _stringLiteral750601408, /*hidden argument*/NULL);
+		if (L_34)
 		{
-			goto IL_0123;
+			goto IL_016c;
 		}
 	}
 	{
-		Animation_t2068071072 * L_29 = __this->get_m_animations_19();
-		NullCheck(L_29);
-		bool L_30 = Animation_IsPlaying_m1305767247(L_29, _stringLiteral1940699121, /*hidden argument*/NULL);
-		if (L_30)
+		Animation_t2068071072 * L_35 = __this->get_m_animations_19();
+		NullCheck(L_35);
+		bool L_36 = Animation_IsPlaying_m1305767247(L_35, _stringLiteral1940699121, /*hidden argument*/NULL);
+		if (L_36)
 		{
-			goto IL_0123;
+			goto IL_016c;
 		}
 	}
 	{
-		Animation_t2068071072 * L_31 = __this->get_m_animations_19();
-		NullCheck(L_31);
-		Animation_Play_m976361057(L_31, _stringLiteral750601408, /*hidden argument*/NULL);
+		Animation_t2068071072 * L_37 = __this->get_m_animations_19();
+		NullCheck(L_37);
+		Animation_Play_m976361057(L_37, _stringLiteral750601408, /*hidden argument*/NULL);
 		__this->set_m_isHideUI_17((bool)1);
 	}
 
-IL_0123:
+IL_016c:
 	{
-		goto IL_0133;
+		goto IL_017c;
 	}
 
-IL_0128:
+IL_0171:
 	{
 		__this->set_m_timers_20((0.0f));
 	}
 
-IL_0133:
+IL_017c:
 	{
 		return;
 	}
@@ -20814,11 +20828,11 @@ extern "C"  void VideoPlayerController_OnVideoEvent_m3674840840 (VideoPlayerCont
 		}
 		if (((int32_t)((int32_t)L_0-(int32_t)1)) == 1)
 		{
-			goto IL_00b2;
+			goto IL_0022;
 		}
 		if (((int32_t)((int32_t)L_0-(int32_t)1)) == 2)
 		{
-			goto IL_00b7;
+			goto IL_0027;
 		}
 		if (((int32_t)((int32_t)L_0-(int32_t)1)) == 3)
 		{
@@ -20830,6 +20844,16 @@ extern "C"  void VideoPlayerController_OnVideoEvent_m3674840840 (VideoPlayerCont
 	}
 
 IL_001d:
+	{
+		goto IL_00c1;
+	}
+
+IL_0022:
+	{
+		goto IL_00c1;
+	}
+
+IL_0027:
 	{
 		Text_t356221433 * L_1 = __this->get_m_playTime_9();
 		DateTime__ctor_m3153923094((&V_0), ((int32_t)2017), 5, ((int32_t)11), 0, 0, 0, /*hidden argument*/NULL);
@@ -20855,16 +20879,6 @@ IL_001d:
 		String_t* L_12 = DateTime_ToString_m1473013667((&V_3), _stringLiteral1699032502, /*hidden argument*/NULL);
 		NullCheck(L_7);
 		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_7, L_12);
-		goto IL_00c1;
-	}
-
-IL_00b2:
-	{
-		goto IL_00c1;
-	}
-
-IL_00b7:
-	{
 		goto IL_00c1;
 	}
 

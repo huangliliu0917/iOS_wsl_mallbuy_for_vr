@@ -183,7 +183,7 @@ extern "C" {
         [getUnityPlugin() downloadVideo:[NSString stringWithFormat:@"%s", name]];
     }
     
-    void OnVideoPlayerReturnClick() {
+    void videoRerurnEvent() {
         [[NSNotificationCenter defaultCenter]postNotificationName:@"videoBack" object:nil];
     }
 }

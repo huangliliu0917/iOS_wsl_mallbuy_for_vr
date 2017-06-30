@@ -47,8 +47,8 @@
 #define HuoBanMallBuyAppId @"app"
 #define HuoBanMallBuyAppSecrect @"3f52fde1855463795f694b121092d6c7"
 //ShareSDk数据统计
-#define HuoBanMallShareSdkAppId @"1d85f1143183c"
-#define HuoBanMallYouMeng @"590982c6717c1903360001af"
+#define HuoBanMallShareSdkAppId @"1f124ff53133a"
+#define HuoBanMallYouMeng @"f87cd70c3ae48ad4b597f567ef6c3ac7"
 //sina
 #define HuoBanMallShareSdkSinaKey @"1000919385"
 #define HuoBanMallShareSdkSinaSecret @"9218c36e6dfdc03e8a5b7c54d129a266"

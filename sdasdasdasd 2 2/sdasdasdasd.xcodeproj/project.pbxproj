@@ -1822,7 +1822,7 @@
 				TargetAttributes = {
 					EFA6D3511C04514500B39B36 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 5MJV2364W2;
+						DevelopmentTeam = 5X8F22ZYCG;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -2383,7 +2383,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5MJV2364W2;
+				DEVELOPMENT_TEAM = 5X8F22ZYCG;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2464,7 +2464,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5MJV2364W2;
+				DEVELOPMENT_TEAM = 5X8F22ZYCG;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (

@@ -115,7 +115,7 @@
     
     if (_arItem == NULL) {
         UIButton * arbtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
-        [arbtn setTitle:@"AR" forState:UIControlStateNormal];
+        [arbtn setBackgroundImage:[UIImage imageNamed:@"ar"] forState:UIControlStateNormal];
         [arbtn addTarget:self action:@selector(ARBtnClicked) forControlEvents:UIControlEventTouchUpInside];
         _arItem = [[UIBarButtonItem alloc] initWithCustomView:arbtn];
     }
@@ -186,7 +186,7 @@
     if (_shareBtn == nil) {
         _shareBtn = [[UIButton alloc] init];
         _shareBtn.frame = CGRectMake(0, 0, 25, 25);
-        _shareBtn.userInteractionEnabled = NO;
+//        _shareBtn.userInteractionEnabled = NO;
         [_shareBtn addTarget:self action:@selector(shareBtnClicks) forControlEvents:UIControlEventTouchUpInside];
         [_shareBtn setBackgroundImage:[UIImage imageNamed:@"home_title_right_share"] forState:UIControlStateNormal];
     }
@@ -492,6 +492,7 @@
     [self.navigationController setNavigationBarHidden:NO  animated:YES];
     self.tabBarController.tabBar.hidden = NO;
     
+    [UIApplication sharedApplication].statusBarHidden = NO;
     
     if ([self.homeWebUrl rangeOfString:@"/UserCenter/Index.aspx"].location != NSNotFound || [self.homeWebUrl rangeOfString:@"/Mall/Cart.aspx"].location != NSNotFound) {
         NSURL * urlStr = [NSURL URLWithString:self.homeWebUrl];

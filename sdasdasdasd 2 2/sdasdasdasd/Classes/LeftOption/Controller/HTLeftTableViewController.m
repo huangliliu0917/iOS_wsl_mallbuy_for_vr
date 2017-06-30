@@ -52,10 +52,10 @@
 @implementation HTLeftTableViewController
 
 
-- (void)doCleanCache{
+- (void     )doCleanCache{
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"CannelLoginBackHome" object:nil];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"CannelLoginBackHome" object:nil];
     }];
     [self clearARCache];
 }
@@ -141,7 +141,8 @@
             if ([json[@"data"][@"menusCode"] integerValue] == 1) {
                 
                 NSMutableArray * lefts = [LeftMenuModel mj_objectArrayWithKeyValuesArray:json[@"data"][@"home_menus"]];
-                 LeftMenuModel * fash = [LeftMenuModel LeftMenuModelWithId:3 andIcon:nil andname:@"清除缓存" andtag:nil andUrl:nil];
+                LeftMenuModel * fash = [LeftMenuModel LeftMenuModelWithId:3 andIcon:@"home_menu_clearcache" andname:@"清除缓存" andtag:nil andUrl:nil];
+                [lefts addObject:fash];
                 [wself.groupArray removeAllObjects];
                 [wself toGroupsByTime:lefts];
                 
@@ -297,7 +298,7 @@
     
     if ([login isEqualToString:Success]) {
         
-        [headView.iconView sd_setImageWithURL:[NSURL URLWithString:headUrl] placeholderImage:nil completed:nil];
+        [headView.iconView sd_setImageWithURL:[NSURL URLWithString:headUrl] placeholderImage:[UIImage imageNamed:@"moren"] completed:nil];
         headView.firstLable.text = userInfor.nickname;
         headView.userInteractionEnabled = NO;
         
@@ -359,7 +360,7 @@
     NSString * login = [[NSUserDefaults standardUserDefaults] objectForKey:LoginStatus];
     if ([login isEqualToString:Success]) {
         
-        [_topHeadView.iconView sd_setImageWithURL:[NSURL URLWithString:headUrl] placeholderImage:nil options:SDWebImageRetryFailed];
+        [_topHeadView.iconView sd_setImageWithURL:[NSURL URLWithString:headUrl] placeholderImage:[UIImage imageNamed:@"moren"] options:SDWebImageRetryFailed];
         _topHeadView.firstLable.text = userInfor.nickname;
         _topHeadView.userInteractionEnabled = NO;
     }else {

@@ -95,11 +95,13 @@ extern const int32_t g_FieldOffsetTable1913[3] =
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1914 = { sizeof (ScanPageUIController_t2756335674), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1915 = { sizeof (UIPageModule_t1803851549), -1, sizeof(UIPageModule_t1803851549_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable1915[3] = 
+extern const int32_t g_FieldOffsetTable1915[5] = 
 {
-	UIPageModule_t1803851549_StaticFields::get_offset_of_m_instance_0(),
-	UIPageModule_t1803851549::get_offset_of_m_mainPage_1(),
-	UIPageModule_t1803851549::get_offset_of_m_videoPage_2(),
+	UIPageModule_t1803851549::get_offset_of_m_mianUI_2(),
+	UIPageModule_t1803851549::get_offset_of_m_playerUI_3(),
+	UIPageModule_t1803851549_StaticFields::get_offset_of_m_instance_4(),
+	UIPageModule_t1803851549::get_offset_of_m_mainPage_5(),
+	UIPageModule_t1803851549::get_offset_of_m_videoPage_6(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1916 = { sizeof (VideoControl_t4217817208), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1917 = { 0, -1, 0, 0 };

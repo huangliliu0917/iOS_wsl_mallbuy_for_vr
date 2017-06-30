@@ -13,6 +13,8 @@
 
 {
     NSString *_photoPath;
+    NSURLSessionDownloadTask *_download;
+    NSString *_videoPath;
 }
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
 - (void)saveImage:(NSString *)path;
@@ -20,6 +22,28 @@
 @end
 
 @implementation unityPlugin
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(quitAR) name:@"quitAR" object:nil];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"quitAR" object:nil];
+}
+
+- (void)quitAR {
+    
+    if (_download != nil && _download.state == NSURLSessionTaskStateRunning && _videoPath != nil) {
+        [_download cancel];
+        [[NSFileManager defaultManager] removeItemAtPath:_videoPath error:nil];
+        UnitySendMessage("GameManager", "OnReturnScanePage", "");
+    }
+}
 
 - (void)saveImage:(NSString *)path {
     
@@ -69,19 +93,25 @@
 
 - (void)startDownload:(NSString *)url name:(NSString *)name giftID:(NSString *)ID{
     
-    NSString *path = [NSString stringWithFormat:@"%@/Documents/videoDownload/", NSHomeDirectory()];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@%@.mp4",path, ID]]) {
+    NSString *path = [NSString stringWithFormat:@"%@/Documents/videoDownload", NSHomeDirectory()];
+
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/%@.mp4",path, ID]]) {
         
         
-        NSDictionary *dic = @{@"type":@"1", @"path":[NSString stringWithFormat:@"%@%@.mp4", path, ID], @"modelName":@"ss"};
+        NSDictionary *dic = @{@"type":@"1", @"path":[NSString stringWithFormat:@"%@/%@.mp4", path, ID], @"modelName":@"ss"};
         
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
         
         NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"IdentifySucceed" object:nil];
         
         UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
         
     } else {
+        
+        if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+        }
         
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         
@@ -91,21 +121,24 @@
         
         NSURLSessionDownloadTask *download = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
             
+            
         } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
             
-            NSString *savePath = [NSString stringWithFormat:@"%@%@.mp4",path, ID];
+            NSString *savePath = [NSString stringWithFormat:@"%@/%@.mp4",path, ID];
+            _videoPath = savePath;
             NSURL *url = [NSURL fileURLWithPath:savePath];
             return url;
             
         } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+
             NSString *giftPath = [NSString stringWithFormat:@"%@/Documents/videoDownload/%@.mp4", NSHomeDirectory(), ID];
             if ([[NSFileManager defaultManager] fileExistsAtPath:giftPath]) {
-                NSDictionary *dic = @{@"type":@"1", @"path":[NSString stringWithFormat:@"%@%@.mp4", path, ID], @"modelName":@"ss"};
+                NSDictionary *dic = @{@"type":@"1", @"path":giftPath, @"modelName":@"ss"};
                 
                 NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
                 
                 NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-                
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"IdentifySucceed" object:nil];
                 UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
             }
         }];
@@ -121,6 +154,7 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
+        
         [self startDownload:dic[@"ar_url"] name:name  giftID:dic[@"id"]];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -147,5 +181,9 @@ extern "C" {
     
     void getGiftPath(const char * name) {
         [getUnityPlugin() downloadVideo:[NSString stringWithFormat:@"%s", name]];
+    }
+    
+    void videoRerurnEvent() {
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"videoBack" object:nil];
     }
 }

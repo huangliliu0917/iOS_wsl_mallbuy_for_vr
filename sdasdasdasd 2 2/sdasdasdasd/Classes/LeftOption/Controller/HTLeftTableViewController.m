@@ -52,12 +52,23 @@
 @implementation HTLeftTableViewController
 
 
-- (void     )doCleanCache{
+- (void)doCleanCache{
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:^(BOOL finished) {
         
 //        [[NSNotificationCenter defaultCenter] postNotificationName:@"CannelLoginBackHome" object:nil];
     }];
-    [self clearARCache];
+    [self alertViewShow];
+}
+
+- (void)alertViewShow {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"是否清除缓存？" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *actionDes = [UIAlertAction actionWithTitle:@"清除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self clearARCache];
+    }];
+    [alert addAction:actionCancel];
+    [alert addAction:actionDes];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)clearARCache {

@@ -37,11 +37,9 @@
 }
 
 - (void)quitAR {
-    
-    if (_download != nil && _download.state == NSURLSessionTaskStateRunning && _videoPath != nil) {
+    if (_download != nil && _download.state == NSURLSessionTaskStateRunning) {
         [_download cancel];
-        [[NSFileManager defaultManager] removeItemAtPath:_videoPath error:nil];
-        UnitySendMessage("GameManager", "OnReturnScanePage", "");
+        UnitySendMessage("GameManager", "ReturnScanePage", "");
     }
 }
 
@@ -125,7 +123,6 @@
         } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
             
             NSString *savePath = [NSString stringWithFormat:@"%@/%@.mp4",path, ID];
-            _videoPath = savePath;
             NSURL *url = [NSURL fileURLWithPath:savePath];
             return url;
             
@@ -142,7 +139,8 @@
                 UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
             }
         }];
-        [download resume];
+        _download = download;
+        [_download resume];
     }
 }
 
@@ -160,7 +158,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
-    
 }
 
 @end

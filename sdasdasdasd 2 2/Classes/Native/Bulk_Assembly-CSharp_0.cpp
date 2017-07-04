@@ -1099,6 +1099,7 @@ extern Il2CppCodeGenString* _stringLiteral1541623294;
 extern const uint32_t GameManager_Start_m753705411_MetadataUsageId;
 extern Il2CppClass* UIPageModule_t1803851549_il2cpp_TypeInfo_var;
 extern const uint32_t GameManager_GiftInformation_m680836865_MetadataUsageId;
+extern const uint32_t GameManager_ReturnScanePage_m960830926_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral3282854815;
 extern const uint32_t GameManager_OnPhotoClick_m1759534112_MetadataUsageId;
 extern Il2CppClass* U3CWaitForPhotoStoreU3Ec__Iterator0_t2565996477_il2cpp_TypeInfo_var;
@@ -2802,6 +2803,10 @@ extern "C"  UIPageModule_t1803851549 * UIPageModule_get_Instance_m1069565874 (Il
 extern "C"  void UIPageModule_OnVideoPlay_m2764247977 (UIPageModule_t1803851549 * __this, String_t* ___videoName0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void Wanshili.UIPageModule::OnObjectCapture()
 extern "C"  void UIPageModule_OnObjectCapture_m2452759603 (UIPageModule_t1803851549 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Wanshili.UIPageModule::OnReturnScanePage()
+extern "C"  void UIPageModule_OnReturnScanePage_m1113423833 (UIPageModule_t1803851549 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void Wanshili.UIPageModule::OnVideoReturn()
+extern "C"  void UIPageModule_OnVideoReturn_m3659676753 (UIPageModule_t1803851549 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.IO.Directory::Exists(System.String)
 extern "C"  bool Directory_Exists_m2663601042 (Il2CppObject * __this /* static, unused */, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.IO.DirectoryInfo System.IO.Directory::CreateDirectory(System.String)
@@ -19266,6 +19271,43 @@ IL_002f:
 	}
 
 IL_0040:
+	{
+		return;
+	}
+}
+// System.Void Wanshili.GameManager::ReturnScanePage()
+extern "C"  void GameManager_ReturnScanePage_m960830926 (GameManager_t1384011863 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (GameManager_ReturnScanePage_m960830926_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		bool L_0 = __this->get_isObjectTracking_3();
+		if (!L_0)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(UIPageModule_t1803851549_il2cpp_TypeInfo_var);
+		UIPageModule_t1803851549 * L_1 = UIPageModule_get_Instance_m1069565874(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		UIPageModule_OnReturnScanePage_m1113423833(L_1, /*hidden argument*/NULL);
+		goto IL_0024;
+	}
+
+IL_001a:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(UIPageModule_t1803851549_il2cpp_TypeInfo_var);
+		UIPageModule_t1803851549 * L_2 = UIPageModule_get_Instance_m1069565874(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		UIPageModule_OnVideoReturn_m3659676753(L_2, /*hidden argument*/NULL);
+	}
+
+IL_0024:
 	{
 		return;
 	}

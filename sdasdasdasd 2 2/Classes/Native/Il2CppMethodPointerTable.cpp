@@ -13138,6 +13138,7 @@ extern "C" void GameManager_set_Instance_m4081175891 ();
 extern "C" void GameManager_Awake_m2580745076 ();
 extern "C" void GameManager_Start_m753705411 ();
 extern "C" void GameManager_GiftInformation_m680836865 ();
+extern "C" void GameManager_ReturnScanePage_m960830926 ();
 extern "C" void GameManager_OnPhotoClick_m1759534112 ();
 extern "C" void GameManager_WaitForPhotoStore_m1384574620 ();
 extern "C" void GameManager_OnTargetRecognized_m113493969 ();
@@ -13202,7 +13203,7 @@ extern "C" void XuanyanTechImageTargetBehaviour_OnTargetLost_m1006372200 ();
 extern "C" void XuanyanTechImageTargetBehaviour_OnTargetLoad_m579846499 ();
 extern "C" void XuanyanTechImageTargetBehaviour_OnTargetUnload_m2489658344 ();
 extern "C" void XuanyanTechImageTargetBehaviour_Start_m3379567795 ();
-extern const Il2CppMethodPointer g_MethodPointers[13188] = 
+extern const Il2CppMethodPointer g_MethodPointers[13189] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -26328,6 +26329,7 @@ extern const Il2CppMethodPointer g_MethodPointers[13188] =
 	GameManager_Awake_m2580745076,
 	GameManager_Start_m753705411,
 	GameManager_GiftInformation_m680836865,
+	GameManager_ReturnScanePage_m960830926,
 	GameManager_OnPhotoClick_m1759534112,
 	GameManager_WaitForPhotoStore_m1384574620,
 	GameManager_OnTargetRecognized_m113493969,

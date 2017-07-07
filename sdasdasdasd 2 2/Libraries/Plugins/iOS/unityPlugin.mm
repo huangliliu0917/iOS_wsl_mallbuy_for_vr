@@ -7,7 +7,7 @@
 //
 #import <AFNetworking.h>
 
-#define BASE_URL(path) [NSString stringWithFormat:@"http://183.129.165.54:8081/api/%@", path]
+#define BASE_URL(path) [NSString stringWithFormat:@"http://www.silkafx.com:8081/api/%@", path]
 
 @interface unityPlugin : NSObject
 

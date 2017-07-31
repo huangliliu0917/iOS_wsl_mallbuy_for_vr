@@ -11,7 +11,7 @@
 #include <stdint.h>
 
 #include "mscorlib_System_Enum2459695545.h"
-#include "UnityEngine_UnityEngine_PrimitiveType2454390065.h"
+#include "UnityEngine_UnityEngine_QueryTriggerInteraction478029726.h"
 
 
 
@@ -23,15 +23,15 @@
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.PrimitiveType
-struct  PrimitiveType_t2454390065 
+// UnityEngine.QueryTriggerInteraction
+struct  QueryTriggerInteraction_t478029726 
 {
 public:
-	// System.Int32 UnityEngine.PrimitiveType::value__
+	// System.Int32 UnityEngine.QueryTriggerInteraction::value__
 	int32_t ___value___1;
 
 public:
-	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(PrimitiveType_t2454390065, ___value___1)); }
+	inline static int32_t get_offset_of_value___1() { return static_cast<int32_t>(offsetof(QueryTriggerInteraction_t478029726, ___value___1)); }
 	inline int32_t get_value___1() const { return ___value___1; }
 	inline int32_t* get_address_of_value___1() { return &___value___1; }
 	inline void set_value___1(int32_t value)

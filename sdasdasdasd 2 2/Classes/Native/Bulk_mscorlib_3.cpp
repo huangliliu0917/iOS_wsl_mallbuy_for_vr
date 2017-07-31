@@ -3395,6 +3395,16 @@ extern "C"  void NullReferenceException__ctor_m2202599572 (NullReferenceExceptio
 		return;
 	}
 }
+// System.Void System.NullReferenceException::.ctor(System.String)
+extern "C"  void NullReferenceException__ctor_m2372754786 (NullReferenceException_t3156209119 * __this, String_t* ___message0, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___message0;
+		SystemException__ctor_m4001391027(__this, L_0, /*hidden argument*/NULL);
+		Exception_set_HResult_m2376998645(__this, ((int32_t)-2147467261), /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void System.NullReferenceException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 extern "C"  void NullReferenceException__ctor_m3390502343 (NullReferenceException_t3156209119 * __this, SerializationInfo_t228987430 * ___info0, StreamingContext_t1417235061  ___context1, const MethodInfo* method)
 {

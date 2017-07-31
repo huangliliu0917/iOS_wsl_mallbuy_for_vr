@@ -16,6 +16,7 @@
     NSURLSessionDownloadTask *_download;
     NSString *_videoPath;
 }
+
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
 - (void)saveImage:(NSString *)path;
 
@@ -89,14 +90,14 @@
     return _manager;
 }
 
-- (void)startDownload:(NSString *)url name:(NSString *)name giftID:(NSString *)ID{
+- (void)startDownload:(NSString *)url name:(NSString *)name giftID:(NSString *)ID ARType:(NSString *)ar_type{
     
     NSString *path = [NSString stringWithFormat:@"%@/Documents/videoDownload", NSHomeDirectory()];
-
-    if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/%@.mp4",path, ID]]) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[ar_type isEqualToString:@"video"] ? [NSString stringWithFormat:@"%@/%@.mp4",path, ID] : [NSString stringWithFormat:@"%@/%@.zip",path, ID]]) {
         
-        
-        NSDictionary *dic = @{@"type":@"1", @"path":[NSString stringWithFormat:@"%@/%@.mp4", path, ID], @"modelName":@"ss"};
+        NSString *type = [ar_type isEqualToString:@"video"] ? @"1" : @"0";
+        NSString *resoursePath = [ar_type isEqualToString:@"video"] ? [NSString stringWithFormat:@"%@/%@.mp4", path, ID] : [NSString stringWithFormat:@"%@/%@.zip", path, ID];
+        NSDictionary *dic = @{@"type":type, @"path":path, @"modelName":@"wudao_demo1"};
         
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
         
@@ -119,18 +120,20 @@
         
         NSURLSessionDownloadTask *download = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
             
-            
+            NSLog(@"----%@", downloadProgress);
         } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
             
-            NSString *savePath = [NSString stringWithFormat:@"%@/%@.mp4",path, ID];
+            NSString *savePath = [ar_type isEqualToString:@"video"] ? [NSString stringWithFormat:@"%@/%@.mp4",path, ID] : [NSString stringWithFormat:@"%@/%@.zip",path, ID];
             NSURL *url = [NSURL fileURLWithPath:savePath];
             return url;
             
         } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
 
-            NSString *giftPath = [NSString stringWithFormat:@"%@/Documents/videoDownload/%@.mp4", NSHomeDirectory(), ID];
+            NSString *giftPath = [ar_type isEqualToString:@"video"] ? [NSString stringWithFormat:@"%@/Documents/videoDownload/%@.mp4", NSHomeDirectory(), ID] : [NSString stringWithFormat:@"%@/Documents/videoDownload/%@.zip", NSHomeDirectory(), ID];
             if ([[NSFileManager defaultManager] fileExistsAtPath:giftPath]) {
-                NSDictionary *dic = @{@"type":@"1", @"path":giftPath, @"modelName":@"ss"};
+                NSString *type = [ar_type isEqualToString:@"video"] ? @"1" : @"0";
+                
+                NSDictionary *dic = @{@"type":type, @"path":path, @"modelName":@"wudao_demo1"};
                 
                 NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
                 
@@ -153,7 +156,7 @@
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
         
-        [self startDownload:dic[@"ar_url"] name:name  giftID:dic[@"id"]];
+        [self startDownload:dic[@"ar_url"] name:name  giftID:dic[@"id"] ARType:dic[@"ar_type"]];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

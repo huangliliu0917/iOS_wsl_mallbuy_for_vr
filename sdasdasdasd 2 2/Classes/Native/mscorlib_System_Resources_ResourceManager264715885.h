@@ -14,8 +14,14 @@
 
 // System.Collections.Hashtable
 struct Hashtable_t909839986;
+// System.String
+struct String_t;
+// System.Reflection.Assembly
+struct Assembly_t4268412390;
 // System.Type
 struct Type_t;
+// System.Globalization.CultureInfo
+struct CultureInfo_t3500843524;
 
 
 
@@ -30,17 +36,61 @@ struct Type_t;
 struct  ResourceManager_t264715885  : public Il2CppObject
 {
 public:
+	// System.String System.Resources.ResourceManager::BaseNameField
+	String_t* ___BaseNameField_4;
+	// System.Reflection.Assembly System.Resources.ResourceManager::MainAssembly
+	Assembly_t4268412390 * ___MainAssembly_5;
+	// System.Collections.Hashtable System.Resources.ResourceManager::ResourceSets
+	Hashtable_t909839986 * ___ResourceSets_6;
 	// System.Type System.Resources.ResourceManager::resourceSetType
-	Type_t * ___resourceSetType_4;
+	Type_t * ___resourceSetType_7;
+	// System.Globalization.CultureInfo System.Resources.ResourceManager::neutral_culture
+	CultureInfo_t3500843524 * ___neutral_culture_8;
 
 public:
-	inline static int32_t get_offset_of_resourceSetType_4() { return static_cast<int32_t>(offsetof(ResourceManager_t264715885, ___resourceSetType_4)); }
-	inline Type_t * get_resourceSetType_4() const { return ___resourceSetType_4; }
-	inline Type_t ** get_address_of_resourceSetType_4() { return &___resourceSetType_4; }
-	inline void set_resourceSetType_4(Type_t * value)
+	inline static int32_t get_offset_of_BaseNameField_4() { return static_cast<int32_t>(offsetof(ResourceManager_t264715885, ___BaseNameField_4)); }
+	inline String_t* get_BaseNameField_4() const { return ___BaseNameField_4; }
+	inline String_t** get_address_of_BaseNameField_4() { return &___BaseNameField_4; }
+	inline void set_BaseNameField_4(String_t* value)
 	{
-		___resourceSetType_4 = value;
-		Il2CppCodeGenWriteBarrier(&___resourceSetType_4, value);
+		___BaseNameField_4 = value;
+		Il2CppCodeGenWriteBarrier(&___BaseNameField_4, value);
+	}
+
+	inline static int32_t get_offset_of_MainAssembly_5() { return static_cast<int32_t>(offsetof(ResourceManager_t264715885, ___MainAssembly_5)); }
+	inline Assembly_t4268412390 * get_MainAssembly_5() const { return ___MainAssembly_5; }
+	inline Assembly_t4268412390 ** get_address_of_MainAssembly_5() { return &___MainAssembly_5; }
+	inline void set_MainAssembly_5(Assembly_t4268412390 * value)
+	{
+		___MainAssembly_5 = value;
+		Il2CppCodeGenWriteBarrier(&___MainAssembly_5, value);
+	}
+
+	inline static int32_t get_offset_of_ResourceSets_6() { return static_cast<int32_t>(offsetof(ResourceManager_t264715885, ___ResourceSets_6)); }
+	inline Hashtable_t909839986 * get_ResourceSets_6() const { return ___ResourceSets_6; }
+	inline Hashtable_t909839986 ** get_address_of_ResourceSets_6() { return &___ResourceSets_6; }
+	inline void set_ResourceSets_6(Hashtable_t909839986 * value)
+	{
+		___ResourceSets_6 = value;
+		Il2CppCodeGenWriteBarrier(&___ResourceSets_6, value);
+	}
+
+	inline static int32_t get_offset_of_resourceSetType_7() { return static_cast<int32_t>(offsetof(ResourceManager_t264715885, ___resourceSetType_7)); }
+	inline Type_t * get_resourceSetType_7() const { return ___resourceSetType_7; }
+	inline Type_t ** get_address_of_resourceSetType_7() { return &___resourceSetType_7; }
+	inline void set_resourceSetType_7(Type_t * value)
+	{
+		___resourceSetType_7 = value;
+		Il2CppCodeGenWriteBarrier(&___resourceSetType_7, value);
+	}
+
+	inline static int32_t get_offset_of_neutral_culture_8() { return static_cast<int32_t>(offsetof(ResourceManager_t264715885, ___neutral_culture_8)); }
+	inline CultureInfo_t3500843524 * get_neutral_culture_8() const { return ___neutral_culture_8; }
+	inline CultureInfo_t3500843524 ** get_address_of_neutral_culture_8() { return &___neutral_culture_8; }
+	inline void set_neutral_culture_8(CultureInfo_t3500843524 * value)
+	{
+		___neutral_culture_8 = value;
+		Il2CppCodeGenWriteBarrier(&___neutral_culture_8, value);
 	}
 };
 

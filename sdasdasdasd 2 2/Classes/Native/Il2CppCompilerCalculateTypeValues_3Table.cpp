@@ -1014,13 +1014,17 @@ extern const int32_t g_FieldOffsetTable380[1] =
 	NeutralResourcesLanguageAttribute_t3267676636::get_offset_of_culture_0(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize381 = { sizeof (ResourceManager_t264715885), -1, sizeof(ResourceManager_t264715885_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable381[5] = 
+extern const int32_t g_FieldOffsetTable381[9] = 
 {
 	ResourceManager_t264715885_StaticFields::get_offset_of_ResourceCache_0(),
 	ResourceManager_t264715885_StaticFields::get_offset_of_NonExistent_1(),
 	ResourceManager_t264715885_StaticFields::get_offset_of_HeaderVersionNumber_2(),
 	ResourceManager_t264715885_StaticFields::get_offset_of_MagicNumber_3(),
-	ResourceManager_t264715885::get_offset_of_resourceSetType_4(),
+	ResourceManager_t264715885::get_offset_of_BaseNameField_4(),
+	ResourceManager_t264715885::get_offset_of_MainAssembly_5(),
+	ResourceManager_t264715885::get_offset_of_ResourceSets_6(),
+	ResourceManager_t264715885::get_offset_of_resourceSetType_7(),
+	ResourceManager_t264715885::get_offset_of_neutral_culture_8(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize382 = { sizeof (PredefinedResourceType_t3623697780)+ sizeof (Il2CppObject), sizeof(int32_t), 0, 0 };
 extern const int32_t g_FieldOffsetTable382[21] = 

@@ -86,11 +86,27 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_streamingAssetsPath();
 		Register_UnityEngine_Application_get_streamingAssetsPath();
 
+		//System.Void UnityEngine.Application::SetLogCallbackDefined(System.Boolean)
+		void Register_UnityEngine_Application_SetLogCallbackDefined();
+		Register_UnityEngine_Application_SetLogCallbackDefined();
+
 		//UnityEngine.RuntimePlatform UnityEngine.Application::get_platform()
 		void Register_UnityEngine_Application_get_platform();
 		Register_UnityEngine_Application_get_platform();
 
 	//End Registrations for type : UnityEngine.Application
+
+	//Start Registrations for type : UnityEngine.AssetBundle
+
+		//System.Void UnityEngine.AssetBundle::Unload(System.Boolean)
+		void Register_UnityEngine_AssetBundle_Unload();
+		Register_UnityEngine_AssetBundle_Unload();
+
+		//UnityEngine.Object UnityEngine.AssetBundle::LoadAsset_Internal(System.String,System.Type)
+		void Register_UnityEngine_AssetBundle_LoadAsset_Internal();
+		Register_UnityEngine_AssetBundle_LoadAsset_Internal();
+
+	//End Registrations for type : UnityEngine.AssetBundle
 
 	//Start Registrations for type : UnityEngine.AssetBundleCreateRequest
 
@@ -103,6 +119,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_AssetBundleCreateRequest_get_assetBundle();
 
 	//End Registrations for type : UnityEngine.AssetBundleCreateRequest
+
+	//Start Registrations for type : UnityEngine.AssetBundleManifest
+
+		//System.String[] UnityEngine.AssetBundleManifest::GetAllDependencies(System.String)
+		void Register_UnityEngine_AssetBundleManifest_GetAllDependencies();
+		Register_UnityEngine_AssetBundleManifest_GetAllDependencies();
+
+	//End Registrations for type : UnityEngine.AssetBundleManifest
 
 	//Start Registrations for type : UnityEngine.AssetBundleRequest
 
@@ -149,6 +173,10 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.AsyncOperation
 
 	//Start Registrations for type : UnityEngine.AudioSource
+
+		//System.Boolean UnityEngine.AudioSource::get_isPlaying()
+		void Register_UnityEngine_AudioSource_get_isPlaying();
+		Register_UnityEngine_AudioSource_get_isPlaying();
 
 		//System.Void UnityEngine.AudioSource::Play(System.UInt64)
 		void Register_UnityEngine_AudioSource_Play();
@@ -515,6 +543,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_CanvasRenderer_set_popMaterialCount();
 
 	//End Registrations for type : UnityEngine.CanvasRenderer
+
+	//Start Registrations for type : UnityEngine.Collider
+
+		//UnityEngine.Rigidbody UnityEngine.Collider::get_attachedRigidbody()
+		void Register_UnityEngine_Collider_get_attachedRigidbody();
+		Register_UnityEngine_Collider_get_attachedRigidbody();
+
+	//End Registrations for type : UnityEngine.Collider
 
 	//Start Registrations for type : UnityEngine.Component
 
@@ -989,10 +1025,6 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.Component UnityEngine.GameObject::Internal_AddComponentWithType(System.Type)
 		void Register_UnityEngine_GameObject_Internal_AddComponentWithType();
 		Register_UnityEngine_GameObject_Internal_AddComponentWithType();
-
-		//UnityEngine.GameObject UnityEngine.GameObject::CreatePrimitive(UnityEngine.PrimitiveType)
-		void Register_UnityEngine_GameObject_CreatePrimitive();
-		Register_UnityEngine_GameObject_CreatePrimitive();
 
 		//UnityEngine.GameObject UnityEngine.GameObject::Find(System.String)
 		void Register_UnityEngine_GameObject_Find();
@@ -1507,6 +1539,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Gyroscope_setEnabled_Internal();
 
 	//End Registrations for type : UnityEngine.Gyroscope
+
+	//Start Registrations for type : UnityEngine.Hash128
+
+		//System.String UnityEngine.Hash128::Internal_Hash128ToString(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+		void Register_UnityEngine_Hash128_Internal_Hash128ToString();
+		Register_UnityEngine_Hash128_Internal_Hash128ToString();
+
+	//End Registrations for type : UnityEngine.Hash128
 
 	//Start Registrations for type : UnityEngine.Input
 
@@ -2128,6 +2168,22 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Object
 
+	//Start Registrations for type : UnityEngine.Physics
+
+		//System.Boolean UnityEngine.Physics::INTERNAL_CALL_Internal_Raycast(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.RaycastHit&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+		void Register_UnityEngine_Physics_INTERNAL_CALL_Internal_Raycast();
+		Register_UnityEngine_Physics_INTERNAL_CALL_Internal_Raycast();
+
+		//System.Boolean UnityEngine.Physics::INTERNAL_CALL_Internal_RaycastTest(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+		void Register_UnityEngine_Physics_INTERNAL_CALL_Internal_RaycastTest();
+		Register_UnityEngine_Physics_INTERNAL_CALL_Internal_RaycastTest();
+
+		//UnityEngine.RaycastHit[] UnityEngine.Physics::INTERNAL_CALL_RaycastAll(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+		void Register_UnityEngine_Physics_INTERNAL_CALL_RaycastAll();
+		Register_UnityEngine_Physics_INTERNAL_CALL_RaycastAll();
+
+	//End Registrations for type : UnityEngine.Physics
+
 	//Start Registrations for type : UnityEngine.QualitySettings
 
 		//UnityEngine.ColorSpace UnityEngine.QualitySettings::get_activeColorSpace()
@@ -2383,6 +2439,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Resources_FindObjectsOfTypeAll();
 
 	//End Registrations for type : UnityEngine.Resources
+
+	//Start Registrations for type : UnityEngine.Rigidbody
+
+		//System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
+		void Register_UnityEngine_Rigidbody_set_freezeRotation();
+		Register_UnityEngine_Rigidbody_set_freezeRotation();
+
+	//End Registrations for type : UnityEngine.Rigidbody
 
 	//Start Registrations for type : UnityEngine.Screen
 
@@ -2951,5 +3015,29 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_VR_VRSettings_set_enabled();
 
 	//End Registrations for type : UnityEngine.VR.VRSettings
+
+	//Start Registrations for type : UnityEngine.WWW
+
+		//System.Boolean UnityEngine.WWW::get_isDone()
+		void Register_UnityEngine_WWW_get_isDone();
+		Register_UnityEngine_WWW_get_isDone();
+
+		//System.String UnityEngine.WWW::get_error()
+		void Register_UnityEngine_WWW_get_error();
+		Register_UnityEngine_WWW_get_error();
+
+		//System.Void UnityEngine.WWW::DestroyWWW(System.Boolean)
+		void Register_UnityEngine_WWW_DestroyWWW();
+		Register_UnityEngine_WWW_DestroyWWW();
+
+		//System.Void UnityEngine.WWW::INTERNAL_CALL_WWW(UnityEngine.WWW,System.String,UnityEngine.Hash128&,System.UInt32)
+		void Register_UnityEngine_WWW_INTERNAL_CALL_WWW();
+		Register_UnityEngine_WWW_INTERNAL_CALL_WWW();
+
+		//UnityEngine.AssetBundle UnityEngine.WWW::get_assetBundle()
+		void Register_UnityEngine_WWW_get_assetBundle();
+		Register_UnityEngine_WWW_get_assetBundle();
+
+	//End Registrations for type : UnityEngine.WWW
 
 }

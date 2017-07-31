@@ -176,6 +176,14 @@ extern "C" void DelegatePInvokeWrapper_AudioConfigurationChangeHandler_t37437530
 extern const Il2CppType AudioConfigurationChangeHandler_t3743753033_0_0_0;
 extern "C" void DelegatePInvokeWrapper_WillRenderCanvases_t3522132132();
 extern const Il2CppType WillRenderCanvases_t3522132132_0_0_0;
+extern "C" void Collision_t2876846408_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void Collision_t2876846408_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void Collision_t2876846408_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const Il2CppType Collision_t2876846408_0_0_0;
+extern "C" void ControllerColliderHit_t4070855101_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void ControllerColliderHit_t4070855101_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void ControllerColliderHit_t4070855101_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const Il2CppType ControllerColliderHit_t4070855101_0_0_0;
 extern "C" void Coroutine_t2299508840_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
 extern "C" void Coroutine_t2299508840_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void Coroutine_t2299508840_marshal_pinvoke_cleanup(void* marshaledStructure);
@@ -352,7 +360,23 @@ extern "C" void SpriteState_t1353336012_marshal_pinvoke_cleanup(void* marshaledS
 extern const Il2CppType SpriteState_t1353336012_0_0_0;
 extern "C" void DelegatePInvokeWrapper_DebugLogCallbackDelegate_t1435929025();
 extern const Il2CppType DebugLogCallbackDelegate_t1435929025_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[102] = 
+extern "C" void Decoder2_t824255155_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void Decoder2_t824255155_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void Decoder2_t824255155_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const Il2CppType Decoder2_t824255155_0_0_0;
+extern "C" void Encoder2_t2131094305_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void Encoder2_t2131094305_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void Encoder2_t2131094305_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const Il2CppType Encoder2_t2131094305_0_0_0;
+extern "C" void BitTreeDecoder_t673053005_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void BitTreeDecoder_t673053005_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void BitTreeDecoder_t673053005_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const Il2CppType BitTreeDecoder_t673053005_0_0_0;
+extern "C" void BitTreeEncoder_t1009728003_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void BitTreeEncoder_t1009728003_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void BitTreeEncoder_t1009728003_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const Il2CppType BitTreeEncoder_t1009728003_0_0_0;
+extern Il2CppInteropData g_Il2CppInteropData[108] = 
 {
 	{ NULL, Context_t2636657155_marshal_pinvoke, Context_t2636657155_marshal_pinvoke_back, Context_t2636657155_marshal_pinvoke_cleanup, NULL, NULL, &Context_t2636657155_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Context */,
 	{ NULL, Escape_t169451053_marshal_pinvoke, Escape_t169451053_marshal_pinvoke_back, Escape_t169451053_marshal_pinvoke_cleanup, NULL, NULL, &Escape_t169451053_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Escape */,
@@ -402,6 +426,8 @@ extern Il2CppInteropData g_Il2CppInteropData[102] =
 	{ DelegatePInvokeWrapper_PCMSetPositionCallback_t421863554, NULL, NULL, NULL, NULL, NULL, &PCMSetPositionCallback_t421863554_0_0_0 } /* UnityEngine.AudioClip/PCMSetPositionCallback */,
 	{ DelegatePInvokeWrapper_AudioConfigurationChangeHandler_t3743753033, NULL, NULL, NULL, NULL, NULL, &AudioConfigurationChangeHandler_t3743753033_0_0_0 } /* UnityEngine.AudioSettings/AudioConfigurationChangeHandler */,
 	{ DelegatePInvokeWrapper_WillRenderCanvases_t3522132132, NULL, NULL, NULL, NULL, NULL, &WillRenderCanvases_t3522132132_0_0_0 } /* UnityEngine.Canvas/WillRenderCanvases */,
+	{ NULL, Collision_t2876846408_marshal_pinvoke, Collision_t2876846408_marshal_pinvoke_back, Collision_t2876846408_marshal_pinvoke_cleanup, NULL, NULL, &Collision_t2876846408_0_0_0 } /* UnityEngine.Collision */,
+	{ NULL, ControllerColliderHit_t4070855101_marshal_pinvoke, ControllerColliderHit_t4070855101_marshal_pinvoke_back, ControllerColliderHit_t4070855101_marshal_pinvoke_cleanup, NULL, NULL, &ControllerColliderHit_t4070855101_0_0_0 } /* UnityEngine.ControllerColliderHit */,
 	{ NULL, Coroutine_t2299508840_marshal_pinvoke, Coroutine_t2299508840_marshal_pinvoke_back, Coroutine_t2299508840_marshal_pinvoke_cleanup, NULL, NULL, &Coroutine_t2299508840_0_0_0 } /* UnityEngine.Coroutine */,
 	{ NULL, CullingGroup_t1091689465_marshal_pinvoke, CullingGroup_t1091689465_marshal_pinvoke_back, CullingGroup_t1091689465_marshal_pinvoke_cleanup, NULL, NULL, &CullingGroup_t1091689465_0_0_0 } /* UnityEngine.CullingGroup */,
 	{ DelegatePInvokeWrapper_StateChanged_t2480912210, NULL, NULL, NULL, NULL, NULL, &StateChanged_t2480912210_0_0_0 } /* UnityEngine.CullingGroup/StateChanged */,
@@ -455,5 +481,9 @@ extern Il2CppInteropData g_Il2CppInteropData[102] =
 	{ NULL, Navigation_t1571958496_marshal_pinvoke, Navigation_t1571958496_marshal_pinvoke_back, Navigation_t1571958496_marshal_pinvoke_cleanup, NULL, NULL, &Navigation_t1571958496_0_0_0 } /* UnityEngine.UI.Navigation */,
 	{ NULL, SpriteState_t1353336012_marshal_pinvoke, SpriteState_t1353336012_marshal_pinvoke_back, SpriteState_t1353336012_marshal_pinvoke_cleanup, NULL, NULL, &SpriteState_t1353336012_0_0_0 } /* UnityEngine.UI.SpriteState */,
 	{ DelegatePInvokeWrapper_DebugLogCallbackDelegate_t1435929025, NULL, NULL, NULL, NULL, NULL, &DebugLogCallbackDelegate_t1435929025_0_0_0 } /* RenderHeads.Media.AVProVideo.OSXMediaPlayer/DebugLogCallbackDelegate */,
+	{ NULL, Decoder2_t824255155_marshal_pinvoke, Decoder2_t824255155_marshal_pinvoke_back, Decoder2_t824255155_marshal_pinvoke_cleanup, NULL, NULL, &Decoder2_t824255155_0_0_0 } /* SevenZip.Compression.LZMA.Decoder/LiteralDecoder/Decoder2 */,
+	{ NULL, Encoder2_t2131094305_marshal_pinvoke, Encoder2_t2131094305_marshal_pinvoke_back, Encoder2_t2131094305_marshal_pinvoke_cleanup, NULL, NULL, &Encoder2_t2131094305_0_0_0 } /* SevenZip.Compression.LZMA.Encoder/LiteralEncoder/Encoder2 */,
+	{ NULL, BitTreeDecoder_t673053005_marshal_pinvoke, BitTreeDecoder_t673053005_marshal_pinvoke_back, BitTreeDecoder_t673053005_marshal_pinvoke_cleanup, NULL, NULL, &BitTreeDecoder_t673053005_0_0_0 } /* SevenZip.Compression.RangeCoder.BitTreeDecoder */,
+	{ NULL, BitTreeEncoder_t1009728003_marshal_pinvoke, BitTreeEncoder_t1009728003_marshal_pinvoke_back, BitTreeEncoder_t1009728003_marshal_pinvoke_cleanup, NULL, NULL, &BitTreeEncoder_t1009728003_0_0_0 } /* SevenZip.Compression.RangeCoder.BitTreeEncoder */,
 	NULL,
 };

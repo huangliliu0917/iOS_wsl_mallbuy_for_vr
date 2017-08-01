@@ -42,6 +42,7 @@ PODS:
   - SVProgressHUD (2.0.3)
   - TPKeyboardAvoiding (1.3)
   - UMengAnalytics-NO-IDFA (4.1.3)
+  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - SVProgressHUD
   - TPKeyboardAvoiding
   - UMengAnalytics-NO-IDFA
+  - ZipArchive (~> 1.4.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -69,7 +71,8 @@ SPEC CHECKSUMS:
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
   UMengAnalytics-NO-IDFA: b26a7003458204d4549b6bd132c2f07dd5942b86
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 5c56c669dbd0150f0adc2cde00e1ae3a5f51e3ce
+PODFILE CHECKSUM: 76de1a4f4b8323e6e44fe401bdfd9ceb9d5027c8
 
 COCOAPODS: 1.2.1

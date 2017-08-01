@@ -8,7 +8,7 @@ target 'sdasdasdasd' do
   # use_frameworks!
 
   # Pods for sdasdasdasd
-
+pod 'ZipArchive', '~> 1.4.0'
 pod 'SVProgressHUD'
 pod 'BlocksKit'
 pod 'iRate'

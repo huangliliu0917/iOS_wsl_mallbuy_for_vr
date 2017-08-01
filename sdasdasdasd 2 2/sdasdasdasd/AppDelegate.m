@@ -119,8 +119,6 @@
     [self registRemoteNotification:application];
     
     
-    
-    
     return YES;
 }
 //

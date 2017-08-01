@@ -40,6 +40,7 @@
 		C756A92D1EF8BF2B00B29877 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C756A92C1EF8BF2B00B29877 /* OpenAL.framework */; };
 		C756A92F1EF8BF3400B29877 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C756A92E1EF8BF3400B29877 /* OpenGLES.framework */; };
 		C756A9311EF8BF5A00B29877 /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C756A9301EF8BF5A00B29877 /* libiconv.2.tbd */; };
+		C78E8D661F2F0A1A00798663 /* Bulk_ICSharpCode.SharpZipLib_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C78E8D651F2F0A1A00798663 /* Bulk_ICSharpCode.SharpZipLib_0.cpp */; };
 		C799BC191EBC9C1900AA9E97 /* CrashReporter.mm in Sources */ = {isa = PBXBuildFile; fileRef = C799AD831EBC9BDE00AA9E97 /* CrashReporter.mm */; };
 		C799BC1A1EBC9C1900AA9E97 /* iPhone_Sensors.mm in Sources */ = {isa = PBXBuildFile; fileRef = C799AD851EBC9BDE00AA9E97 /* iPhone_Sensors.mm */; };
 		C799BC1B1EBC9C1900AA9E97 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = C799AD861EBC9BDE00AA9E97 /* main.mm */; };
@@ -313,6 +314,7 @@
 		C756A92C1EF8BF2B00B29877 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		C756A92E1EF8BF3400B29877 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		C756A9301EF8BF5A00B29877 /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
+		C78E8D651F2F0A1A00798663 /* Bulk_ICSharpCode.SharpZipLib_0.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bulk_ICSharpCode.SharpZipLib_0.cpp; sourceTree = "<group>"; };
 		C799AD821EBC9BDE00AA9E97 /* CrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashReporter.h; sourceTree = "<group>"; };
 		C799AD831EBC9BDE00AA9E97 /* CrashReporter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CrashReporter.mm; sourceTree = "<group>"; };
 		C799AD841EBC9BDE00AA9E97 /* iPhone_Sensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Sensors.h; sourceTree = "<group>"; };
@@ -956,6 +958,7 @@
 		C799AD871EBC9BDE00AA9E97 /* Native */ = {
 			isa = PBXGroup;
 			children = (
+				C78E8D651F2F0A1A00798663 /* Bulk_ICSharpCode.SharpZipLib_0.cpp */,
 				C799AE091EBC9BDE00AA9E97 /* Bulk_Assembly-CSharp_0.cpp */,
 				C799AE101EBC9BDE00AA9E97 /* Bulk_EasyAR.Unity_0.cpp */,
 				C799AE111EBC9BDE00AA9E97 /* Bulk_Generics_0.cpp */,
@@ -1827,7 +1830,7 @@
 				TargetAttributes = {
 					EFA6D3511C04514500B39B36 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 5X8F22ZYCG;
+						DevelopmentTeam = 5MJV2364W2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -2147,6 +2150,7 @@
 				EF9D4C591C055FF900D005E8 /* UIImage+LHB.m in Sources */,
 				C799BC7B1EBC9C1A00AA9E97 /* CVTextureCache.mm in Sources */,
 				C799BC541EBC9C1900AA9E97 /* Il2CppCompilerCalculateTypeValues_3Table.cpp in Sources */,
+				C78E8D661F2F0A1A00798663 /* Bulk_ICSharpCode.SharpZipLib_0.cpp in Sources */,
 				C799BC6B1EBC9C1A00AA9E97 /* UnresolvedVirtualCallStubs.cpp in Sources */,
 				C799BC5E1EBC9C1900AA9E97 /* Il2CppGenericInstDefinitions.cpp in Sources */,
 				EF9D4C7D1C055FF900D005E8 /* ApiXml.mm in Sources */,
@@ -2403,7 +2407,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5X8F22ZYCG;
+				DEVELOPMENT_TEAM = 5MJV2364W2;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2484,7 +2488,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5X8F22ZYCG;
+				DEVELOPMENT_TEAM = 5MJV2364W2;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (

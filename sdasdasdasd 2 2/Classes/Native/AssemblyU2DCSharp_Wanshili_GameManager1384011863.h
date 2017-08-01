@@ -16,6 +16,8 @@
 struct String_t;
 // UnityEngine.GameObject
 struct GameObject_t1756533147;
+// System.Collections.Generic.List`1<UnityEngine.AssetBundle>
+struct List_1_t1424099886;
 // Wanshili.GameManager
 struct GameManager_t1384011863;
 
@@ -46,6 +48,10 @@ public:
 	bool ___isLoaded_7;
 	// System.String Wanshili.GameManager::m_assetbundlePath
 	String_t* ___m_assetbundlePath_8;
+	// System.Collections.Generic.List`1<UnityEngine.AssetBundle> Wanshili.GameManager::assetBundleList
+	List_1_t1424099886 * ___assetBundleList_9;
+	// System.Boolean Wanshili.GameManager::m_isCapture
+	bool ___m_isCapture_10;
 
 public:
 	inline static int32_t get_offset_of_m_photoPath_2() { return static_cast<int32_t>(offsetof(GameManager_t1384011863, ___m_photoPath_2)); }
@@ -108,22 +114,39 @@ public:
 		___m_assetbundlePath_8 = value;
 		Il2CppCodeGenWriteBarrier(&___m_assetbundlePath_8, value);
 	}
+
+	inline static int32_t get_offset_of_assetBundleList_9() { return static_cast<int32_t>(offsetof(GameManager_t1384011863, ___assetBundleList_9)); }
+	inline List_1_t1424099886 * get_assetBundleList_9() const { return ___assetBundleList_9; }
+	inline List_1_t1424099886 ** get_address_of_assetBundleList_9() { return &___assetBundleList_9; }
+	inline void set_assetBundleList_9(List_1_t1424099886 * value)
+	{
+		___assetBundleList_9 = value;
+		Il2CppCodeGenWriteBarrier(&___assetBundleList_9, value);
+	}
+
+	inline static int32_t get_offset_of_m_isCapture_10() { return static_cast<int32_t>(offsetof(GameManager_t1384011863, ___m_isCapture_10)); }
+	inline bool get_m_isCapture_10() const { return ___m_isCapture_10; }
+	inline bool* get_address_of_m_isCapture_10() { return &___m_isCapture_10; }
+	inline void set_m_isCapture_10(bool value)
+	{
+		___m_isCapture_10 = value;
+	}
 };
 
 struct GameManager_t1384011863_StaticFields
 {
 public:
 	// Wanshili.GameManager Wanshili.GameManager::m_instance
-	GameManager_t1384011863 * ___m_instance_9;
+	GameManager_t1384011863 * ___m_instance_11;
 
 public:
-	inline static int32_t get_offset_of_m_instance_9() { return static_cast<int32_t>(offsetof(GameManager_t1384011863_StaticFields, ___m_instance_9)); }
-	inline GameManager_t1384011863 * get_m_instance_9() const { return ___m_instance_9; }
-	inline GameManager_t1384011863 ** get_address_of_m_instance_9() { return &___m_instance_9; }
-	inline void set_m_instance_9(GameManager_t1384011863 * value)
+	inline static int32_t get_offset_of_m_instance_11() { return static_cast<int32_t>(offsetof(GameManager_t1384011863_StaticFields, ___m_instance_11)); }
+	inline GameManager_t1384011863 * get_m_instance_11() const { return ___m_instance_11; }
+	inline GameManager_t1384011863 ** get_address_of_m_instance_11() { return &___m_instance_11; }
+	inline void set_m_instance_11(GameManager_t1384011863 * value)
 	{
-		___m_instance_9 = value;
-		Il2CppCodeGenWriteBarrier(&___m_instance_9, value);
+		___m_instance_11 = value;
+		Il2CppCodeGenWriteBarrier(&___m_instance_11, value);
 	}
 };
 

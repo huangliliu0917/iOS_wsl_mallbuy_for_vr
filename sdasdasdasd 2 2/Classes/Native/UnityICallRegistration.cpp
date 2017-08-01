@@ -264,6 +264,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.BitStream
 
+	//Start Registrations for type : UnityEngine.Caching
+
+		//System.Boolean UnityEngine.Caching::CleanCache()
+		void Register_UnityEngine_Caching_CleanCache();
+		Register_UnityEngine_Caching_CleanCache();
+
+	//End Registrations for type : UnityEngine.Caching
+
 	//Start Registrations for type : UnityEngine.Camera
 
 		//System.Int32 UnityEngine.Camera::GetAllCameras(UnityEngine.Camera[])
@@ -2425,6 +2433,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Resources::UnloadAsset(UnityEngine.Object)
 		void Register_UnityEngine_Resources_UnloadAsset();
 		Register_UnityEngine_Resources_UnloadAsset();
+
+		//UnityEngine.AsyncOperation UnityEngine.Resources::UnloadUnusedAssets()
+		void Register_UnityEngine_Resources_UnloadUnusedAssets();
+		Register_UnityEngine_Resources_UnloadUnusedAssets();
 
 		//UnityEngine.Object UnityEngine.Resources::GetBuiltinResource(System.Type,System.String)
 		void Register_UnityEngine_Resources_GetBuiltinResource();

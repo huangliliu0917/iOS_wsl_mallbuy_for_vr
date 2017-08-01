@@ -87,9 +87,11 @@ extern bool _skipPresent;
 }
 
 - (void)identifySucceed {
-    [_backBtn setHidden:YES];
-    [_photoBtn setHidden:YES];
-    [_screenshotBtn setHidden:YES];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"ARStyle"] isEqualToString:@"video"]) {
+        [_backBtn setHidden:YES];
+        [_photoBtn setHidden:YES];
+        [_screenshotBtn setHidden:YES];
+    }
 }
 
 - (void)videoBack {
@@ -119,9 +121,15 @@ extern bool _skipPresent;
 
 - (void)backBtnClicked {
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"quitAR" object:nil];
-    [[self getCurrentViewController] dismissViewControllerAnimated:NO completion:nil];
-    UnityPause(true);
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"ARStyle"] isEqualToString:@"video"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"quitAR" object:nil];
+        [[self getCurrentViewController] dismissViewControllerAnimated:NO completion:nil];
+        UnityPause(true);
+    } else {
+        [[NSUserDefaults standardUserDefaults] setObject:@"video" forKey:@"ARStyle"];
+        UnitySendMessage("GameManager", "ReturnScanePage", "");
+    }
+    
 }
 
 - (void)photoBtnClicked {

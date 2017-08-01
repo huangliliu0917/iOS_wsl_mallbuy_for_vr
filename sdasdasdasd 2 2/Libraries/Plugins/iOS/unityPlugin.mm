@@ -6,6 +6,7 @@
 //
 //
 #import <AFNetworking.h>
+#import <ZipArchive/ZipArchive.h>
 
 #define BASE_URL(path) [NSString stringWithFormat:@"http://www.silkafx.com:8081/api/%@", path]
 
@@ -15,6 +16,7 @@
     NSString *_photoPath;
     NSURLSessionDownloadTask *_download;
     NSString *_videoPath;
+    NSString *_name;
 }
 
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
@@ -40,6 +42,9 @@
 - (void)quitAR {
     if (_download != nil && _download.state == NSURLSessionTaskStateRunning) {
         [_download cancel];
+        if (_name) {
+            [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@/Documents/modelDownload/%@", NSHomeDirectory(), _name] error:nil];
+        }
         UnitySendMessage("GameManager", "ReturnScanePage", "");
     }
 }
@@ -90,13 +95,13 @@
     return _manager;
 }
 
-- (void)startDownload:(NSString *)url name:(NSString *)name giftID:(NSString *)ID ARType:(NSString *)ar_type{
+- (void)startDownload:(NSString *)url name:(NSString *)name giftID:(NSString *)ID{
     
+    [[NSUserDefaults standardUserDefaults] setObject:@"video" forKey:@"ARStyle"];
     NSString *path = [NSString stringWithFormat:@"%@/Documents/videoDownload", NSHomeDirectory()];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:[ar_type isEqualToString:@"video"] ? [NSString stringWithFormat:@"%@/%@.mp4",path, ID] : [NSString stringWithFormat:@"%@/%@.zip",path, ID]]) {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/%@.mp4",path, ID] ]) {
         
-        NSString *type = [ar_type isEqualToString:@"video"] ? @"1" : @"0";
-        NSString *resoursePath = [ar_type isEqualToString:@"video"] ? [NSString stringWithFormat:@"%@/%@.mp4", path, ID] : [NSString stringWithFormat:@"%@/%@.zip", path, ID];
+        NSString *type = @"1" ;
         NSDictionary *dic = @{@"type":type, @"path":path, @"modelName":@"wudao_demo1"};
         
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
@@ -123,15 +128,104 @@
             NSLog(@"----%@", downloadProgress);
         } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
             
-            NSString *savePath = [ar_type isEqualToString:@"video"] ? [NSString stringWithFormat:@"%@/%@.mp4",path, ID] : [NSString stringWithFormat:@"%@/%@.zip",path, ID];
+            NSString *savePath = [NSString stringWithFormat:@"%@/%@.mp4",path, ID];
             NSURL *url = [NSURL fileURLWithPath:savePath];
             return url;
             
         } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
 
-            NSString *giftPath = [ar_type isEqualToString:@"video"] ? [NSString stringWithFormat:@"%@/Documents/videoDownload/%@.mp4", NSHomeDirectory(), ID] : [NSString stringWithFormat:@"%@/Documents/videoDownload/%@.zip", NSHomeDirectory(), ID];
+            NSString *giftPath =[NSString stringWithFormat:@"%@/Documents/videoDownload/%@.mp4", NSHomeDirectory(), ID];
             if ([[NSFileManager defaultManager] fileExistsAtPath:giftPath]) {
-                NSString *type = [ar_type isEqualToString:@"video"] ? @"1" : @"0";
+                NSString *type = @"1";
+                
+                NSDictionary *dic = @{@"type":type, @"path":path, @"modelName":@"wudao_demo1"};
+                
+                NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+                
+                NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"IdentifySucceed" object:nil];
+                UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
+            }
+        }];
+        _download = download;
+        [_download resume];
+    }
+}
+
+- (void)startDownloadModel:(NSString *)url name:(NSString *)name giftID:(NSString *)ID{
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@"model" forKey:@"ARStyle"];
+    _name = name;
+    NSLog(@"%@", url);
+    NSString *path = [NSString stringWithFormat:@"%@/Documents/modelDownload/%@/", NSHomeDirectory(), name];
+    if ([[NSFileManager defaultManager] fileExistsAtPath: path]) {
+        
+        NSString *str1 = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil] firstObject];
+        NSString *type = @"0";
+        NSDictionary *dic = @{@"type":type, @"path":[NSString stringWithFormat:@"%@/%@", path, str1], @"modelName":name};
+        
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+        
+        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"IdentifySucceed" object:nil];
+        
+        UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
+        
+    } else {
+        
+        if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+        }
+        
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        
+        NSURL *modelUrl = [NSURL URLWithString:url];
+        
+        NSURLRequest *request = [NSURLRequest requestWithURL:modelUrl];
+        
+        NSURLSessionDownloadTask *download = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+            NSLog(@"----%@", downloadProgress);
+        } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+            
+            NSString *savePath = [NSString stringWithFormat:@"%@%@.zip",path, name];
+            NSURL *url = [NSURL fileURLWithPath:savePath];
+            return url;
+            
+        } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+            
+            NSString *giftPath = [NSString stringWithFormat:@"%@%@.zip", path, name];
+            if ([[NSFileManager defaultManager] fileExistsAtPath:giftPath]) {
+                
+                
+                NSFileManager *manager = [NSFileManager defaultManager];
+                
+                ZipArchive *zipManager = [[ZipArchive alloc] initWithFileManager:manager];
+                zipManager.progressBlock = ^(int percentage, int filesProcessed, unsigned long numFiles) {
+                    NSLog(@"%d %d %ld", percentage, filesProcessed, numFiles);
+                    if (percentage == 100) {
+                        NSLog(@"解压完了");
+                        [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@/%@.zip", path, name] error:nil];
+                        NSString *str = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil] firstObject];
+                        NSLog(@"*****%@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[NSString stringWithFormat:@"%@/%@", path, str] error:nil]);
+                        NSDictionary *dic = @{@"type":@"0", @"path":[NSString stringWithFormat:@"%@/%@", path, str], @"modelName":name};
+                        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+                        
+                        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+                        
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"IdentifySucceed" object:nil];
+                        
+                        UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
+                    }
+                };
+                [zipManager UnzipOpenFile:giftPath];
+                BOOL ret = [zipManager UnzipFileTo:path overWrite:YES];
+                if (NO == ret) {
+                    [zipManager UnzipCloseFile];
+                }
+                
+                
+                NSString *type = @"0";
                 
                 NSDictionary *dic = @{@"type":type, @"path":path, @"modelName":@"wudao_demo1"};
                 
@@ -156,7 +250,13 @@
         
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
         
-        [self startDownload:dic[@"ar_url"] name:name  giftID:dic[@"id"] ARType:dic[@"ar_type"]];
+        if ([dic[@"ar_type"] isEqualToString:@"video"]) {
+            [self startDownload:dic[@"ar_url"] name:name  giftID:dic[@"id"]];
+        } else {
+            [self startDownloadModel:dic[@"ar_url"] name:dic[@"ar_name"]  giftID:dic[@"id"]];
+        }
+        
+        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         

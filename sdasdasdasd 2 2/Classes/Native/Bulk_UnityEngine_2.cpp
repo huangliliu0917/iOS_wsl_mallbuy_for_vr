@@ -16,6 +16,7 @@
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
+#include "UnityEngine_UnityEngine_QueryTriggerInteraction478029726.h"
 #include "UnityEngine_UnityEngine_Random1170710517.h"
 #include "mscorlib_System_Single2076509932.h"
 #include "mscorlib_System_Int322071877448.h"
@@ -195,9 +196,6 @@
 #include "UnityEngine_UnityEngine_ThreadAndSerializationSafe4226409784.h"
 #include "UnityEngine_UnityEngine_Time31991979.h"
 #include "UnityEngine_UnityEngine_TooltipAttribute4278647215.h"
-#include "UnityEngine_UnityEngine_Touch407273883.h"
-#include "UnityEngine_UnityEngine_TouchPhase2458120420.h"
-#include "UnityEngine_UnityEngine_TouchType2732027771.h"
 
 // UnityEngine.RangeAttribute
 struct RangeAttribute_t3336560921;
@@ -2380,14 +2378,6 @@ extern "C"  void Texture2D_INTERNAL_CALL_GetPixelBilinear_m570286059 (Il2CppObje
 extern "C"  void Texture2D_Apply_m3753817130 (Texture2D_t3542995729 * __this, bool ___updateMipmaps0, bool ___makeNoLongerReadable1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Texture2D::INTERNAL_CALL_ReadPixels(UnityEngine.Texture2D,UnityEngine.Rect&,System.Int32,System.Int32,System.Boolean)
 extern "C"  void Texture2D_INTERNAL_CALL_ReadPixels_m1476963500 (Il2CppObject * __this /* static, unused */, Texture2D_t3542995729 * ___self0, Rect_t3681755626 * ___source1, int32_t ___destX2, int32_t ___destY3, bool ___recalculateMipMaps4, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Touch::get_fingerId()
-extern "C"  int32_t Touch_get_fingerId_m4109475843 (Touch_t407273883 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector2 UnityEngine.Touch::get_position()
-extern "C"  Vector2_t2243707579  Touch_get_position_m2079703643 (Touch_t407273883 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.TouchPhase UnityEngine.Touch::get_phase()
-extern "C"  int32_t Touch_get_phase_m196706494 (Touch_t407273883 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.TouchType UnityEngine.Touch::get_type()
-extern "C"  int32_t Touch_get_type_m3264731406 (Touch_t407273883 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -6115,6 +6105,15 @@ extern "C"  void Resources_UnloadAsset_m1827916571 (Il2CppObject * __this /* sta
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Resources_UnloadAsset_m1827916571_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Resources::UnloadAsset(UnityEngine.Object)");
 	_il2cpp_icall_func(___assetToUnload0);
+}
+// UnityEngine.AsyncOperation UnityEngine.Resources::UnloadUnusedAssets()
+extern "C"  AsyncOperation_t3814632279 * Resources_UnloadUnusedAssets_m2770025609 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	typedef AsyncOperation_t3814632279 * (*Resources_UnloadUnusedAssets_m2770025609_ftn) ();
+	static Resources_UnloadUnusedAssets_m2770025609_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Resources_UnloadUnusedAssets_m2770025609_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Resources::UnloadUnusedAssets()");
+	return _il2cpp_icall_func();
 }
 // System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
 extern "C"  void Rigidbody_set_freezeRotation_m2131864169 (Rigidbody_t4233889191 * __this, bool ___value0, const MethodInfo* method)
@@ -16738,91 +16737,6 @@ extern "C"  void TooltipAttribute__ctor_m2640804852 (TooltipAttribute_t427864721
 		__this->set_tooltip_0(L_0);
 		return;
 	}
-}
-// System.Int32 UnityEngine.Touch::get_fingerId()
-extern "C"  int32_t Touch_get_fingerId_m4109475843 (Touch_t407273883 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		int32_t L_0 = __this->get_m_FingerId_0();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  int32_t Touch_get_fingerId_m4109475843_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Touch_t407273883 * _thisAdjusted = reinterpret_cast<Touch_t407273883 *>(__this + 1);
-	return Touch_get_fingerId_m4109475843(_thisAdjusted, method);
-}
-// UnityEngine.Vector2 UnityEngine.Touch::get_position()
-extern "C"  Vector2_t2243707579  Touch_get_position_m2079703643 (Touch_t407273883 * __this, const MethodInfo* method)
-{
-	Vector2_t2243707579  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector2_t2243707579  L_0 = __this->get_m_Position_1();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		Vector2_t2243707579  L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  Vector2_t2243707579  Touch_get_position_m2079703643_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Touch_t407273883 * _thisAdjusted = reinterpret_cast<Touch_t407273883 *>(__this + 1);
-	return Touch_get_position_m2079703643(_thisAdjusted, method);
-}
-// UnityEngine.TouchPhase UnityEngine.Touch::get_phase()
-extern "C"  int32_t Touch_get_phase_m196706494 (Touch_t407273883 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		int32_t L_0 = __this->get_m_Phase_6();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  int32_t Touch_get_phase_m196706494_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Touch_t407273883 * _thisAdjusted = reinterpret_cast<Touch_t407273883 *>(__this + 1);
-	return Touch_get_phase_m196706494(_thisAdjusted, method);
-}
-// UnityEngine.TouchType UnityEngine.Touch::get_type()
-extern "C"  int32_t Touch_get_type_m3264731406 (Touch_t407273883 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		int32_t L_0 = __this->get_m_Type_7();
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  int32_t Touch_get_type_m3264731406_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	Touch_t407273883 * _thisAdjusted = reinterpret_cast<Touch_t407273883 *>(__this + 1);
-	return Touch_get_type_m3264731406(_thisAdjusted, method);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

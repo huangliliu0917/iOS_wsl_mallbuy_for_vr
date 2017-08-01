@@ -16,6 +16,7 @@
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
+#include "UnityEngine_UnityEngine_Experimental_Director_Frame658788566.h"
 #include "UnityEngine_UnityEngine_Experimental_Director_Play3667545548.h"
 #include "mscorlib_System_Void1841601450.h"
 #include "mscorlib_System_Object2689449295.h"

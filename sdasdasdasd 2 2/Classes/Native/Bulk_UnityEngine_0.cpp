@@ -88,6 +88,7 @@
 #include "UnityEngine_UnityEngine_NetworkViewID3942988548.h"
 #include "UnityEngine_UnityEngine_NetworkPlayer1243528291.h"
 #include "UnityEngine_UnityEngine_Bounds3033363703.h"
+#include "UnityEngine_UnityEngine_Caching2648050249.h"
 #include "UnityEngine_UnityEngine_Camera189460977.h"
 #include "UnityEngine_UnityEngine_Rect3681755626.h"
 #include "UnityEngine_UnityEngine_RenderTexture2666733923.h"
@@ -195,7 +196,6 @@
 #include "mscorlib_System_Collections_Generic_List_1_gen3274872481.h"
 #include "mscorlib_System_IndexOutOfRangeException3527622107.h"
 #include "UnityEngine_UnityEngine_Experimental_Director_Fram1120735295.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Frame658788566.h"
 
 // AOT.MonoPInvokeCallbackAttribute
 struct MonoPInvokeCallbackAttribute_t2934651840;
@@ -5917,6 +5917,15 @@ extern "C"  String_t* Bounds_ToString_m1966597703_AdjustorThunk (Il2CppObject * 
 {
 	Bounds_t3033363703 * _thisAdjusted = reinterpret_cast<Bounds_t3033363703 *>(__this + 1);
 	return Bounds_ToString_m1966597703(_thisAdjusted, method);
+}
+// System.Boolean UnityEngine.Caching::CleanCache()
+extern "C"  bool Caching_CleanCache_m1711828369 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	typedef bool (*Caching_CleanCache_m1711828369_ftn) ();
+	static Caching_CleanCache_m1711828369_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Caching_CleanCache_m1711828369_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Caching::CleanCache()");
+	return _il2cpp_icall_func();
 }
 // System.Void UnityEngine.Camera::set_fieldOfView(System.Single)
 extern "C"  void Camera_set_fieldOfView_m3974156396 (Camera_t189460977 * __this, float ___value0, const MethodInfo* method)

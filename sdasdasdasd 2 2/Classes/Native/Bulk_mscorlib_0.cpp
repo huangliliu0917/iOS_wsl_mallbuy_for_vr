@@ -3844,7 +3844,7 @@ CATCH_0105:
 		String_t* L_37 = __this->get_file_4();
 		Exception_t1927440687 * L_38 = V_6;
 		NullCheck(L_36);
-		VirtActionInvoker3< String_t*, Il2CppObject *, Il2CppObject * >::Invoke(17 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object) */, L_36, _stringLiteral3254213585, L_37, L_38);
+		VirtActionInvoker3< String_t*, Il2CppObject *, Il2CppObject * >::Invoke(15 /* System.Void System.IO.TextWriter::WriteLine(System.String,System.Object,System.Object) */, L_36, _stringLiteral3254213585, L_37, L_38);
 		Hashtable_t909839986 * L_39 = __this->get_values_3();
 		NullCheck(L_39);
 		VirtActionInvoker0::Invoke(26 /* System.Void System.Collections.Hashtable::Clear() */, L_39);
@@ -12280,7 +12280,7 @@ IL_0019:
 		TextInfo_t3620182823 * L_6 = __this->get_textInfo_2();
 		int32_t L_7 = ___i0;
 		NullCheck(L_6);
-		Il2CppChar L_8 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_6, (((int32_t)((uint16_t)L_7))));
+		Il2CppChar L_8 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_6, (((int32_t)((uint16_t)L_7))));
 		___i0 = L_8;
 	}
 
@@ -12296,7 +12296,7 @@ IL_0034:
 		TextInfo_t3620182823 * L_10 = __this->get_textInfo_2();
 		int32_t L_11 = ___i0;
 		NullCheck(L_10);
-		Il2CppChar L_12 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_10, (((int32_t)((uint16_t)L_11))));
+		Il2CppChar L_12 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_10, (((int32_t)((uint16_t)L_11))));
 		___i0 = L_12;
 	}
 
@@ -14485,14 +14485,14 @@ IL_00b2:
 		NullCheck(L_49);
 		Il2CppChar L_51 = String_get_Chars_m4230566705(L_49, L_50, /*hidden argument*/NULL);
 		NullCheck(L_48);
-		Il2CppChar L_52 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_48, L_51);
+		Il2CppChar L_52 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_48, L_51);
 		TextInfo_t3620182823 * L_53 = V_3;
 		String_t* L_54 = ___s23;
 		int32_t L_55 = V_5;
 		NullCheck(L_54);
 		Il2CppChar L_56 = String_get_Chars_m4230566705(L_54, L_55, /*hidden argument*/NULL);
 		NullCheck(L_53);
-		Il2CppChar L_57 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_53, L_56);
+		Il2CppChar L_57 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_53, L_56);
 		if ((((int32_t)L_52) == ((int32_t)L_57)))
 		{
 			goto IL_00f3;
@@ -14505,14 +14505,14 @@ IL_00b2:
 		NullCheck(L_59);
 		Il2CppChar L_61 = String_get_Chars_m4230566705(L_59, L_60, /*hidden argument*/NULL);
 		NullCheck(L_58);
-		Il2CppChar L_62 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_58, L_61);
+		Il2CppChar L_62 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_58, L_61);
 		TextInfo_t3620182823 * L_63 = V_3;
 		String_t* L_64 = ___s23;
 		int32_t L_65 = V_5;
 		NullCheck(L_64);
 		Il2CppChar L_66 = String_get_Chars_m4230566705(L_64, L_65, /*hidden argument*/NULL);
 		NullCheck(L_63);
-		Il2CppChar L_67 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_63, L_66);
+		Il2CppChar L_67 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_63, L_66);
 		return ((int32_t)((int32_t)L_62-(int32_t)L_67));
 	}
 
@@ -17647,14 +17647,14 @@ IL_003a:
 		NullCheck(L_11);
 		Il2CppChar L_14 = String_get_Chars_m4230566705(L_11, ((int32_t)((int32_t)L_12+(int32_t)L_13)), /*hidden argument*/NULL);
 		NullCheck(L_10);
-		Il2CppChar L_15 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_10, L_14);
+		Il2CppChar L_15 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_10, L_14);
 		TextInfo_t3620182823 * L_16 = __this->get_textInfo_2();
 		String_t* L_17 = ___target1;
 		int32_t L_18 = V_3;
 		NullCheck(L_17);
 		Il2CppChar L_19 = String_get_Chars_m4230566705(L_17, L_18, /*hidden argument*/NULL);
 		NullCheck(L_16);
-		Il2CppChar L_20 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_16, L_19);
+		Il2CppChar L_20 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_16, L_19);
 		if ((((int32_t)L_15) == ((int32_t)L_20)))
 		{
 			goto IL_006c;
@@ -18532,7 +18532,7 @@ IL_0029:
 		NullCheck(L_13);
 		Il2CppChar L_16 = String_get_Chars_m4230566705(L_13, ((int32_t)((int32_t)L_15-(int32_t)1)), /*hidden argument*/NULL);
 		NullCheck(L_12);
-		Il2CppChar L_17 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_12, L_16);
+		Il2CppChar L_17 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_12, L_16);
 		V_1 = L_17;
 		int32_t L_18 = ___start2;
 		V_2 = L_18;
@@ -18547,7 +18547,7 @@ IL_0058:
 		NullCheck(L_20);
 		Il2CppChar L_22 = String_get_Chars_m4230566705(L_20, L_21, /*hidden argument*/NULL);
 		NullCheck(L_19);
-		Il2CppChar L_23 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_19, L_22);
+		Il2CppChar L_23 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_19, L_22);
 		Il2CppChar L_24 = V_1;
 		if ((((int32_t)L_23) == ((int32_t)L_24)))
 		{
@@ -18586,14 +18586,14 @@ IL_009a:
 		NullCheck(L_33);
 		Il2CppChar L_36 = String_get_Chars_m4230566705(L_33, ((int32_t)((int32_t)L_34+(int32_t)L_35)), /*hidden argument*/NULL);
 		NullCheck(L_32);
-		Il2CppChar L_37 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_32, L_36);
+		Il2CppChar L_37 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_32, L_36);
 		TextInfo_t3620182823 * L_38 = __this->get_textInfo_2();
 		String_t* L_39 = ___target1;
 		int32_t L_40 = V_5;
 		NullCheck(L_39);
 		Il2CppChar L_41 = String_get_Chars_m4230566705(L_39, L_40, /*hidden argument*/NULL);
 		NullCheck(L_38);
-		Il2CppChar L_42 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(7 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_38, L_41);
+		Il2CppChar L_42 = VirtFuncInvoker1< Il2CppChar, Il2CppChar >::Invoke(8 /* System.Char System.Globalization.TextInfo::ToLower(System.Char) */, L_38, L_41);
 		if ((((int32_t)L_37) == ((int32_t)L_42)))
 		{
 			goto IL_00cf;

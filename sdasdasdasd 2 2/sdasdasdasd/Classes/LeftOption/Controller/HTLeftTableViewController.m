@@ -73,11 +73,13 @@
 
 - (void)clearARCache {
     
-    NSString *path = [NSString stringWithFormat:@"%@/Documents/videoDownload", NSHomeDirectory()];
+    NSString *videoPath = [NSString stringWithFormat:@"%@/Documents/videoDownload", NSHomeDirectory()];
+    NSString *modelPath = [NSString stringWithFormat:@"%@/Documents/modelDownload", NSHomeDirectory()];
     dispatch_queue_t concurrentQueen = dispatch_queue_create("com.huobanmall.hsc.queen", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(concurrentQueen, ^{
         
-        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:videoPath error:nil];
+        [[NSFileManager defaultManager] removeItemAtPath:modelPath error:nil];
     });
 }
 

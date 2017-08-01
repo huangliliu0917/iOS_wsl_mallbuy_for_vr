@@ -16,7 +16,11 @@
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
+#include "UnityEngine_UnityEngine_Touch407273883.h"
+#include "mscorlib_System_Int322071877448.h"
+#include "UnityEngine_UnityEngine_Vector22243707579.h"
 #include "UnityEngine_UnityEngine_TouchPhase2458120420.h"
+#include "UnityEngine_UnityEngine_TouchType2732027771.h"
 #include "UnityEngine_UnityEngine_TouchScreenKeyboard601950206.h"
 #include "mscorlib_System_String2029220233.h"
 #include "UnityEngine_UnityEngine_TouchScreenKeyboardType875112366.h"
@@ -27,8 +31,6 @@
 #include "mscorlib_System_UInt322149682021.h"
 #include "UnityEngine_UnityEngine_RuntimePlatform1869584967.h"
 #include "UnityEngine_UnityEngine_RangeInt2323401134.h"
-#include "mscorlib_System_Int322071877448.h"
-#include "UnityEngine_UnityEngine_TouchType2732027771.h"
 #include "UnityEngine_UnityEngine_TrackedReference1045890189.h"
 #include "mscorlib_System_IntPtr2504060609.h"
 #include "UnityEngine_UnityEngine_Transform3275118058.h"
@@ -46,7 +48,6 @@
 #include "UnityEngine_UnityEngine_UIVertex1204258818.h"
 #include "UnityEngine_UnityEngine_Color32874517518.h"
 #include "UnityEngine_UnityEngine_Vector42243707581.h"
-#include "UnityEngine_UnityEngine_Vector22243707579.h"
 #include "mscorlib_System_Byte3683104436.h"
 #include "UnityEngine_UnityEngine_UnhandledExceptionHandler1903422412.h"
 #include "mscorlib_System_UnhandledExceptionEventHandler1916531888.h"
@@ -278,6 +279,14 @@ public:
 
 
 
+// System.Int32 UnityEngine.Touch::get_fingerId()
+extern "C"  int32_t Touch_get_fingerId_m4109475843 (Touch_t407273883 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector2 UnityEngine.Touch::get_position()
+extern "C"  Vector2_t2243707579  Touch_get_position_m2079703643 (Touch_t407273883 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.TouchPhase UnityEngine.Touch::get_phase()
+extern "C"  int32_t Touch_get_phase_m196706494 (Touch_t407273883 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.TouchType UnityEngine.Touch::get_type()
+extern "C"  int32_t Touch_get_type_m3264731406 (Touch_t407273883 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Object::.ctor()
 extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.UInt32 System.Convert::ToUInt32(System.Object)
@@ -555,6 +564,91 @@ extern "C"  void Regex__ctor_m1229307206 (Regex_t1803876613 * __this, String_t* 
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Int32 UnityEngine.Touch::get_fingerId()
+extern "C"  int32_t Touch_get_fingerId_m4109475843 (Touch_t407273883 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->get_m_FingerId_0();
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  int32_t Touch_get_fingerId_m4109475843_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	Touch_t407273883 * _thisAdjusted = reinterpret_cast<Touch_t407273883 *>(__this + 1);
+	return Touch_get_fingerId_m4109475843(_thisAdjusted, method);
+}
+// UnityEngine.Vector2 UnityEngine.Touch::get_position()
+extern "C"  Vector2_t2243707579  Touch_get_position_m2079703643 (Touch_t407273883 * __this, const MethodInfo* method)
+{
+	Vector2_t2243707579  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Vector2_t2243707579  L_0 = __this->get_m_Position_1();
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		Vector2_t2243707579  L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  Vector2_t2243707579  Touch_get_position_m2079703643_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	Touch_t407273883 * _thisAdjusted = reinterpret_cast<Touch_t407273883 *>(__this + 1);
+	return Touch_get_position_m2079703643(_thisAdjusted, method);
+}
+// UnityEngine.TouchPhase UnityEngine.Touch::get_phase()
+extern "C"  int32_t Touch_get_phase_m196706494 (Touch_t407273883 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->get_m_Phase_6();
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  int32_t Touch_get_phase_m196706494_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	Touch_t407273883 * _thisAdjusted = reinterpret_cast<Touch_t407273883 *>(__this + 1);
+	return Touch_get_phase_m196706494(_thisAdjusted, method);
+}
+// UnityEngine.TouchType UnityEngine.Touch::get_type()
+extern "C"  int32_t Touch_get_type_m3264731406 (Touch_t407273883 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->get_m_Type_7();
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  int32_t Touch_get_type_m3264731406_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	Touch_t407273883 * _thisAdjusted = reinterpret_cast<Touch_t407273883 *>(__this + 1);
+	return Touch_get_type_m3264731406(_thisAdjusted, method);
+}
 // System.Void UnityEngine.TouchScreenKeyboard::.ctor(System.String,UnityEngine.TouchScreenKeyboardType,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)
 extern "C"  void TouchScreenKeyboard__ctor_m4200205334 (TouchScreenKeyboard_t601950206 * __this, String_t* ___text0, int32_t ___keyboardType1, bool ___autocorrection2, bool ___multiline3, bool ___secure4, bool ___alert5, String_t* ___textPlaceholder6, const MethodInfo* method)
 {

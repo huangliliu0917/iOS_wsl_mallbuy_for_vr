@@ -16,22 +16,24 @@
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
-#include "mscorlib_System_Text_DecoderFallback1715117820.h"
+#include "mscorlib_System_Text_Decoder3792697818.h"
 #include "mscorlib_System_Void1841601450.h"
-#include "mscorlib_System_Object2689449295.h"
-#include "mscorlib_System_String2029220233.h"
-#include "mscorlib_System_Text_DecoderExceptionFallback944865245.h"
 #include "mscorlib_System_Text_DecoderReplacementFallback3042394152.h"
-#include "mscorlib_System_Text_DecoderFallbackBuffer4206371382.h"
-#include "mscorlib_System_Text_DecoderFallbackException561423693.h"
-#include "mscorlib_System_Int322071877448.h"
-#include "mscorlib_System_ArgumentException3259014390.h"
-#include "mscorlib_System_Byte3683104436.h"
+#include "mscorlib_System_Text_DecoderFallback1715117820.h"
+#include "mscorlib_System_Object2689449295.h"
 #include "mscorlib_System_ArgumentNullException628810857.h"
-#include "mscorlib_System_Text_DecoderReplacementFallbackBuf3471122670.h"
+#include "mscorlib_System_Text_DecoderFallbackBuffer4206371382.h"
+#include "mscorlib_System_Text_DecoderExceptionFallback944865245.h"
+#include "mscorlib_System_Text_DecoderExceptionFallbackBuffer40651649.h"
 #include "mscorlib_System_Boolean3825574718.h"
-#include "mscorlib_System_ArgumentOutOfRangeException279959794.h"
+#include "mscorlib_System_Int322071877448.h"
+#include "mscorlib_System_Byte3683104436.h"
+#include "mscorlib_System_String2029220233.h"
+#include "mscorlib_System_Text_DecoderFallbackException561423693.h"
 #include "mscorlib_System_Char3454481338.h"
+#include "mscorlib_System_ArgumentException3259014390.h"
+#include "mscorlib_System_Text_DecoderReplacementFallbackBuf3471122670.h"
+#include "mscorlib_System_ArgumentOutOfRangeException279959794.h"
 #include "mscorlib_System_Text_EncoderExceptionFallback1520212111.h"
 #include "mscorlib_System_Text_EncoderFallback1756452756.h"
 #include "mscorlib_System_Text_EncoderFallbackBuffer3883615514.h"
@@ -41,7 +43,6 @@
 #include "mscorlib_System_Text_EncoderReplacementFallbackBuf1313574570.h"
 #include "mscorlib_System_Text_Encoding663144255.h"
 #include "mscorlib_System_InvalidOperationException721527559.h"
-#include "mscorlib_System_Text_Decoder3792697818.h"
 #include "mscorlib_System_Text_Encoding_ForwardingDecoder2155223679.h"
 #include "mscorlib_System_Type1303803226.h"
 #include "mscorlib_System_MissingMethodException3441205986.h"
@@ -177,26 +178,30 @@
 #include "mscorlib_System_Runtime_InteropServices_GCHandle3409268066.h"
 #include "mscorlib_System_Runtime_InteropServices_GCHandleTy1970708122.h"
 
-// System.Text.DecoderFallback
-struct DecoderFallback_t1715117820;
-// System.Object
-struct Il2CppObject;
-// System.Text.DecoderExceptionFallback
-struct DecoderExceptionFallback_t944865245;
+// System.Text.Decoder
+struct Decoder_t3792697818;
 // System.Text.DecoderReplacementFallback
 struct DecoderReplacementFallback_t3042394152;
-// System.String
-struct String_t;
-// System.Text.DecoderFallbackBuffer
-struct DecoderFallbackBuffer_t4206371382;
-// System.Text.DecoderFallbackException
-struct DecoderFallbackException_t561423693;
-// System.ArgumentException
-struct ArgumentException_t3259014390;
-// System.Byte[]
-struct ByteU5BU5D_t3397334013;
+// System.Object
+struct Il2CppObject;
+// System.Text.DecoderFallback
+struct DecoderFallback_t1715117820;
 // System.ArgumentNullException
 struct ArgumentNullException_t628810857;
+// System.Text.DecoderFallbackBuffer
+struct DecoderFallbackBuffer_t4206371382;
+// System.Text.DecoderExceptionFallback
+struct DecoderExceptionFallback_t944865245;
+// System.Text.DecoderExceptionFallbackBuffer
+struct DecoderExceptionFallbackBuffer_t40651649;
+// System.Byte[]
+struct ByteU5BU5D_t3397334013;
+// System.Text.DecoderFallbackException
+struct DecoderFallbackException_t561423693;
+// System.String
+struct String_t;
+// System.ArgumentException
+struct ArgumentException_t3259014390;
 // System.Text.DecoderReplacementFallbackBuffer
 struct DecoderReplacementFallbackBuffer_t3471122670;
 // System.ArgumentOutOfRangeException
@@ -221,8 +226,6 @@ struct Encoding_t663144255;
 struct InvalidOperationException_t721527559;
 // System.Char[]
 struct CharU5BU5D_t1328083999;
-// System.Text.Decoder
-struct Decoder_t3792697818;
 // System.Text.Encoding/ForwardingDecoder
 struct ForwardingDecoder_t2155223679;
 // System.Object[]
@@ -405,9 +408,18 @@ struct Version_t1755874712;
 struct StringU5BU5D_t1642385972;
 // System.WeakReference
 struct WeakReference_t1077405567;
-extern Il2CppClass* DecoderExceptionFallback_t944865245_il2cpp_TypeInfo_var;
-extern Il2CppClass* DecoderFallback_t1715117820_il2cpp_TypeInfo_var;
 extern Il2CppClass* DecoderReplacementFallback_t3042394152_il2cpp_TypeInfo_var;
+extern const uint32_t Decoder__ctor_m2623573910_MetadataUsageId;
+extern Il2CppClass* ArgumentNullException_t628810857_il2cpp_TypeInfo_var;
+extern const uint32_t Decoder_set_Fallback_m1780632169_MetadataUsageId;
+extern Il2CppClass* DecoderFallback_t1715117820_il2cpp_TypeInfo_var;
+extern const uint32_t DecoderExceptionFallback__ctor_m3330792769_MetadataUsageId;
+extern Il2CppClass* DecoderExceptionFallbackBuffer_t40651649_il2cpp_TypeInfo_var;
+extern const uint32_t DecoderExceptionFallback_CreateFallbackBuffer_m3122436232_MetadataUsageId;
+extern Il2CppClass* DecoderExceptionFallback_t944865245_il2cpp_TypeInfo_var;
+extern const uint32_t DecoderExceptionFallback_Equals_m3699645544_MetadataUsageId;
+extern Il2CppClass* DecoderFallbackException_t561423693_il2cpp_TypeInfo_var;
+extern const uint32_t DecoderExceptionFallbackBuffer_Fallback_m3457210607_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral372001873;
 extern const uint32_t DecoderFallback__cctor_m215821245_MetadataUsageId;
 extern const uint32_t DecoderFallback_get_ExceptionFallback_m2047732509_MetadataUsageId;
@@ -415,7 +427,6 @@ extern const uint32_t DecoderFallback_get_ReplacementFallback_m2155645318_Metada
 extern const uint32_t DecoderFallback_get_StandardSafeFallback_m428997736_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral372029331;
 extern const uint32_t DecoderReplacementFallback__ctor_m2930674034_MetadataUsageId;
-extern Il2CppClass* ArgumentNullException_t628810857_il2cpp_TypeInfo_var;
 extern const uint32_t DecoderReplacementFallback__ctor_m2344783488_MetadataUsageId;
 extern Il2CppClass* DecoderReplacementFallbackBuffer_t3471122670_il2cpp_TypeInfo_var;
 extern const uint32_t DecoderReplacementFallback_CreateFallbackBuffer_m708895625_MetadataUsageId;
@@ -1307,30 +1318,34 @@ extern "C"  void GenericComparer_1__ctor_m221205314_gshared (GenericComparer_1_t
 // System.Void System.Collections.Generic.GenericEqualityComparer`1<System.TimeSpan>::.ctor()
 extern "C"  void GenericEqualityComparer_1__ctor_m1269284954_gshared (GenericEqualityComparer_1_t2414141085 * __this, const MethodInfo* method);
 
-// System.Void System.Object::.ctor()
-extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.Text.DecoderExceptionFallback::.ctor()
-extern "C"  void DecoderExceptionFallback__ctor_m3330792769 (DecoderExceptionFallback_t944865245 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.DecoderReplacementFallback::.ctor()
 extern "C"  void DecoderReplacementFallback__ctor_m2930674034 (DecoderReplacementFallback_t3042394152 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Object::.ctor()
+extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.ArgumentNullException::.ctor()
+extern "C"  void ArgumentNullException__ctor_m911049464 (ArgumentNullException_t628810857 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.DecoderFallback::.ctor()
+extern "C"  void DecoderFallback__ctor_m1226750992 (DecoderFallback_t1715117820 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.DecoderExceptionFallbackBuffer::.ctor()
+extern "C"  void DecoderExceptionFallbackBuffer__ctor_m509091621 (DecoderExceptionFallbackBuffer_t40651649 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.DecoderFallbackBuffer::.ctor()
+extern "C"  void DecoderFallbackBuffer__ctor_m3014928010 (DecoderFallbackBuffer_t4206371382 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.DecoderFallbackException::.ctor(System.String,System.Byte[],System.Int32)
+extern "C"  void DecoderFallbackException__ctor_m2025033573 (DecoderFallbackException_t561423693 * __this, String_t* ___message0, ByteU5BU5D_t3397334013* ___bytesUnknown1, int32_t ___index2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void System.Text.DecoderExceptionFallback::.ctor()
+extern "C"  void DecoderExceptionFallback__ctor_m3330792769 (DecoderExceptionFallback_t944865245 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.DecoderReplacementFallback::.ctor(System.String)
 extern "C"  void DecoderReplacementFallback__ctor_m2344783488 (DecoderReplacementFallback_t3042394152 * __this, String_t* ___replacement0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.DecoderFallbackException::.ctor(System.String)
 extern "C"  void DecoderFallbackException__ctor_m3081822699 (DecoderFallbackException_t561423693 * __this, String_t* ___message0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.ArgumentException::.ctor(System.String)
 extern "C"  void ArgumentException__ctor_m3739475201 (ArgumentException_t3259014390 * __this, String_t* ___message0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.Text.DecoderFallback::.ctor()
-extern "C"  void DecoderFallback__ctor_m1226750992 (DecoderFallback_t1715117820 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.ArgumentNullException::.ctor()
-extern "C"  void ArgumentNullException__ctor_m911049464 (ArgumentNullException_t628810857 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.DecoderReplacementFallbackBuffer::.ctor(System.Text.DecoderReplacementFallback)
 extern "C"  void DecoderReplacementFallbackBuffer__ctor_m1305504326 (DecoderReplacementFallbackBuffer_t3471122670 * __this, DecoderReplacementFallback_t3042394152 * ___fallback0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.String::op_Equality(System.String,System.String)
 extern "C"  bool String_op_Equality_m1790663636 (Il2CppObject * __this /* static, unused */, String_t* ___a0, String_t* ___b1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.String::GetHashCode()
 extern "C"  int32_t String_GetHashCode_m931956593 (String_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void System.Text.DecoderFallbackBuffer::.ctor()
-extern "C"  void DecoderFallbackBuffer__ctor_m3014928010 (DecoderFallbackBuffer_t4206371382 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.ArgumentNullException::.ctor(System.String)
 extern "C"  void ArgumentNullException__ctor_m3380712306 (ArgumentNullException_t628810857 * __this, String_t* ___paramName0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.DecoderReplacementFallback::get_DefaultString()
@@ -2398,6 +2413,166 @@ extern "C"  void SerializationInfo_AddValue_m1192926088 (SerializationInfo_t2289
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.Text.Decoder::.ctor()
+extern "C"  void Decoder__ctor_m2623573910 (Decoder_t3792697818 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Decoder__ctor_m2623573910_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		DecoderReplacementFallback_t3042394152 * L_0 = (DecoderReplacementFallback_t3042394152 *)il2cpp_codegen_object_new(DecoderReplacementFallback_t3042394152_il2cpp_TypeInfo_var);
+		DecoderReplacementFallback__ctor_m2930674034(L_0, /*hidden argument*/NULL);
+		__this->set_fallback_0(L_0);
+		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.Text.Decoder::set_Fallback(System.Text.DecoderFallback)
+extern "C"  void Decoder_set_Fallback_m1780632169 (Decoder_t3792697818 * __this, DecoderFallback_t1715117820 * ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Decoder_set_Fallback_m1780632169_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		DecoderFallback_t1715117820 * L_0 = ___value0;
+		if (L_0)
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		ArgumentNullException_t628810857 * L_1 = (ArgumentNullException_t628810857 *)il2cpp_codegen_object_new(ArgumentNullException_t628810857_il2cpp_TypeInfo_var);
+		ArgumentNullException__ctor_m911049464(L_1, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_000c:
+	{
+		DecoderFallback_t1715117820 * L_2 = ___value0;
+		__this->set_fallback_0(L_2);
+		__this->set_fallback_buffer_1((DecoderFallbackBuffer_t4206371382 *)NULL);
+		return;
+	}
+}
+// System.Text.DecoderFallbackBuffer System.Text.Decoder::get_FallbackBuffer()
+extern "C"  DecoderFallbackBuffer_t4206371382 * Decoder_get_FallbackBuffer_m2995053018 (Decoder_t3792697818 * __this, const MethodInfo* method)
+{
+	{
+		DecoderFallbackBuffer_t4206371382 * L_0 = __this->get_fallback_buffer_1();
+		if (L_0)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		DecoderFallback_t1715117820 * L_1 = __this->get_fallback_0();
+		NullCheck(L_1);
+		DecoderFallbackBuffer_t4206371382 * L_2 = VirtFuncInvoker0< DecoderFallbackBuffer_t4206371382 * >::Invoke(4 /* System.Text.DecoderFallbackBuffer System.Text.DecoderFallback::CreateFallbackBuffer() */, L_1);
+		__this->set_fallback_buffer_1(L_2);
+	}
+
+IL_001c:
+	{
+		DecoderFallbackBuffer_t4206371382 * L_3 = __this->get_fallback_buffer_1();
+		return L_3;
+	}
+}
+// System.Void System.Text.DecoderExceptionFallback::.ctor()
+extern "C"  void DecoderExceptionFallback__ctor_m3330792769 (DecoderExceptionFallback_t944865245 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (DecoderExceptionFallback__ctor_m3330792769_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(DecoderFallback_t1715117820_il2cpp_TypeInfo_var);
+		DecoderFallback__ctor_m1226750992(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Text.DecoderFallbackBuffer System.Text.DecoderExceptionFallback::CreateFallbackBuffer()
+extern "C"  DecoderFallbackBuffer_t4206371382 * DecoderExceptionFallback_CreateFallbackBuffer_m3122436232 (DecoderExceptionFallback_t944865245 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (DecoderExceptionFallback_CreateFallbackBuffer_m3122436232_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		DecoderExceptionFallbackBuffer_t40651649 * L_0 = (DecoderExceptionFallbackBuffer_t40651649 *)il2cpp_codegen_object_new(DecoderExceptionFallbackBuffer_t40651649_il2cpp_TypeInfo_var);
+		DecoderExceptionFallbackBuffer__ctor_m509091621(L_0, /*hidden argument*/NULL);
+		return L_0;
+	}
+}
+// System.Boolean System.Text.DecoderExceptionFallback::Equals(System.Object)
+extern "C"  bool DecoderExceptionFallback_Equals_m3699645544 (DecoderExceptionFallback_t944865245 * __this, Il2CppObject * ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (DecoderExceptionFallback_Equals_m3699645544_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Il2CppObject * L_0 = ___value0;
+		return (bool)((!(((Il2CppObject*)(DecoderExceptionFallback_t944865245 *)((DecoderExceptionFallback_t944865245 *)IsInstSealed(L_0, DecoderExceptionFallback_t944865245_il2cpp_TypeInfo_var))) <= ((Il2CppObject*)(Il2CppObject *)NULL)))? 1 : 0);
+	}
+}
+// System.Int32 System.Text.DecoderExceptionFallback::GetHashCode()
+extern "C"  int32_t DecoderExceptionFallback_GetHashCode_m2972426052 (DecoderExceptionFallback_t944865245 * __this, const MethodInfo* method)
+{
+	{
+		return 0;
+	}
+}
+// System.Void System.Text.DecoderExceptionFallbackBuffer::.ctor()
+extern "C"  void DecoderExceptionFallbackBuffer__ctor_m509091621 (DecoderExceptionFallbackBuffer_t40651649 * __this, const MethodInfo* method)
+{
+	{
+		DecoderFallbackBuffer__ctor_m3014928010(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 System.Text.DecoderExceptionFallbackBuffer::get_Remaining()
+extern "C"  int32_t DecoderExceptionFallbackBuffer_get_Remaining_m282446616 (DecoderExceptionFallbackBuffer_t40651649 * __this, const MethodInfo* method)
+{
+	{
+		return 0;
+	}
+}
+// System.Boolean System.Text.DecoderExceptionFallbackBuffer::Fallback(System.Byte[],System.Int32)
+extern "C"  bool DecoderExceptionFallbackBuffer_Fallback_m3457210607 (DecoderExceptionFallbackBuffer_t40651649 * __this, ByteU5BU5D_t3397334013* ___bytesUnknown0, int32_t ___index1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (DecoderExceptionFallbackBuffer_Fallback_m3457210607_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		ByteU5BU5D_t3397334013* L_0 = ___bytesUnknown0;
+		int32_t L_1 = ___index1;
+		DecoderFallbackException_t561423693 * L_2 = (DecoderFallbackException_t561423693 *)il2cpp_codegen_object_new(DecoderFallbackException_t561423693_il2cpp_TypeInfo_var);
+		DecoderFallbackException__ctor_m2025033573(L_2, (String_t*)NULL, L_0, L_1, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2);
+	}
+}
+// System.Char System.Text.DecoderExceptionFallbackBuffer::GetNextChar()
+extern "C"  Il2CppChar DecoderExceptionFallbackBuffer_GetNextChar_m1727394816 (DecoderExceptionFallbackBuffer_t40651649 * __this, const MethodInfo* method)
+{
+	{
+		return 0;
+	}
+}
 // System.Void System.Text.DecoderFallback::.ctor()
 extern "C"  void DecoderFallback__ctor_m1226750992 (DecoderFallback_t1715117820 * __this, const MethodInfo* method)
 {

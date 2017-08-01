@@ -332,6 +332,8 @@ extern "C" void DelegatePInvokeWrapper_CallBack_t3993155758();
 extern const Il2CppType CallBack_t3993155758_0_0_0;
 extern "C" void DelegatePInvokeWrapper_CallBack_t3844454365();
 extern const Il2CppType CallBack_t3844454365_0_0_0;
+extern "C" void DelegatePInvokeWrapper_ReadDataHandler_t1814344764();
+extern const Il2CppType ReadDataHandler_t1814344764_0_0_0;
 extern "C" void RaycastResult_t21186376_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
 extern "C" void RaycastResult_t21186376_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void RaycastResult_t21186376_marshal_pinvoke_cleanup(void* marshaledStructure);
@@ -360,23 +362,7 @@ extern "C" void SpriteState_t1353336012_marshal_pinvoke_cleanup(void* marshaledS
 extern const Il2CppType SpriteState_t1353336012_0_0_0;
 extern "C" void DelegatePInvokeWrapper_DebugLogCallbackDelegate_t1435929025();
 extern const Il2CppType DebugLogCallbackDelegate_t1435929025_0_0_0;
-extern "C" void Decoder2_t824255155_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
-extern "C" void Decoder2_t824255155_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
-extern "C" void Decoder2_t824255155_marshal_pinvoke_cleanup(void* marshaledStructure);
-extern const Il2CppType Decoder2_t824255155_0_0_0;
-extern "C" void Encoder2_t2131094305_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
-extern "C" void Encoder2_t2131094305_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
-extern "C" void Encoder2_t2131094305_marshal_pinvoke_cleanup(void* marshaledStructure);
-extern const Il2CppType Encoder2_t2131094305_0_0_0;
-extern "C" void BitTreeDecoder_t673053005_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
-extern "C" void BitTreeDecoder_t673053005_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
-extern "C" void BitTreeDecoder_t673053005_marshal_pinvoke_cleanup(void* marshaledStructure);
-extern const Il2CppType BitTreeDecoder_t673053005_0_0_0;
-extern "C" void BitTreeEncoder_t1009728003_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
-extern "C" void BitTreeEncoder_t1009728003_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
-extern "C" void BitTreeEncoder_t1009728003_marshal_pinvoke_cleanup(void* marshaledStructure);
-extern const Il2CppType BitTreeEncoder_t1009728003_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[108] = 
+extern Il2CppInteropData g_Il2CppInteropData[105] = 
 {
 	{ NULL, Context_t2636657155_marshal_pinvoke, Context_t2636657155_marshal_pinvoke_back, Context_t2636657155_marshal_pinvoke_cleanup, NULL, NULL, &Context_t2636657155_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Context */,
 	{ NULL, Escape_t169451053_marshal_pinvoke, Escape_t169451053_marshal_pinvoke_back, Escape_t169451053_marshal_pinvoke_cleanup, NULL, NULL, &Escape_t169451053_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Escape */,
@@ -473,6 +459,7 @@ extern Il2CppInteropData g_Il2CppInteropData[108] =
 	{ DelegatePInvokeWrapper_TargetLoadCallbackC_t1090767794, NULL, NULL, NULL, NULL, NULL, &TargetLoadCallbackC_t1090767794_0_0_0 } /* EasyAR.ObjectTracker/TargetLoadCallbackC */,
 	{ DelegatePInvokeWrapper_CallBack_t3993155758, NULL, NULL, NULL, NULL, NULL, &CallBack_t3993155758_0_0_0 } /* EasyAR.RecorderNative/CallBack */,
 	{ DelegatePInvokeWrapper_CallBack_t3844454365, NULL, NULL, NULL, NULL, NULL, &CallBack_t3844454365_0_0_0 } /* EasyAR.VideoPlayer/CallBack */,
+	{ DelegatePInvokeWrapper_ReadDataHandler_t1814344764, NULL, NULL, NULL, NULL, NULL, &ReadDataHandler_t1814344764_0_0_0 } /* ICSharpCode.SharpZipLib.Zip.ZipInputStream/ReadDataHandler */,
 	{ NULL, RaycastResult_t21186376_marshal_pinvoke, RaycastResult_t21186376_marshal_pinvoke_back, RaycastResult_t21186376_marshal_pinvoke_cleanup, NULL, NULL, &RaycastResult_t21186376_0_0_0 } /* UnityEngine.EventSystems.RaycastResult */,
 	{ NULL, ColorTween_t3438117476_marshal_pinvoke, ColorTween_t3438117476_marshal_pinvoke_back, ColorTween_t3438117476_marshal_pinvoke_cleanup, NULL, NULL, &ColorTween_t3438117476_0_0_0 } /* UnityEngine.UI.CoroutineTween.ColorTween */,
 	{ NULL, FloatTween_t2986189219_marshal_pinvoke, FloatTween_t2986189219_marshal_pinvoke_back, FloatTween_t2986189219_marshal_pinvoke_cleanup, NULL, NULL, &FloatTween_t2986189219_0_0_0 } /* UnityEngine.UI.CoroutineTween.FloatTween */,
@@ -481,9 +468,5 @@ extern Il2CppInteropData g_Il2CppInteropData[108] =
 	{ NULL, Navigation_t1571958496_marshal_pinvoke, Navigation_t1571958496_marshal_pinvoke_back, Navigation_t1571958496_marshal_pinvoke_cleanup, NULL, NULL, &Navigation_t1571958496_0_0_0 } /* UnityEngine.UI.Navigation */,
 	{ NULL, SpriteState_t1353336012_marshal_pinvoke, SpriteState_t1353336012_marshal_pinvoke_back, SpriteState_t1353336012_marshal_pinvoke_cleanup, NULL, NULL, &SpriteState_t1353336012_0_0_0 } /* UnityEngine.UI.SpriteState */,
 	{ DelegatePInvokeWrapper_DebugLogCallbackDelegate_t1435929025, NULL, NULL, NULL, NULL, NULL, &DebugLogCallbackDelegate_t1435929025_0_0_0 } /* RenderHeads.Media.AVProVideo.OSXMediaPlayer/DebugLogCallbackDelegate */,
-	{ NULL, Decoder2_t824255155_marshal_pinvoke, Decoder2_t824255155_marshal_pinvoke_back, Decoder2_t824255155_marshal_pinvoke_cleanup, NULL, NULL, &Decoder2_t824255155_0_0_0 } /* SevenZip.Compression.LZMA.Decoder/LiteralDecoder/Decoder2 */,
-	{ NULL, Encoder2_t2131094305_marshal_pinvoke, Encoder2_t2131094305_marshal_pinvoke_back, Encoder2_t2131094305_marshal_pinvoke_cleanup, NULL, NULL, &Encoder2_t2131094305_0_0_0 } /* SevenZip.Compression.LZMA.Encoder/LiteralEncoder/Encoder2 */,
-	{ NULL, BitTreeDecoder_t673053005_marshal_pinvoke, BitTreeDecoder_t673053005_marshal_pinvoke_back, BitTreeDecoder_t673053005_marshal_pinvoke_cleanup, NULL, NULL, &BitTreeDecoder_t673053005_0_0_0 } /* SevenZip.Compression.RangeCoder.BitTreeDecoder */,
-	{ NULL, BitTreeEncoder_t1009728003_marshal_pinvoke, BitTreeEncoder_t1009728003_marshal_pinvoke_back, BitTreeEncoder_t1009728003_marshal_pinvoke_cleanup, NULL, NULL, &BitTreeEncoder_t1009728003_0_0_0 } /* SevenZip.Compression.RangeCoder.BitTreeEncoder */,
 	NULL,
 };

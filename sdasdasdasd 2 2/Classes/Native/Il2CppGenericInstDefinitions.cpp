@@ -571,6 +571,12 @@ extern const Il2CppGenericInst GenInst_RaycastHit_t87180320_0_0_0 = { 1, GenInst
 extern const Il2CppType Rigidbody2D_t502193897_0_0_0;
 static const Il2CppType* GenInst_Rigidbody2D_t502193897_0_0_0_Types[] = { &Rigidbody2D_t502193897_0_0_0 };
 extern const Il2CppGenericInst GenInst_Rigidbody2D_t502193897_0_0_0 = { 1, GenInst_Rigidbody2D_t502193897_0_0_0_Types };
+extern const Il2CppType RaycastHit2D_t4063908774_0_0_0;
+static const Il2CppType* GenInst_RaycastHit2D_t4063908774_0_0_0_Types[] = { &RaycastHit2D_t4063908774_0_0_0 };
+extern const Il2CppGenericInst GenInst_RaycastHit2D_t4063908774_0_0_0 = { 1, GenInst_RaycastHit2D_t4063908774_0_0_0_Types };
+extern const Il2CppType ContactPoint2D_t3659330976_0_0_0;
+static const Il2CppType* GenInst_ContactPoint2D_t3659330976_0_0_0_Types[] = { &ContactPoint2D_t3659330976_0_0_0 };
+extern const Il2CppGenericInst GenInst_ContactPoint2D_t3659330976_0_0_0 = { 1, GenInst_ContactPoint2D_t3659330976_0_0_0_Types };
 extern const Il2CppType AnimatorClipInfo_t3905751349_0_0_0;
 static const Il2CppType* GenInst_AnimatorClipInfo_t3905751349_0_0_0_Types[] = { &AnimatorClipInfo_t3905751349_0_0_0 };
 extern const Il2CppGenericInst GenInst_AnimatorClipInfo_t3905751349_0_0_0 = { 1, GenInst_AnimatorClipInfo_t3905751349_0_0_0_Types };
@@ -1004,9 +1010,6 @@ extern const Il2CppGenericInst GenInst_Int32_t2071877448_0_0_0_PointerEventData_
 extern const Il2CppType ButtonState_t2688375492_0_0_0;
 static const Il2CppType* GenInst_ButtonState_t2688375492_0_0_0_Types[] = { &ButtonState_t2688375492_0_0_0 };
 extern const Il2CppGenericInst GenInst_ButtonState_t2688375492_0_0_0 = { 1, GenInst_ButtonState_t2688375492_0_0_0_Types };
-extern const Il2CppType RaycastHit2D_t4063908774_0_0_0;
-static const Il2CppType* GenInst_RaycastHit2D_t4063908774_0_0_0_Types[] = { &RaycastHit2D_t4063908774_0_0_0 };
-extern const Il2CppGenericInst GenInst_RaycastHit2D_t4063908774_0_0_0 = { 1, GenInst_RaycastHit2D_t4063908774_0_0_0_Types };
 extern const Il2CppType Color_t2020392075_0_0_0;
 static const Il2CppType* GenInst_Color_t2020392075_0_0_0_Types[] = { &Color_t2020392075_0_0_0 };
 extern const Il2CppGenericInst GenInst_Color_t2020392075_0_0_0 = { 1, GenInst_Color_t2020392075_0_0_0_Types };
@@ -1855,7 +1858,7 @@ static const Il2CppType* GenInst_ErrorCode_t259631595_0_0_0_Types[] = { &ErrorCo
 extern const Il2CppGenericInst GenInst_ErrorCode_t259631595_0_0_0 = { 1, GenInst_ErrorCode_t259631595_0_0_0_Types };
 static const Il2CppType* GenInst_EventType_t857664606_0_0_0_Types[] = { &EventType_t857664606_0_0_0 };
 extern const Il2CppGenericInst GenInst_EventType_t857664606_0_0_0 = { 1, GenInst_EventType_t857664606_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[656] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[657] = 
 {
 	&GenInst_Il2CppObject_0_0_0,
 	&GenInst_Int32_t2071877448_0_0_0,
@@ -2050,6 +2053,8 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[656] =
 	&GenInst_ContactPoint_t1376425630_0_0_0,
 	&GenInst_RaycastHit_t87180320_0_0_0,
 	&GenInst_Rigidbody2D_t502193897_0_0_0,
+	&GenInst_RaycastHit2D_t4063908774_0_0_0,
+	&GenInst_ContactPoint2D_t3659330976_0_0_0,
 	&GenInst_AnimatorClipInfo_t3905751349_0_0_0,
 	&GenInst_AnimatorControllerParameter_t1381019216_0_0_0,
 	&GenInst_UIVertex_t1204258818_0_0_0,
@@ -2214,7 +2219,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[656] =
 	&GenInst_PointerEventData_t1599784723_0_0_0,
 	&GenInst_Int32_t2071877448_0_0_0_PointerEventData_t1599784723_0_0_0_PointerEventData_t1599784723_0_0_0,
 	&GenInst_ButtonState_t2688375492_0_0_0,
-	&GenInst_RaycastHit2D_t4063908774_0_0_0,
 	&GenInst_Color_t2020392075_0_0_0,
 	&GenInst_ICanvasElement_t986520779_0_0_0,
 	&GenInst_ICanvasElement_t986520779_0_0_0_Int32_t2071877448_0_0_0,

@@ -156,6 +156,7 @@
 		C799BC961EBC9C1A00AA9E97 /* RegisterFeatures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C799BC151EBC9C1900AA9E97 /* RegisterFeatures.cpp */; };
 		C799BC971EBC9C1A00AA9E97 /* RegisterMonoModules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C799BC171EBC9C1900AA9E97 /* RegisterMonoModules.cpp */; };
 		C799BCCE1EBC9C6F00AA9E97 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = C799BCCD1EBC9C6F00AA9E97 /* Data */; };
+		C7B8ABC51F321C5300E393E4 /* Il2CppCompilerCalculateTypeValues_20Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7B8ABC41F321C5300E393E4 /* Il2CppCompilerCalculateTypeValues_20Table.cpp */; };
 		EF01595E1E24E3E50017D7BA /* UITabBar+XSDExt.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01595C1E24E3E50017D7BA /* UITabBar+XSDExt.m */; };
 		EF01597A1E262F8C0017D7BA /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0159791E262F8C0017D7BA /* ADView.m */; };
 		EF01597D1E262FDE0017D7BA /* AdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF01597C1E262FDE0017D7BA /* AdModel.m */; };
@@ -476,6 +477,7 @@
 		C799BC171EBC9C1900AA9E97 /* RegisterMonoModules.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegisterMonoModules.cpp; sourceTree = "<group>"; };
 		C799BC181EBC9C1900AA9E97 /* RegisterMonoModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterMonoModules.h; sourceTree = "<group>"; };
 		C799BCCD1EBC9C6F00AA9E97 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		C7B8ABC41F321C5300E393E4 /* Il2CppCompilerCalculateTypeValues_20Table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Il2CppCompilerCalculateTypeValues_20Table.cpp; sourceTree = "<group>"; };
 		D3FA7512B2CD8F74C2A874B4 /* Pods-sdasdasdasdTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdasdasdasdTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdasdasdasdTests/Pods-sdasdasdasdTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA2EEA1809CD99910D259E86 /* Pods-sdasdasdasd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdasdasdasd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdasdasdasd/Pods-sdasdasdasd.debug.xcconfig"; sourceTree = "<group>"; };
 		EF01595C1E24E3E50017D7BA /* UITabBar+XSDExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+XSDExt.m"; sourceTree = "<group>"; };
@@ -958,6 +960,7 @@
 		C799AD871EBC9BDE00AA9E97 /* Native */ = {
 			isa = PBXGroup;
 			children = (
+				C7B8ABC41F321C5300E393E4 /* Il2CppCompilerCalculateTypeValues_20Table.cpp */,
 				C78E8D651F2F0A1A00798663 /* Bulk_ICSharpCode.SharpZipLib_0.cpp */,
 				C799AE091EBC9BDE00AA9E97 /* Bulk_Assembly-CSharp_0.cpp */,
 				C799AE101EBC9BDE00AA9E97 /* Bulk_EasyAR.Unity_0.cpp */,
@@ -2191,6 +2194,7 @@
 				C799BC491EBC9C1900AA9E97 /* Il2CppCompilerCalculateTypeValues_13Table.cpp in Sources */,
 				EFB0D8A51D826A8300D24FE4 /* LaunchViewController.m in Sources */,
 				C799BC751EBC9C1A00AA9E97 /* UnityView.mm in Sources */,
+				C7B8ABC51F321C5300E393E4 /* Il2CppCompilerCalculateTypeValues_20Table.cpp in Sources */,
 				EF9A5BC11E237128004E23EE /* base64.m in Sources */,
 				EF9A5B171E236148004E23EE /* Order.m in Sources */,
 				EFA6D35A1C04514500B39B36 /* AppDelegate.m in Sources */,

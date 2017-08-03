@@ -142,6 +142,8 @@
 #include "UnityEngine_UnityEngine_Color32874517518.h"
 #include "mscorlib_System_Array_InternalEnumerator_1_gen2235177892.h"
 #include "UnityEngine_UnityEngine_ContactPoint1376425630.h"
+#include "mscorlib_System_Array_InternalEnumerator_1_gen223115942.h"
+#include "UnityEngine_UnityEngine_ContactPoint2D3659330976.h"
 #include "mscorlib_System_Array_InternalEnumerator_1_gen879938638.h"
 #include "UnityEngine_UI_UnityEngine_EventSystems_RaycastResul21186376.h"
 #include "mscorlib_System_Array_InternalEnumerator_1_gen2308223602.h"
@@ -205,8 +207,6 @@
 #include "mscorlib_System_Collections_Generic_Comparer_1_gen1946645919.h"
 #include "mscorlib_System_Collections_Generic_Comparer_1_Def2110548107.h"
 #include "mscorlib_System_Collections_Generic_Comparer_1_gen2511286993.h"
-#include "mscorlib_System_Collections_Generic_Comparer_1_Def3988496347.h"
-#include "mscorlib_System_Collections_Generic_Comparer_1_gen94267937.h"
 
 // System.Action`1<System.Boolean>
 struct Action_1_t3627374100;
@@ -316,8 +316,6 @@ struct DefaultComparer_t2805423905;
 struct DefaultComparer_t1545907033;
 // System.Collections.Generic.Comparer`1/DefaultComparer<UnityEngine.UILineInfo>
 struct DefaultComparer_t2110548107;
-// System.Collections.Generic.Comparer`1/DefaultComparer<UnityEngine.UIVertex>
-struct DefaultComparer_t3988496347;
 extern Il2CppClass* Boolean_t3825574718_il2cpp_TypeInfo_var;
 extern const uint32_t Action_1_BeginInvoke_m226849422_MetadataUsageId;
 extern Il2CppClass* Int32_t2071877448_il2cpp_TypeInfo_var;
@@ -400,6 +398,7 @@ extern const uint32_t InternalEnumerator_1_get_Current_m1830023619_MetadataUsage
 extern const uint32_t InternalEnumerator_1_get_Current_m3724267862_MetadataUsageId;
 extern const uint32_t InternalEnumerator_1_get_Current_m3143558721_MetadataUsageId;
 extern const uint32_t InternalEnumerator_1_get_Current_m3035290781_MetadataUsageId;
+extern const uint32_t InternalEnumerator_1_get_Current_m4045489063_MetadataUsageId;
 extern const uint32_t InternalEnumerator_1_get_Current_m319833891_MetadataUsageId;
 extern const uint32_t InternalEnumerator_1_get_Current_m3959023023_MetadataUsageId;
 extern const uint32_t InternalEnumerator_1_get_Current_m1715820327_MetadataUsageId;
@@ -432,7 +431,6 @@ extern const uint32_t DefaultComparer_Compare_m1247109616_MetadataUsageId;
 extern const uint32_t DefaultComparer_Compare_m851771764_MetadataUsageId;
 extern const uint32_t DefaultComparer_Compare_m3386135912_MetadataUsageId;
 extern const uint32_t DefaultComparer_Compare_m2804119458_MetadataUsageId;
-extern const uint32_t DefaultComparer_Compare_m3564013922_MetadataUsageId;
 
 // System.Object[]
 struct ObjectU5BU5D_t3614634134  : public Il2CppArray
@@ -1117,6 +1115,18 @@ extern "C"  Il2CppObject * InternalEnumerator_1_System_Collections_IEnumerator_g
 extern "C"  void InternalEnumerator_1_Dispose_m3715403693_gshared (InternalEnumerator_1_t2235177892 * __this, const MethodInfo* method);
 // System.Boolean System.Array/InternalEnumerator`1<UnityEngine.ContactPoint>::MoveNext()
 extern "C"  bool InternalEnumerator_1_MoveNext_m3299881374_gshared (InternalEnumerator_1_t2235177892 * __this, const MethodInfo* method);
+// System.Void System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::.ctor(System.Array)
+extern "C"  void InternalEnumerator_1__ctor_m3623160640_gshared (InternalEnumerator_1_t223115942 * __this, Il2CppArray * ___array0, const MethodInfo* method);
+// System.Void System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::System.Collections.IEnumerator.Reset()
+extern "C"  void InternalEnumerator_1_System_Collections_IEnumerator_Reset_m2619213736_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method);
+// T System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::get_Current()
+extern "C"  ContactPoint2D_t3659330976  InternalEnumerator_1_get_Current_m4045489063_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method);
+// System.Object System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::System.Collections.IEnumerator.get_Current()
+extern "C"  Il2CppObject * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m2061144652_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method);
+// System.Void System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::Dispose()
+extern "C"  void InternalEnumerator_1_Dispose_m3885764311_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method);
+// System.Boolean System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::MoveNext()
+extern "C"  bool InternalEnumerator_1_MoveNext_m2906956792_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method);
 // System.Void System.Array/InternalEnumerator`1<UnityEngine.EventSystems.RaycastResult>::.ctor(System.Array)
 extern "C"  void InternalEnumerator_1__ctor_m994739194_gshared (InternalEnumerator_1_t879938638 * __this, Il2CppArray * ___array0, const MethodInfo* method);
 // System.Void System.Array/InternalEnumerator`1<UnityEngine.EventSystems.RaycastResult>::System.Collections.IEnumerator.Reset()
@@ -1886,6 +1896,18 @@ extern "C"  void InvalidOperationException__ctor_m2801133788 (InvalidOperationEx
 #define InternalEnumerator_1_Dispose_m3715403693(__this, method) ((  void (*) (InternalEnumerator_1_t2235177892 *, const MethodInfo*))InternalEnumerator_1_Dispose_m3715403693_gshared)(__this, method)
 // System.Boolean System.Array/InternalEnumerator`1<UnityEngine.ContactPoint>::MoveNext()
 #define InternalEnumerator_1_MoveNext_m3299881374(__this, method) ((  bool (*) (InternalEnumerator_1_t2235177892 *, const MethodInfo*))InternalEnumerator_1_MoveNext_m3299881374_gshared)(__this, method)
+// System.Void System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::.ctor(System.Array)
+#define InternalEnumerator_1__ctor_m3623160640(__this, ___array0, method) ((  void (*) (InternalEnumerator_1_t223115942 *, Il2CppArray *, const MethodInfo*))InternalEnumerator_1__ctor_m3623160640_gshared)(__this, ___array0, method)
+// System.Void System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::System.Collections.IEnumerator.Reset()
+#define InternalEnumerator_1_System_Collections_IEnumerator_Reset_m2619213736(__this, method) ((  void (*) (InternalEnumerator_1_t223115942 *, const MethodInfo*))InternalEnumerator_1_System_Collections_IEnumerator_Reset_m2619213736_gshared)(__this, method)
+// T System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::get_Current()
+#define InternalEnumerator_1_get_Current_m4045489063(__this, method) ((  ContactPoint2D_t3659330976  (*) (InternalEnumerator_1_t223115942 *, const MethodInfo*))InternalEnumerator_1_get_Current_m4045489063_gshared)(__this, method)
+// System.Object System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::System.Collections.IEnumerator.get_Current()
+#define InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m2061144652(__this, method) ((  Il2CppObject * (*) (InternalEnumerator_1_t223115942 *, const MethodInfo*))InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m2061144652_gshared)(__this, method)
+// System.Void System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::Dispose()
+#define InternalEnumerator_1_Dispose_m3885764311(__this, method) ((  void (*) (InternalEnumerator_1_t223115942 *, const MethodInfo*))InternalEnumerator_1_Dispose_m3885764311_gshared)(__this, method)
+// System.Boolean System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::MoveNext()
+#define InternalEnumerator_1_MoveNext_m2906956792(__this, method) ((  bool (*) (InternalEnumerator_1_t223115942 *, const MethodInfo*))InternalEnumerator_1_MoveNext_m2906956792_gshared)(__this, method)
 // System.Void System.Array/InternalEnumerator`1<UnityEngine.EventSystems.RaycastResult>::.ctor(System.Array)
 #define InternalEnumerator_1__ctor_m994739194(__this, ___array0, method) ((  void (*) (InternalEnumerator_1_t879938638 *, Il2CppArray *, const MethodInfo*))InternalEnumerator_1__ctor_m994739194_gshared)(__this, ___array0, method)
 // System.Void System.Array/InternalEnumerator`1<UnityEngine.EventSystems.RaycastResult>::System.Collections.IEnumerator.Reset()
@@ -11056,6 +11078,167 @@ extern "C"  ContactPoint_t1376425630  InternalEnumerator_1_get_Current_m30352907
 	InternalEnumerator_1_t2235177892 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t2235177892 *>(__this + 1);
 	return InternalEnumerator_1_get_Current_m3035290781(_thisAdjusted, method);
 }
+// System.Void System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::.ctor(System.Array)
+extern "C"  void InternalEnumerator_1__ctor_m3623160640_gshared (InternalEnumerator_1_t223115942 * __this, Il2CppArray * ___array0, const MethodInfo* method)
+{
+	{
+		Il2CppArray * L_0 = ___array0;
+		__this->set_array_0(L_0);
+		__this->set_idx_1(((int32_t)-2));
+		return;
+	}
+}
+extern "C"  void InternalEnumerator_1__ctor_m3623160640_AdjustorThunk (Il2CppObject * __this, Il2CppArray * ___array0, const MethodInfo* method)
+{
+	InternalEnumerator_1_t223115942 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t223115942 *>(__this + 1);
+	InternalEnumerator_1__ctor_m3623160640(_thisAdjusted, ___array0, method);
+}
+// System.Void System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::System.Collections.IEnumerator.Reset()
+extern "C"  void InternalEnumerator_1_System_Collections_IEnumerator_Reset_m2619213736_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method)
+{
+	{
+		__this->set_idx_1(((int32_t)-2));
+		return;
+	}
+}
+extern "C"  void InternalEnumerator_1_System_Collections_IEnumerator_Reset_m2619213736_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	InternalEnumerator_1_t223115942 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t223115942 *>(__this + 1);
+	InternalEnumerator_1_System_Collections_IEnumerator_Reset_m2619213736(_thisAdjusted, method);
+}
+// System.Object System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::System.Collections.IEnumerator.get_Current()
+extern "C"  Il2CppObject * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m2061144652_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method)
+{
+	{
+		ContactPoint2D_t3659330976  L_0 = InternalEnumerator_1_get_Current_m4045489063((InternalEnumerator_1_t223115942 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 0));
+		ContactPoint2D_t3659330976  L_1 = L_0;
+		Il2CppObject * L_2 = Box(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->declaring_type)->rgctx_data, 1), &L_1);
+		return L_2;
+	}
+}
+extern "C"  Il2CppObject * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m2061144652_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	InternalEnumerator_1_t223115942 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t223115942 *>(__this + 1);
+	return InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m2061144652(_thisAdjusted, method);
+}
+// System.Void System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::Dispose()
+extern "C"  void InternalEnumerator_1_Dispose_m3885764311_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method)
+{
+	{
+		__this->set_idx_1(((int32_t)-2));
+		return;
+	}
+}
+extern "C"  void InternalEnumerator_1_Dispose_m3885764311_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	InternalEnumerator_1_t223115942 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t223115942 *>(__this + 1);
+	InternalEnumerator_1_Dispose_m3885764311(_thisAdjusted, method);
+}
+// System.Boolean System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::MoveNext()
+extern "C"  bool InternalEnumerator_1_MoveNext_m2906956792_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method)
+{
+	int32_t V_0 = 0;
+	int32_t G_B5_0 = 0;
+	{
+		int32_t L_0 = (int32_t)__this->get_idx_1();
+		if ((!(((uint32_t)L_0) == ((uint32_t)((int32_t)-2)))))
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		Il2CppArray * L_1 = (Il2CppArray *)__this->get_array_0();
+		NullCheck((Il2CppArray *)L_1);
+		int32_t L_2 = Array_get_Length_m1498215565((Il2CppArray *)L_1, /*hidden argument*/NULL);
+		__this->set_idx_1(L_2);
+	}
+
+IL_001e:
+	{
+		int32_t L_3 = (int32_t)__this->get_idx_1();
+		if ((((int32_t)L_3) == ((int32_t)(-1))))
+		{
+			goto IL_0043;
+		}
+	}
+	{
+		int32_t L_4 = (int32_t)__this->get_idx_1();
+		int32_t L_5 = (int32_t)((int32_t)((int32_t)L_4-(int32_t)1));
+		V_0 = (int32_t)L_5;
+		__this->set_idx_1(L_5);
+		int32_t L_6 = V_0;
+		G_B5_0 = ((((int32_t)((((int32_t)L_6) == ((int32_t)(-1)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_0044;
+	}
+
+IL_0043:
+	{
+		G_B5_0 = 0;
+	}
+
+IL_0044:
+	{
+		return (bool)G_B5_0;
+	}
+}
+extern "C"  bool InternalEnumerator_1_MoveNext_m2906956792_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	InternalEnumerator_1_t223115942 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t223115942 *>(__this + 1);
+	return InternalEnumerator_1_MoveNext_m2906956792(_thisAdjusted, method);
+}
+// T System.Array/InternalEnumerator`1<UnityEngine.ContactPoint2D>::get_Current()
+extern "C"  ContactPoint2D_t3659330976  InternalEnumerator_1_get_Current_m4045489063_gshared (InternalEnumerator_1_t223115942 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (InternalEnumerator_1_get_Current_m4045489063_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		int32_t L_0 = (int32_t)__this->get_idx_1();
+		if ((!(((uint32_t)L_0) == ((uint32_t)((int32_t)-2)))))
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		InvalidOperationException_t721527559 * L_1 = (InvalidOperationException_t721527559 *)il2cpp_codegen_object_new(InvalidOperationException_t721527559_il2cpp_TypeInfo_var);
+		InvalidOperationException__ctor_m2801133788(L_1, (String_t*)_stringLiteral1024050925, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1);
+	}
+
+IL_0018:
+	{
+		int32_t L_2 = (int32_t)__this->get_idx_1();
+		if ((!(((uint32_t)L_2) == ((uint32_t)(-1)))))
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		InvalidOperationException_t721527559 * L_3 = (InvalidOperationException_t721527559 *)il2cpp_codegen_object_new(InvalidOperationException_t721527559_il2cpp_TypeInfo_var);
+		InvalidOperationException__ctor_m2801133788(L_3, (String_t*)_stringLiteral2903193705, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3);
+	}
+
+IL_002f:
+	{
+		Il2CppArray * L_4 = (Il2CppArray *)__this->get_array_0();
+		Il2CppArray * L_5 = (Il2CppArray *)__this->get_array_0();
+		NullCheck((Il2CppArray *)L_5);
+		int32_t L_6 = Array_get_Length_m1498215565((Il2CppArray *)L_5, /*hidden argument*/NULL);
+		int32_t L_7 = (int32_t)__this->get_idx_1();
+		NullCheck((Il2CppArray *)L_4);
+		ContactPoint2D_t3659330976  L_8 = ((  ContactPoint2D_t3659330976  (*) (Il2CppArray *, int32_t, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 2)->methodPointer)((Il2CppArray *)L_4, (int32_t)((int32_t)((int32_t)((int32_t)((int32_t)L_6-(int32_t)1))-(int32_t)L_7)), /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->declaring_type)->rgctx_data, 2));
+		return L_8;
+	}
+}
+extern "C"  ContactPoint2D_t3659330976  InternalEnumerator_1_get_Current_m4045489063_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
+{
+	InternalEnumerator_1_t223115942 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t223115942 *>(__this + 1);
+	return InternalEnumerator_1_get_Current_m4045489063(_thisAdjusted, method);
+}
 // System.Void System.Array/InternalEnumerator`1<UnityEngine.EventSystems.RaycastResult>::.ctor(System.Array)
 extern "C"  void InternalEnumerator_1__ctor_m994739194_gshared (InternalEnumerator_1_t879938638 * __this, Il2CppArray * ___array0, const MethodInfo* method)
 {
@@ -14832,104 +15015,6 @@ IL_004d:
 		Il2CppObject * L_16 = Box(IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 2), &L_15);
 		UILineInfo_t3621277874  L_17 = ___y1;
 		UILineInfo_t3621277874  L_18 = L_17;
-		Il2CppObject * L_19 = Box(IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 2), &L_18);
-		NullCheck((Il2CppObject *)((Il2CppObject *)Castclass(L_16, IComparable_t1857082765_il2cpp_TypeInfo_var)));
-		int32_t L_20 = InterfaceFuncInvoker1< int32_t, Il2CppObject * >::Invoke(0 /* System.Int32 System.IComparable::CompareTo(System.Object) */, IComparable_t1857082765_il2cpp_TypeInfo_var, (Il2CppObject *)((Il2CppObject *)Castclass(L_16, IComparable_t1857082765_il2cpp_TypeInfo_var)), (Il2CppObject *)L_19);
-		return L_20;
-	}
-
-IL_0074:
-	{
-		ArgumentException_t3259014390 * L_21 = (ArgumentException_t3259014390 *)il2cpp_codegen_object_new(ArgumentException_t3259014390_il2cpp_TypeInfo_var);
-		ArgumentException__ctor_m3739475201(L_21, (String_t*)_stringLiteral1864089402, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_21);
-	}
-}
-// System.Void System.Collections.Generic.Comparer`1/DefaultComparer<UnityEngine.UIVertex>::.ctor()
-extern "C"  void DefaultComparer__ctor_m710539671_gshared (DefaultComparer_t3988496347 * __this, const MethodInfo* method)
-{
-	{
-		NullCheck((Comparer_1_t94267937 *)__this);
-		IL2CPP_RUNTIME_CLASS_INIT(IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 1));
-		((  void (*) (Comparer_1_t94267937 *, const MethodInfo*))IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 0)->methodPointer)((Comparer_1_t94267937 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->declaring_type->rgctx_data, 0));
-		return;
-	}
-}
-// System.Int32 System.Collections.Generic.Comparer`1/DefaultComparer<UnityEngine.UIVertex>::Compare(T,T)
-extern "C"  int32_t DefaultComparer_Compare_m3564013922_gshared (DefaultComparer_t3988496347 * __this, UIVertex_t1204258818  ___x0, UIVertex_t1204258818  ___y1, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (DefaultComparer_Compare_m3564013922_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t G_B4_0 = 0;
-	{
-		goto IL_001e;
-	}
-	{
-		goto IL_001c;
-	}
-	{
-		G_B4_0 = 0;
-		goto IL_001d;
-	}
-
-IL_001c:
-	{
-		G_B4_0 = (-1);
-	}
-
-IL_001d:
-	{
-		return G_B4_0;
-	}
-
-IL_001e:
-	{
-		goto IL_002b;
-	}
-	{
-		return 1;
-	}
-
-IL_002b:
-	{
-		UIVertex_t1204258818  L_3 = ___x0;
-		UIVertex_t1204258818  L_4 = L_3;
-		Il2CppObject * L_5 = Box(IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 2), &L_4);
-		if (!((Il2CppObject*)IsInst(L_5, IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 3))))
-		{
-			goto IL_004d;
-		}
-	}
-	{
-		UIVertex_t1204258818  L_6 = ___x0;
-		UIVertex_t1204258818  L_7 = L_6;
-		Il2CppObject * L_8 = Box(IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 2), &L_7);
-		UIVertex_t1204258818  L_9 = ___y1;
-		NullCheck((Il2CppObject*)((Il2CppObject*)Castclass(L_8, IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 3))));
-		int32_t L_10 = InterfaceFuncInvoker1< int32_t, UIVertex_t1204258818  >::Invoke(0 /* System.Int32 System.IComparable`1<UnityEngine.UIVertex>::CompareTo(T) */, IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 3), (Il2CppObject*)((Il2CppObject*)Castclass(L_8, IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 3))), (UIVertex_t1204258818 )L_9);
-		return L_10;
-	}
-
-IL_004d:
-	{
-		UIVertex_t1204258818  L_11 = ___x0;
-		UIVertex_t1204258818  L_12 = L_11;
-		Il2CppObject * L_13 = Box(IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 2), &L_12);
-		if (!((Il2CppObject *)IsInst(L_13, IComparable_t1857082765_il2cpp_TypeInfo_var)))
-		{
-			goto IL_0074;
-		}
-	}
-	{
-		UIVertex_t1204258818  L_14 = ___x0;
-		UIVertex_t1204258818  L_15 = L_14;
-		Il2CppObject * L_16 = Box(IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 2), &L_15);
-		UIVertex_t1204258818  L_17 = ___y1;
-		UIVertex_t1204258818  L_18 = L_17;
 		Il2CppObject * L_19 = Box(IL2CPP_RGCTX_DATA(method->declaring_type->rgctx_data, 2), &L_18);
 		NullCheck((Il2CppObject *)((Il2CppObject *)Castclass(L_16, IComparable_t1857082765_il2cpp_TypeInfo_var)));
 		int32_t L_20 = InterfaceFuncInvoker1< int32_t, Il2CppObject * >::Invoke(0 /* System.Int32 System.IComparable::CompareTo(System.Object) */, IComparable_t1857082765_il2cpp_TypeInfo_var, (Il2CppObject *)((Il2CppObject *)Castclass(L_16, IComparable_t1857082765_il2cpp_TypeInfo_var)), (Il2CppObject *)L_19);

@@ -7563,6 +7563,11 @@ extern "C" void AesTransform_Decrypt128_m3067379519 ();
 extern "C" void MonoPInvokeCallbackAttribute__ctor_m1298113763 ();
 extern "C" void AddComponentMenu__ctor_m2231330368 ();
 extern "C" void AddComponentMenu__ctor_m648737891 ();
+extern "C" void NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974 ();
+extern "C" void OnNavMeshPreUpdate__ctor_m1184347935 ();
+extern "C" void OnNavMeshPreUpdate_Invoke_m1433154603 ();
+extern "C" void OnNavMeshPreUpdate_BeginInvoke_m3346880328 ();
+extern "C" void OnNavMeshPreUpdate_EndInvoke_m3901151097 ();
 extern "C" void Animation_IsPlaying_m1305767247 ();
 extern "C" void Animation_get_Item_m4198128320 ();
 extern "C" void Animation_Play_m315011537 ();
@@ -7865,6 +7870,16 @@ extern "C" void Collision_get_impulse_m1836134987 ();
 extern "C" void Collision_get_impactForceSum_m521972354 ();
 extern "C" void Collision_get_frictionForceSum_m3438602686 ();
 extern "C" void Collision_get_other_m4238363497 ();
+extern "C" void Collision2D__ctor_m2559810705 ();
+extern "C" void Collision2D_get_collider_m3330356936 ();
+extern "C" void Collision2D_get_otherCollider_m4079883492 ();
+extern "C" void Collision2D_get_rigidbody_m4058558226 ();
+extern "C" void Collision2D_get_otherRigidbody_m1518790444 ();
+extern "C" void Collision2D_get_transform_m314016758 ();
+extern "C" void Collision2D_get_gameObject_m4234358314 ();
+extern "C" void Collision2D_get_contacts_m2230578195 ();
+extern "C" void Collision2D_get_relativeVelocity_m2410092780 ();
+extern "C" void Collision2D_get_enabled_m1627968529 ();
 extern "C" void Color__ctor_m1909920690_AdjustorThunk ();
 extern "C" void Color__ctor_m3811852957_AdjustorThunk ();
 extern "C" void Color_ToString_m4028093047_AdjustorThunk ();
@@ -7914,6 +7929,9 @@ extern "C" void Component_BroadcastMessage_m2230184532 ();
 extern "C" void Component_BroadcastMessage_m1308086896 ();
 extern "C" void Component_BroadcastMessage_m1706240890 ();
 extern "C" void Component_BroadcastMessage_m444672650 ();
+extern "C" void ContactFilter2D_SetLayerMask_m846404302_AdjustorThunk ();
+extern "C" void ContactFilter2D_SetDepth_m3891076190_AdjustorThunk ();
+extern "C" void ContactFilter2D_CreateLegacyFilter_m1912787689 ();
 extern "C" void ContextMenu__ctor_m666643627 ();
 extern "C" void ContextMenu__ctor_m1669818156 ();
 extern "C" void ContextMenu__ctor_m3931483141 ();
@@ -9046,6 +9064,12 @@ extern "C" void MonoBehaviour_set_useGUILayout_m2666356651 ();
 extern "C" void MultilineAttribute__ctor_m851638778 ();
 extern "C" void NativeClassAttribute__ctor_m3215217838 ();
 extern "C" void NativeClassAttribute_set_QualifiedNativeName_m2790580781 ();
+extern "C" void DownloadHandler__ctor_m328121149 ();
+extern "C" void DownloadHandler_InternalDestroy_m761762988 ();
+extern "C" void DownloadHandler_Finalize_m3781185347 ();
+extern "C" void DownloadHandler_Dispose_m2043077428 ();
+extern "C" void DownloadHandlerAudioClip__ctor_m1779320660 ();
+extern "C" void DownloadHandlerAudioClip_InternalCreateAudioClip_m751632673 ();
 extern "C" void MessageEventArgs__ctor_m2154443826 ();
 extern "C" void PlayerConnection__ctor_m956924263 ();
 extern "C" void PlayerConnection_get_instance_m3885313185 ();
@@ -9176,6 +9200,24 @@ extern "C" void Physics_Internal_Raycast_m1160243045 ();
 extern "C" void Physics_INTERNAL_CALL_Internal_Raycast_m93849932 ();
 extern "C" void Physics_Internal_RaycastTest_m3442924926 ();
 extern "C" void Physics_INTERNAL_CALL_Internal_RaycastTest_m3440840981 ();
+extern "C" void Physics2D_get_queriesHitTriggers_m361275035 ();
+extern "C" void Physics2D_Raycast_m1220041042 ();
+extern "C" void Physics2D_Raycast_m122312471 ();
+extern "C" void Physics2D_Raycast_m3913913442 ();
+extern "C" void Physics2D_Raycast_m2560154475 ();
+extern "C" void Physics2D_Raycast_m2303387255 ();
+extern "C" void Physics2D_Raycast_m2368200185 ();
+extern "C" void Physics2D_Raycast_m564567838 ();
+extern "C" void Physics2D_Internal_Raycast_m2213595168 ();
+extern "C" void Physics2D_INTERNAL_CALL_Internal_Raycast_m489831109 ();
+extern "C" void Physics2D_Internal_RaycastNonAlloc_m1874107548 ();
+extern "C" void Physics2D_INTERNAL_CALL_Internal_RaycastNonAlloc_m2253171281 ();
+extern "C" void Physics2D_GetRayIntersectionAll_m253330691 ();
+extern "C" void Physics2D_GetRayIntersectionAll_m2808325432 ();
+extern "C" void Physics2D_GetRayIntersectionAll_m120415839 ();
+extern "C" void Physics2D_INTERNAL_CALL_GetRayIntersectionAll_m161475998 ();
+extern "C" void Physics2D_GetRigidbodyFromInstanceID_m3260338451 ();
+extern "C" void Physics2D_GetColliderFromInstanceID_m95920619 ();
 extern "C" void Physics2D__cctor_m3532647019 ();
 extern "C" void Plane__ctor_m3187718367_AdjustorThunk ();
 extern "C" void Plane_get_normal_m1872443823_AdjustorThunk ();
@@ -9377,6 +9419,8 @@ extern "C" void ScriptableObject_Internal_CreateScriptableObject_m1778903390 ();
 extern "C" void ScriptableObject_CreateInstance_m3921674852 ();
 extern "C" void ScriptableObject_CreateInstance_m3271154163 ();
 extern "C" void ScriptableObject_CreateInstanceFromType_m4271875689 ();
+extern "C" void MovedFromAttribute__ctor_m4050085439 ();
+extern "C" void MovedFromAttribute_set_Namespace_m1786632593 ();
 extern "C" void GeneratedByOldBindingsGeneratorAttribute__ctor_m3745565094 ();
 extern "C" void RequiredByNativeCodeAttribute__ctor_m2374853658 ();
 extern "C" void UsedByNativeCodeAttribute__ctor_m2459832290 ();
@@ -9617,6 +9661,17 @@ extern "C" void SystemInfo_get_graphicsDeviceVersion_m2838077281 ();
 extern "C" void SystemInfo_get_graphicsMultiThreaded_m1879088810 ();
 extern "C" void SystemInfo_get_supportsGyroscope_m2145709384 ();
 extern "C" void SystemInfo_get_maxTextureSize_m57711319 ();
+extern "C" void Terrain_GetTerrainDataInternal_m2712943927 ();
+extern "C" void TerrainData_Internal_GetMaximumResolution_m1726089468 ();
+extern "C" void TerrainData_Internal_GetMinimumDetailResolutionPerPatch_m4256328712 ();
+extern "C" void TerrainData_Internal_GetMaximumDetailResolutionPerPatch_m2220059530 ();
+extern "C" void TerrainData_Internal_GetMaximumDetailPatchCount_m611112374 ();
+extern "C" void TerrainData_Internal_GetMinimumAlphamapResolution_m412927128 ();
+extern "C" void TerrainData_Internal_GetMaximumAlphamapResolution_m2965232202 ();
+extern "C" void TerrainData_Internal_GetMinimumBaseMapResolution_m3854864607 ();
+extern "C" void TerrainData_Internal_GetMaximumBaseMapResolution_m2656985397 ();
+extern "C" void TerrainData_GetAlphamapResolutionInternal_m2290069727 ();
+extern "C" void TerrainData__cctor_m1858770469 ();
 extern "C" void TextAreaAttribute__ctor_m2320572467 ();
 extern "C" void TextEditor__ctor_m1990252461 ();
 extern "C" void TextGenerationSettings_CompareColors_m991725620_AdjustorThunk ();
@@ -9856,6 +9911,25 @@ extern "C" void Vector4_op_Implicit_m1059320239 ();
 extern "C" void Vector4_op_Implicit_m1902992875 ();
 extern "C" void Vector4_ToString_m2340321043_AdjustorThunk ();
 extern "C" void Vector4_SqrMagnitude_m3109980116 ();
+extern "C" void VideoPlayer_InvokePrepareCompletedCallback_Internal_m2209413459 ();
+extern "C" void VideoPlayer_InvokeFrameReadyCallback_Internal_m3788999635 ();
+extern "C" void VideoPlayer_InvokeLoopPointReachedCallback_Internal_m1495616359 ();
+extern "C" void VideoPlayer_InvokeStartedCallback_Internal_m303286616 ();
+extern "C" void VideoPlayer_InvokeFrameDroppedCallback_Internal_m4234239774 ();
+extern "C" void VideoPlayer_InvokeErrorReceivedCallback_Internal_m4209059756 ();
+extern "C" void VideoPlayer_InvokeSeekCompletedCallback_Internal_m2526020444 ();
+extern "C" void ErrorEventHandler__ctor_m2587793811 ();
+extern "C" void ErrorEventHandler_Invoke_m1545469159 ();
+extern "C" void ErrorEventHandler_BeginInvoke_m1584132788 ();
+extern "C" void ErrorEventHandler_EndInvoke_m3824161421 ();
+extern "C" void EventHandler__ctor_m2074097083 ();
+extern "C" void EventHandler_Invoke_m2873584157 ();
+extern "C" void EventHandler_BeginInvoke_m1209029734 ();
+extern "C" void EventHandler_EndInvoke_m3709665097 ();
+extern "C" void FrameReadyEventHandler__ctor_m1740305025 ();
+extern "C" void FrameReadyEventHandler_Invoke_m2483052669 ();
+extern "C" void FrameReadyEventHandler_BeginInvoke_m3022200868 ();
+extern "C" void FrameReadyEventHandler_EndInvoke_m759749803 ();
 extern "C" void InputTracking_Recenter_m1968669378 ();
 extern "C" void VRDevice_get_isPresent_m26039931 ();
 extern "C" void VRSettings_get_enabled_m1122229986 ();
@@ -13749,7 +13823,7 @@ extern "C" void ZipCallback__ctor_m1214416664 ();
 extern "C" void ZipCallback_OnPreZip_m4068006944 ();
 extern "C" void ZipCallback_OnPostZip_m2441962287 ();
 extern "C" void ZipCallback_OnFinished_m3793178532 ();
-extern const Il2CppMethodPointer g_MethodPointers[13735] = 
+extern const Il2CppMethodPointer g_MethodPointers[13809] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -21300,6 +21374,11 @@ extern const Il2CppMethodPointer g_MethodPointers[13735] =
 	MonoPInvokeCallbackAttribute__ctor_m1298113763,
 	AddComponentMenu__ctor_m2231330368,
 	AddComponentMenu__ctor_m648737891,
+	NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974,
+	OnNavMeshPreUpdate__ctor_m1184347935,
+	OnNavMeshPreUpdate_Invoke_m1433154603,
+	OnNavMeshPreUpdate_BeginInvoke_m3346880328,
+	OnNavMeshPreUpdate_EndInvoke_m3901151097,
 	Animation_IsPlaying_m1305767247,
 	Animation_get_Item_m4198128320,
 	Animation_Play_m315011537,
@@ -21602,6 +21681,16 @@ extern const Il2CppMethodPointer g_MethodPointers[13735] =
 	Collision_get_impactForceSum_m521972354,
 	Collision_get_frictionForceSum_m3438602686,
 	Collision_get_other_m4238363497,
+	Collision2D__ctor_m2559810705,
+	Collision2D_get_collider_m3330356936,
+	Collision2D_get_otherCollider_m4079883492,
+	Collision2D_get_rigidbody_m4058558226,
+	Collision2D_get_otherRigidbody_m1518790444,
+	Collision2D_get_transform_m314016758,
+	Collision2D_get_gameObject_m4234358314,
+	Collision2D_get_contacts_m2230578195,
+	Collision2D_get_relativeVelocity_m2410092780,
+	Collision2D_get_enabled_m1627968529,
 	Color__ctor_m1909920690_AdjustorThunk,
 	Color__ctor_m3811852957_AdjustorThunk,
 	Color_ToString_m4028093047_AdjustorThunk,
@@ -21651,6 +21740,9 @@ extern const Il2CppMethodPointer g_MethodPointers[13735] =
 	Component_BroadcastMessage_m1308086896,
 	Component_BroadcastMessage_m1706240890,
 	Component_BroadcastMessage_m444672650,
+	ContactFilter2D_SetLayerMask_m846404302_AdjustorThunk,
+	ContactFilter2D_SetDepth_m3891076190_AdjustorThunk,
+	ContactFilter2D_CreateLegacyFilter_m1912787689,
 	ContextMenu__ctor_m666643627,
 	ContextMenu__ctor_m1669818156,
 	ContextMenu__ctor_m3931483141,
@@ -22783,6 +22875,12 @@ extern const Il2CppMethodPointer g_MethodPointers[13735] =
 	MultilineAttribute__ctor_m851638778,
 	NativeClassAttribute__ctor_m3215217838,
 	NativeClassAttribute_set_QualifiedNativeName_m2790580781,
+	DownloadHandler__ctor_m328121149,
+	DownloadHandler_InternalDestroy_m761762988,
+	DownloadHandler_Finalize_m3781185347,
+	DownloadHandler_Dispose_m2043077428,
+	DownloadHandlerAudioClip__ctor_m1779320660,
+	DownloadHandlerAudioClip_InternalCreateAudioClip_m751632673,
 	MessageEventArgs__ctor_m2154443826,
 	PlayerConnection__ctor_m956924263,
 	PlayerConnection_get_instance_m3885313185,
@@ -22913,6 +23011,24 @@ extern const Il2CppMethodPointer g_MethodPointers[13735] =
 	Physics_INTERNAL_CALL_Internal_Raycast_m93849932,
 	Physics_Internal_RaycastTest_m3442924926,
 	Physics_INTERNAL_CALL_Internal_RaycastTest_m3440840981,
+	Physics2D_get_queriesHitTriggers_m361275035,
+	Physics2D_Raycast_m1220041042,
+	Physics2D_Raycast_m122312471,
+	Physics2D_Raycast_m3913913442,
+	Physics2D_Raycast_m2560154475,
+	Physics2D_Raycast_m2303387255,
+	Physics2D_Raycast_m2368200185,
+	Physics2D_Raycast_m564567838,
+	Physics2D_Internal_Raycast_m2213595168,
+	Physics2D_INTERNAL_CALL_Internal_Raycast_m489831109,
+	Physics2D_Internal_RaycastNonAlloc_m1874107548,
+	Physics2D_INTERNAL_CALL_Internal_RaycastNonAlloc_m2253171281,
+	Physics2D_GetRayIntersectionAll_m253330691,
+	Physics2D_GetRayIntersectionAll_m2808325432,
+	Physics2D_GetRayIntersectionAll_m120415839,
+	Physics2D_INTERNAL_CALL_GetRayIntersectionAll_m161475998,
+	Physics2D_GetRigidbodyFromInstanceID_m3260338451,
+	Physics2D_GetColliderFromInstanceID_m95920619,
 	Physics2D__cctor_m3532647019,
 	Plane__ctor_m3187718367_AdjustorThunk,
 	Plane_get_normal_m1872443823_AdjustorThunk,
@@ -23114,6 +23230,8 @@ extern const Il2CppMethodPointer g_MethodPointers[13735] =
 	ScriptableObject_CreateInstance_m3921674852,
 	ScriptableObject_CreateInstance_m3271154163,
 	ScriptableObject_CreateInstanceFromType_m4271875689,
+	MovedFromAttribute__ctor_m4050085439,
+	MovedFromAttribute_set_Namespace_m1786632593,
 	GeneratedByOldBindingsGeneratorAttribute__ctor_m3745565094,
 	RequiredByNativeCodeAttribute__ctor_m2374853658,
 	UsedByNativeCodeAttribute__ctor_m2459832290,
@@ -23354,6 +23472,17 @@ extern const Il2CppMethodPointer g_MethodPointers[13735] =
 	SystemInfo_get_graphicsMultiThreaded_m1879088810,
 	SystemInfo_get_supportsGyroscope_m2145709384,
 	SystemInfo_get_maxTextureSize_m57711319,
+	Terrain_GetTerrainDataInternal_m2712943927,
+	TerrainData_Internal_GetMaximumResolution_m1726089468,
+	TerrainData_Internal_GetMinimumDetailResolutionPerPatch_m4256328712,
+	TerrainData_Internal_GetMaximumDetailResolutionPerPatch_m2220059530,
+	TerrainData_Internal_GetMaximumDetailPatchCount_m611112374,
+	TerrainData_Internal_GetMinimumAlphamapResolution_m412927128,
+	TerrainData_Internal_GetMaximumAlphamapResolution_m2965232202,
+	TerrainData_Internal_GetMinimumBaseMapResolution_m3854864607,
+	TerrainData_Internal_GetMaximumBaseMapResolution_m2656985397,
+	TerrainData_GetAlphamapResolutionInternal_m2290069727,
+	TerrainData__cctor_m1858770469,
 	TextAreaAttribute__ctor_m2320572467,
 	TextEditor__ctor_m1990252461,
 	TextGenerationSettings_CompareColors_m991725620_AdjustorThunk,
@@ -23593,6 +23722,25 @@ extern const Il2CppMethodPointer g_MethodPointers[13735] =
 	Vector4_op_Implicit_m1902992875,
 	Vector4_ToString_m2340321043_AdjustorThunk,
 	Vector4_SqrMagnitude_m3109980116,
+	VideoPlayer_InvokePrepareCompletedCallback_Internal_m2209413459,
+	VideoPlayer_InvokeFrameReadyCallback_Internal_m3788999635,
+	VideoPlayer_InvokeLoopPointReachedCallback_Internal_m1495616359,
+	VideoPlayer_InvokeStartedCallback_Internal_m303286616,
+	VideoPlayer_InvokeFrameDroppedCallback_Internal_m4234239774,
+	VideoPlayer_InvokeErrorReceivedCallback_Internal_m4209059756,
+	VideoPlayer_InvokeSeekCompletedCallback_Internal_m2526020444,
+	ErrorEventHandler__ctor_m2587793811,
+	ErrorEventHandler_Invoke_m1545469159,
+	ErrorEventHandler_BeginInvoke_m1584132788,
+	ErrorEventHandler_EndInvoke_m3824161421,
+	EventHandler__ctor_m2074097083,
+	EventHandler_Invoke_m2873584157,
+	EventHandler_BeginInvoke_m1209029734,
+	EventHandler_EndInvoke_m3709665097,
+	FrameReadyEventHandler__ctor_m1740305025,
+	FrameReadyEventHandler_Invoke_m2483052669,
+	FrameReadyEventHandler_BeginInvoke_m3022200868,
+	FrameReadyEventHandler_EndInvoke_m759749803,
 	InputTracking_Recenter_m1968669378,
 	VRDevice_get_isPresent_m26039931,
 	VRSettings_get_enabled_m1122229986,

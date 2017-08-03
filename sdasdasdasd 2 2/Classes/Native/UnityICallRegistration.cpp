@@ -2016,6 +2016,22 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.MonoBehaviour
 
+	//Start Registrations for type : UnityEngine.Networking.DownloadHandler
+
+		//System.Void UnityEngine.Networking.DownloadHandler::InternalDestroy()
+		void Register_UnityEngine_Networking_DownloadHandler_InternalDestroy();
+		Register_UnityEngine_Networking_DownloadHandler_InternalDestroy();
+
+	//End Registrations for type : UnityEngine.Networking.DownloadHandler
+
+	//Start Registrations for type : UnityEngine.Networking.DownloadHandlerAudioClip
+
+		//System.Void UnityEngine.Networking.DownloadHandlerAudioClip::InternalCreateAudioClip(System.String,UnityEngine.AudioType)
+		void Register_UnityEngine_Networking_DownloadHandlerAudioClip_InternalCreateAudioClip();
+		Register_UnityEngine_Networking_DownloadHandlerAudioClip_InternalCreateAudioClip();
+
+	//End Registrations for type : UnityEngine.Networking.DownloadHandlerAudioClip
+
 	//Start Registrations for type : UnityEngine.NetworkMessageInfo
 
 		//UnityEngine.NetworkView UnityEngine.NetworkMessageInfo::NullNetworkView()
@@ -2191,6 +2207,34 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Physics_INTERNAL_CALL_RaycastAll();
 
 	//End Registrations for type : UnityEngine.Physics
+
+	//Start Registrations for type : UnityEngine.Physics2D
+
+		//System.Boolean UnityEngine.Physics2D::get_queriesHitTriggers()
+		void Register_UnityEngine_Physics2D_get_queriesHitTriggers();
+		Register_UnityEngine_Physics2D_get_queriesHitTriggers();
+
+		//System.Int32 UnityEngine.Physics2D::INTERNAL_CALL_Internal_RaycastNonAlloc(UnityEngine.Vector2&,UnityEngine.Vector2&,System.Single,UnityEngine.ContactFilter2D&,UnityEngine.RaycastHit2D[])
+		void Register_UnityEngine_Physics2D_INTERNAL_CALL_Internal_RaycastNonAlloc();
+		Register_UnityEngine_Physics2D_INTERNAL_CALL_Internal_RaycastNonAlloc();
+
+		//System.Void UnityEngine.Physics2D::INTERNAL_CALL_Internal_Raycast(UnityEngine.Vector2&,UnityEngine.Vector2&,System.Single,UnityEngine.ContactFilter2D&,UnityEngine.RaycastHit2D&)
+		void Register_UnityEngine_Physics2D_INTERNAL_CALL_Internal_Raycast();
+		Register_UnityEngine_Physics2D_INTERNAL_CALL_Internal_Raycast();
+
+		//UnityEngine.Collider2D UnityEngine.Physics2D::GetColliderFromInstanceID(System.Int32)
+		void Register_UnityEngine_Physics2D_GetColliderFromInstanceID();
+		Register_UnityEngine_Physics2D_GetColliderFromInstanceID();
+
+		//UnityEngine.RaycastHit2D[] UnityEngine.Physics2D::INTERNAL_CALL_GetRayIntersectionAll(UnityEngine.Ray&,System.Single,System.Int32)
+		void Register_UnityEngine_Physics2D_INTERNAL_CALL_GetRayIntersectionAll();
+		Register_UnityEngine_Physics2D_INTERNAL_CALL_GetRayIntersectionAll();
+
+		//UnityEngine.Rigidbody2D UnityEngine.Physics2D::GetRigidbodyFromInstanceID(System.Int32)
+		void Register_UnityEngine_Physics2D_GetRigidbodyFromInstanceID();
+		Register_UnityEngine_Physics2D_GetRigidbodyFromInstanceID();
+
+	//End Registrations for type : UnityEngine.Physics2D
 
 	//Start Registrations for type : UnityEngine.QualitySettings
 
@@ -2687,6 +2731,54 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_SystemInfo_get_operatingSystemFamily();
 
 	//End Registrations for type : UnityEngine.SystemInfo
+
+	//Start Registrations for type : UnityEngine.Terrain
+
+		//UnityEngine.TerrainData UnityEngine.Terrain::GetTerrainDataInternal()
+		void Register_UnityEngine_Terrain_GetTerrainDataInternal();
+		Register_UnityEngine_Terrain_GetTerrainDataInternal();
+
+	//End Registrations for type : UnityEngine.Terrain
+
+	//Start Registrations for type : UnityEngine.TerrainData
+
+		//System.Int32 UnityEngine.TerrainData::Internal_GetMaximumAlphamapResolution()
+		void Register_UnityEngine_TerrainData_Internal_GetMaximumAlphamapResolution();
+		Register_UnityEngine_TerrainData_Internal_GetMaximumAlphamapResolution();
+
+		//System.Int32 UnityEngine.TerrainData::Internal_GetMaximumBaseMapResolution()
+		void Register_UnityEngine_TerrainData_Internal_GetMaximumBaseMapResolution();
+		Register_UnityEngine_TerrainData_Internal_GetMaximumBaseMapResolution();
+
+		//System.Int32 UnityEngine.TerrainData::Internal_GetMaximumDetailPatchCount()
+		void Register_UnityEngine_TerrainData_Internal_GetMaximumDetailPatchCount();
+		Register_UnityEngine_TerrainData_Internal_GetMaximumDetailPatchCount();
+
+		//System.Int32 UnityEngine.TerrainData::Internal_GetMaximumDetailResolutionPerPatch()
+		void Register_UnityEngine_TerrainData_Internal_GetMaximumDetailResolutionPerPatch();
+		Register_UnityEngine_TerrainData_Internal_GetMaximumDetailResolutionPerPatch();
+
+		//System.Int32 UnityEngine.TerrainData::Internal_GetMaximumResolution()
+		void Register_UnityEngine_TerrainData_Internal_GetMaximumResolution();
+		Register_UnityEngine_TerrainData_Internal_GetMaximumResolution();
+
+		//System.Int32 UnityEngine.TerrainData::Internal_GetMinimumAlphamapResolution()
+		void Register_UnityEngine_TerrainData_Internal_GetMinimumAlphamapResolution();
+		Register_UnityEngine_TerrainData_Internal_GetMinimumAlphamapResolution();
+
+		//System.Int32 UnityEngine.TerrainData::Internal_GetMinimumBaseMapResolution()
+		void Register_UnityEngine_TerrainData_Internal_GetMinimumBaseMapResolution();
+		Register_UnityEngine_TerrainData_Internal_GetMinimumBaseMapResolution();
+
+		//System.Int32 UnityEngine.TerrainData::Internal_GetMinimumDetailResolutionPerPatch()
+		void Register_UnityEngine_TerrainData_Internal_GetMinimumDetailResolutionPerPatch();
+		Register_UnityEngine_TerrainData_Internal_GetMinimumDetailResolutionPerPatch();
+
+		//System.Single UnityEngine.TerrainData::GetAlphamapResolutionInternal()
+		void Register_UnityEngine_TerrainData_GetAlphamapResolutionInternal();
+		Register_UnityEngine_TerrainData_GetAlphamapResolutionInternal();
+
+	//End Registrations for type : UnityEngine.TerrainData
 
 	//Start Registrations for type : UnityEngine.TextGenerator
 

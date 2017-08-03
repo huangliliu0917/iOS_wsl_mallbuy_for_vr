@@ -21948,12 +21948,13 @@ extern "C"  void GameManager_OnTargetRecognized_m3616005029 (GameManager_t138401
 		il2cpp_codegen_initialize_method (GameManager_OnTargetRecognized_m3616005029_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
+	int32_t V_0 = 0;
 	{
 		__this->set_m_isCapture_10((bool)1);
 		bool L_0 = __this->get_isObjectTracking_3();
 		if (!L_0)
 		{
-			goto IL_009c;
+			goto IL_0108;
 		}
 	}
 	{
@@ -21962,7 +21963,7 @@ extern "C"  void GameManager_OnTargetRecognized_m3616005029 (GameManager_t138401
 		bool L_2 = Object_op_Inequality_m2402264703(NULL /*static, unused*/, L_1, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
 		if (!L_2)
 		{
-			goto IL_0079;
+			goto IL_00e5;
 		}
 	}
 	{
@@ -21979,7 +21980,7 @@ extern "C"  void GameManager_OnTargetRecognized_m3616005029 (GameManager_t138401
 		bool L_6 = String_op_Inequality_m304203149(NULL /*static, unused*/, L_4, L_5, /*hidden argument*/NULL);
 		if (!L_6)
 		{
-			goto IL_006d;
+			goto IL_00d9;
 		}
 	}
 
@@ -21988,63 +21989,129 @@ IL_003f:
 		GameObject_t1756533147 * L_7 = __this->get_m_loadedObject_4();
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
 		Object_Destroy_m4145850038(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
-		String_t* L_8 = ___tagetName0;
-		__this->set_m_targetName_6(L_8);
-		GameObject_t1756533147 * L_9 = ___targetObject1;
-		__this->set_m_targetObject_5(L_9);
-		IL2CPP_RUNTIME_CLASS_INIT(UIPageModule_t1803851549_il2cpp_TypeInfo_var);
-		UIPageModule_t1803851549 * L_10 = UIPageModule_get_Instance_m1069565874(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_10);
-		UIPageModule_OnRecgnized_m306881865(L_10, /*hidden argument*/NULL);
-		String_t* L_11 = ___tagetName0;
-		ForPlugins_GetTheGiftPath_m1657746043(NULL /*static, unused*/, L_11, /*hidden argument*/NULL);
-		goto IL_0074;
+		List_1_t1424099886 * L_8 = __this->get_assetBundleList_9();
+		NullCheck(L_8);
+		int32_t L_9 = List_1_get_Count_m2061372024(L_8, /*hidden argument*/List_1_get_Count_m2061372024_MethodInfo_var);
+		if ((((int32_t)L_9) <= ((int32_t)0)))
+		{
+			goto IL_00b0;
+		}
+	}
+	{
+		V_0 = 0;
+		goto IL_0094;
 	}
 
-IL_006d:
+IL_0062:
+	{
+		List_1_t1424099886 * L_10 = __this->get_assetBundleList_9();
+		int32_t L_11 = V_0;
+		NullCheck(L_10);
+		AssetBundle_t2054978754 * L_12 = List_1_get_Item_m3704067433(L_10, L_11, /*hidden argument*/List_1_get_Item_m3704067433_MethodInfo_var);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		bool L_13 = Object_op_Equality_m3764089466(NULL /*static, unused*/, L_12, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
+		if (!L_13)
+		{
+			goto IL_007e;
+		}
+	}
+	{
+		goto IL_0090;
+	}
+
+IL_007e:
+	{
+		List_1_t1424099886 * L_14 = __this->get_assetBundleList_9();
+		int32_t L_15 = V_0;
+		NullCheck(L_14);
+		AssetBundle_t2054978754 * L_16 = List_1_get_Item_m3704067433(L_14, L_15, /*hidden argument*/List_1_get_Item_m3704067433_MethodInfo_var);
+		NullCheck(L_16);
+		AssetBundle_Unload_m167529087(L_16, (bool)1, /*hidden argument*/NULL);
+	}
+
+IL_0090:
+	{
+		int32_t L_17 = V_0;
+		V_0 = ((int32_t)((int32_t)L_17+(int32_t)1));
+	}
+
+IL_0094:
+	{
+		int32_t L_18 = V_0;
+		List_1_t1424099886 * L_19 = __this->get_assetBundleList_9();
+		NullCheck(L_19);
+		int32_t L_20 = List_1_get_Count_m2061372024(L_19, /*hidden argument*/List_1_get_Count_m2061372024_MethodInfo_var);
+		if ((((int32_t)L_18) < ((int32_t)L_20)))
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		List_1_t1424099886 * L_21 = (List_1_t1424099886 *)il2cpp_codegen_object_new(List_1_t1424099886_il2cpp_TypeInfo_var);
+		List_1__ctor_m1707322730(L_21, /*hidden argument*/List_1__ctor_m1707322730_MethodInfo_var);
+		__this->set_assetBundleList_9(L_21);
+	}
+
+IL_00b0:
+	{
+		Resources_UnloadUnusedAssets_m2770025609(NULL /*static, unused*/, /*hidden argument*/NULL);
+		String_t* L_22 = ___tagetName0;
+		__this->set_m_targetName_6(L_22);
+		GameObject_t1756533147 * L_23 = ___targetObject1;
+		__this->set_m_targetObject_5(L_23);
+		IL2CPP_RUNTIME_CLASS_INIT(UIPageModule_t1803851549_il2cpp_TypeInfo_var);
+		UIPageModule_t1803851549 * L_24 = UIPageModule_get_Instance_m1069565874(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_24);
+		UIPageModule_OnRecgnized_m306881865(L_24, /*hidden argument*/NULL);
+		String_t* L_25 = ___tagetName0;
+		ForPlugins_GetTheGiftPath_m1657746043(NULL /*static, unused*/, L_25, /*hidden argument*/NULL);
+		goto IL_00e0;
+	}
+
+IL_00d9:
 	{
 		GameManager_setParent_m4252675054(__this, (bool)1, /*hidden argument*/NULL);
 	}
 
-IL_0074:
+IL_00e0:
 	{
-		goto IL_0097;
+		goto IL_0103;
 	}
 
-IL_0079:
+IL_00e5:
 	{
-		String_t* L_12 = ___tagetName0;
-		__this->set_m_targetName_6(L_12);
-		GameObject_t1756533147 * L_13 = ___targetObject1;
-		__this->set_m_targetObject_5(L_13);
+		String_t* L_26 = ___tagetName0;
+		__this->set_m_targetName_6(L_26);
+		GameObject_t1756533147 * L_27 = ___targetObject1;
+		__this->set_m_targetObject_5(L_27);
 		IL2CPP_RUNTIME_CLASS_INIT(UIPageModule_t1803851549_il2cpp_TypeInfo_var);
-		UIPageModule_t1803851549 * L_14 = UIPageModule_get_Instance_m1069565874(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_14);
-		UIPageModule_OnRecgnized_m306881865(L_14, /*hidden argument*/NULL);
-		String_t* L_15 = ___tagetName0;
-		ForPlugins_GetTheGiftPath_m1657746043(NULL /*static, unused*/, L_15, /*hidden argument*/NULL);
+		UIPageModule_t1803851549 * L_28 = UIPageModule_get_Instance_m1069565874(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_28);
+		UIPageModule_OnRecgnized_m306881865(L_28, /*hidden argument*/NULL);
+		String_t* L_29 = ___tagetName0;
+		ForPlugins_GetTheGiftPath_m1657746043(NULL /*static, unused*/, L_29, /*hidden argument*/NULL);
 	}
 
-IL_0097:
+IL_0103:
 	{
-		goto IL_00ba;
+		goto IL_0126;
 	}
 
-IL_009c:
+IL_0108:
 	{
-		String_t* L_16 = ___tagetName0;
-		__this->set_m_targetName_6(L_16);
-		GameObject_t1756533147 * L_17 = ___targetObject1;
-		__this->set_m_targetObject_5(L_17);
+		String_t* L_30 = ___tagetName0;
+		__this->set_m_targetName_6(L_30);
+		GameObject_t1756533147 * L_31 = ___targetObject1;
+		__this->set_m_targetObject_5(L_31);
 		IL2CPP_RUNTIME_CLASS_INIT(UIPageModule_t1803851549_il2cpp_TypeInfo_var);
-		UIPageModule_t1803851549 * L_18 = UIPageModule_get_Instance_m1069565874(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_18);
-		UIPageModule_OnRecgnized_m306881865(L_18, /*hidden argument*/NULL);
-		String_t* L_19 = ___tagetName0;
-		ForPlugins_GetTheGiftPath_m1657746043(NULL /*static, unused*/, L_19, /*hidden argument*/NULL);
+		UIPageModule_t1803851549 * L_32 = UIPageModule_get_Instance_m1069565874(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_32);
+		UIPageModule_OnRecgnized_m306881865(L_32, /*hidden argument*/NULL);
+		String_t* L_33 = ___tagetName0;
+		ForPlugins_GetTheGiftPath_m1657746043(NULL /*static, unused*/, L_33, /*hidden argument*/NULL);
 	}
 
-IL_00ba:
+IL_0126:
 	{
 		return;
 	}
@@ -22383,8 +22450,9 @@ extern "C"  bool U3CLoadAssetBundleAssetU3Ec__Iterator1_MoveNext_m2998362886 (U3
 		s_Il2CppMethodInitialized = true;
 	}
 	uint32_t V_0 = 0;
-	AssetBundle_t2054978754 * V_1 = NULL;
-	GameObject_t1756533147 * V_2 = NULL;
+	int32_t V_1 = 0;
+	AssetBundle_t2054978754 * V_2 = NULL;
+	GameObject_t1756533147 * V_3 = NULL;
 	{
 		int32_t L_0 = __this->get_U24PC_17();
 		V_0 = L_0;
@@ -22396,420 +22464,496 @@ extern "C"  bool U3CLoadAssetBundleAssetU3Ec__Iterator1_MoveNext_m2998362886 (U3
 		}
 		if (L_1 == 1)
 		{
-			goto IL_00f5;
+			goto IL_017a;
 		}
 		if (L_1 == 2)
 		{
-			goto IL_0125;
+			goto IL_01aa;
 		}
 		if (L_1 == 3)
 		{
-			goto IL_0217;
+			goto IL_029c;
 		}
 		if (L_1 == 4)
 		{
-			goto IL_0241;
+			goto IL_02c6;
 		}
 		if (L_1 == 5)
 		{
-			goto IL_02e4;
+			goto IL_0369;
 		}
 		if (L_1 == 6)
 		{
-			goto IL_030e;
+			goto IL_0393;
 		}
 	}
 	{
-		goto IL_03d8;
+		goto IL_045d;
 	}
 
 IL_0035:
 	{
 		Caching_CleanCache_m1711828369(NULL /*static, unused*/, /*hidden argument*/NULL);
-		String_t* L_2 = __this->get_bundlePath_0();
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_3 = String_Concat_m612901809(NULL /*static, unused*/, _stringLiteral2494949592, L_2, _stringLiteral372029315, /*hidden argument*/NULL);
-		__this->set_U3CassetBundlePathU3E__0_1(L_3);
-		int32_t L_4 = Application_get_platform_m3989224144(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if ((!(((uint32_t)L_4) == ((uint32_t)8))))
+		GameManager_t1384011863 * L_2 = __this->get_U24this_14();
+		NullCheck(L_2);
+		List_1_t1424099886 * L_3 = L_2->get_assetBundleList_9();
+		NullCheck(L_3);
+		int32_t L_4 = List_1_get_Count_m2061372024(L_3, /*hidden argument*/List_1_get_Count_m2061372024_MethodInfo_var);
+		if ((((int32_t)L_4) <= ((int32_t)0)))
 		{
-			goto IL_0071;
+			goto IL_00ba;
+		}
+	}
+	{
+		V_1 = 0;
+		goto IL_0094;
+	}
+
+IL_0058:
+	{
+		GameManager_t1384011863 * L_5 = __this->get_U24this_14();
+		NullCheck(L_5);
+		List_1_t1424099886 * L_6 = L_5->get_assetBundleList_9();
+		int32_t L_7 = V_1;
+		NullCheck(L_6);
+		AssetBundle_t2054978754 * L_8 = List_1_get_Item_m3704067433(L_6, L_7, /*hidden argument*/List_1_get_Item_m3704067433_MethodInfo_var);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		bool L_9 = Object_op_Equality_m3764089466(NULL /*static, unused*/, L_8, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
+		if (!L_9)
+		{
+			goto IL_0079;
+		}
+	}
+	{
+		goto IL_0090;
+	}
+
+IL_0079:
+	{
+		GameManager_t1384011863 * L_10 = __this->get_U24this_14();
+		NullCheck(L_10);
+		List_1_t1424099886 * L_11 = L_10->get_assetBundleList_9();
+		int32_t L_12 = V_1;
+		NullCheck(L_11);
+		AssetBundle_t2054978754 * L_13 = List_1_get_Item_m3704067433(L_11, L_12, /*hidden argument*/List_1_get_Item_m3704067433_MethodInfo_var);
+		NullCheck(L_13);
+		AssetBundle_Unload_m167529087(L_13, (bool)1, /*hidden argument*/NULL);
+	}
+
+IL_0090:
+	{
+		int32_t L_14 = V_1;
+		V_1 = ((int32_t)((int32_t)L_14+(int32_t)1));
+	}
+
+IL_0094:
+	{
+		int32_t L_15 = V_1;
+		GameManager_t1384011863 * L_16 = __this->get_U24this_14();
+		NullCheck(L_16);
+		List_1_t1424099886 * L_17 = L_16->get_assetBundleList_9();
+		NullCheck(L_17);
+		int32_t L_18 = List_1_get_Count_m2061372024(L_17, /*hidden argument*/List_1_get_Count_m2061372024_MethodInfo_var);
+		if ((((int32_t)L_15) < ((int32_t)L_18)))
+		{
+			goto IL_0058;
+		}
+	}
+	{
+		GameManager_t1384011863 * L_19 = __this->get_U24this_14();
+		List_1_t1424099886 * L_20 = (List_1_t1424099886 *)il2cpp_codegen_object_new(List_1_t1424099886_il2cpp_TypeInfo_var);
+		List_1__ctor_m1707322730(L_20, /*hidden argument*/List_1__ctor_m1707322730_MethodInfo_var);
+		NullCheck(L_19);
+		L_19->set_assetBundleList_9(L_20);
+	}
+
+IL_00ba:
+	{
+		Resources_UnloadUnusedAssets_m2770025609(NULL /*static, unused*/, /*hidden argument*/NULL);
+		String_t* L_21 = __this->get_bundlePath_0();
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_22 = String_Concat_m612901809(NULL /*static, unused*/, _stringLiteral2494949592, L_21, _stringLiteral372029315, /*hidden argument*/NULL);
+		__this->set_U3CassetBundlePathU3E__0_1(L_22);
+		int32_t L_23 = Application_get_platform_m3989224144(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_23) == ((uint32_t)8))))
+		{
+			goto IL_00f6;
 		}
 	}
 	{
 		__this->set_U3CmanifestNameU3E__1_2(_stringLiteral77678225);
-		goto IL_0098;
+		goto IL_011d;
 	}
 
-IL_0071:
+IL_00f6:
 	{
-		int32_t L_5 = Application_get_platform_m3989224144(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if ((!(((uint32_t)L_5) == ((uint32_t)((int32_t)11)))))
+		int32_t L_24 = Application_get_platform_m3989224144(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((!(((uint32_t)L_24) == ((uint32_t)((int32_t)11)))))
 		{
-			goto IL_008d;
+			goto IL_0112;
 		}
 	}
 	{
 		__this->set_U3CmanifestNameU3E__1_2(_stringLiteral1279998075);
-		goto IL_0098;
+		goto IL_011d;
 	}
 
-IL_008d:
+IL_0112:
 	{
 		__this->set_U3CmanifestNameU3E__1_2(_stringLiteral123983067);
 	}
 
-IL_0098:
+IL_011d:
 	{
-		String_t* L_6 = __this->get_bundlePath_0();
-		String_t* L_7 = __this->get_U3CmanifestNameU3E__1_2();
+		String_t* L_25 = __this->get_bundlePath_0();
+		String_t* L_26 = __this->get_U3CmanifestNameU3E__1_2();
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_8 = String_Concat_m1561703559(NULL /*static, unused*/, _stringLiteral2494949592, L_6, _stringLiteral372029315, L_7, /*hidden argument*/NULL);
-		__this->set_U3CmanifestPathU3E__0_3(L_8);
-		String_t* L_9 = __this->get_U3CmanifestPathU3E__0_3();
-		WWW_t2919945039 * L_10 = WWW_LoadFromCacheOrDownload_m3967609319(NULL /*static, unused*/, L_9, 0, /*hidden argument*/NULL);
-		__this->set_U3CwwwManifestU3E__0_4(L_10);
-		goto IL_00f5;
+		String_t* L_27 = String_Concat_m1561703559(NULL /*static, unused*/, _stringLiteral2494949592, L_25, _stringLiteral372029315, L_26, /*hidden argument*/NULL);
+		__this->set_U3CmanifestPathU3E__0_3(L_27);
+		String_t* L_28 = __this->get_U3CmanifestPathU3E__0_3();
+		WWW_t2919945039 * L_29 = WWW_LoadFromCacheOrDownload_m3967609319(NULL /*static, unused*/, L_28, 0, /*hidden argument*/NULL);
+		__this->set_U3CwwwManifestU3E__0_4(L_29);
+		goto IL_017a;
 	}
 
-IL_00d0:
+IL_0155:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2320880909, /*hidden argument*/NULL);
 		__this->set_U24current_15(NULL);
-		bool L_11 = __this->get_U24disposing_16();
-		if (L_11)
+		bool L_30 = __this->get_U24disposing_16();
+		if (L_30)
 		{
-			goto IL_00f0;
+			goto IL_0175;
 		}
 	}
 	{
 		__this->set_U24PC_17(1);
 	}
 
-IL_00f0:
+IL_0175:
 	{
-		goto IL_03da;
+		goto IL_045f;
 	}
 
-IL_00f5:
+IL_017a:
 	{
-		WWW_t2919945039 * L_12 = __this->get_U3CwwwManifestU3E__0_4();
-		NullCheck(L_12);
-		bool L_13 = WWW_get_isDone_m3240254121(L_12, /*hidden argument*/NULL);
-		if (!L_13)
+		WWW_t2919945039 * L_31 = __this->get_U3CwwwManifestU3E__0_4();
+		NullCheck(L_31);
+		bool L_32 = WWW_get_isDone_m3240254121(L_31, /*hidden argument*/NULL);
+		if (!L_32)
 		{
-			goto IL_00d0;
+			goto IL_0155;
 		}
 	}
 	{
-		WWW_t2919945039 * L_14 = __this->get_U3CwwwManifestU3E__0_4();
-		__this->set_U24current_15(L_14);
-		bool L_15 = __this->get_U24disposing_16();
-		if (L_15)
+		WWW_t2919945039 * L_33 = __this->get_U3CwwwManifestU3E__0_4();
+		__this->set_U24current_15(L_33);
+		bool L_34 = __this->get_U24disposing_16();
+		if (L_34)
 		{
-			goto IL_0120;
+			goto IL_01a5;
 		}
 	}
 	{
 		__this->set_U24PC_17(2);
 	}
 
-IL_0120:
+IL_01a5:
 	{
-		goto IL_03da;
+		goto IL_045f;
 	}
 
-IL_0125:
+IL_01aa:
 	{
-		WWW_t2919945039 * L_16 = __this->get_U3CwwwManifestU3E__0_4();
-		NullCheck(L_16);
-		String_t* L_17 = WWW_get_error_m3092701216(L_16, /*hidden argument*/NULL);
+		WWW_t2919945039 * L_35 = __this->get_U3CwwwManifestU3E__0_4();
+		NullCheck(L_35);
+		String_t* L_36 = WWW_get_error_m3092701216(L_35, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		bool L_18 = String_IsNullOrEmpty_m2802126737(NULL /*static, unused*/, L_17, /*hidden argument*/NULL);
-		if (L_18)
+		bool L_37 = String_IsNullOrEmpty_m2802126737(NULL /*static, unused*/, L_36, /*hidden argument*/NULL);
+		if (L_37)
 		{
-			goto IL_014f;
+			goto IL_01d4;
 		}
 	}
 	{
-		WWW_t2919945039 * L_19 = __this->get_U3CwwwManifestU3E__0_4();
-		NullCheck(L_19);
-		String_t* L_20 = WWW_get_error_m3092701216(L_19, /*hidden argument*/NULL);
+		WWW_t2919945039 * L_38 = __this->get_U3CwwwManifestU3E__0_4();
+		NullCheck(L_38);
+		String_t* L_39 = WWW_get_error_m3092701216(L_38, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
-		Debug_Log_m920475918(NULL /*static, unused*/, L_20, /*hidden argument*/NULL);
-		goto IL_03d8;
+		Debug_Log_m920475918(NULL /*static, unused*/, L_39, /*hidden argument*/NULL);
+		goto IL_045d;
 	}
 
-IL_014f:
+IL_01d4:
 	{
-		WWW_t2919945039 * L_21 = __this->get_U3CwwwManifestU3E__0_4();
-		NullCheck(L_21);
-		AssetBundle_t2054978754 * L_22 = WWW_get_assetBundle_m80031863(L_21, /*hidden argument*/NULL);
-		__this->set_U3CmanifestBundleU3E__2_5(L_22);
-		GameManager_t1384011863 * L_23 = __this->get_U24this_14();
-		NullCheck(L_23);
-		List_1_t1424099886 * L_24 = L_23->get_assetBundleList_9();
-		AssetBundle_t2054978754 * L_25 = __this->get_U3CmanifestBundleU3E__2_5();
-		NullCheck(L_24);
-		List_1_Add_m1415808294(L_24, L_25, /*hidden argument*/List_1_Add_m1415808294_MethodInfo_var);
-		AssetBundle_t2054978754 * L_26 = __this->get_U3CmanifestBundleU3E__2_5();
-		NullCheck(L_26);
-		Object_t1021602117 * L_27 = AssetBundle_LoadAsset_m2358606850(L_26, _stringLiteral1226701511, /*hidden argument*/NULL);
-		__this->set_U3CmanifestU3E__2_6(((AssetBundleManifest_t1328741589 *)CastclassSealed(L_27, AssetBundleManifest_t1328741589_il2cpp_TypeInfo_var)));
-		AssetBundle_t2054978754 * L_28 = __this->get_U3CmanifestBundleU3E__2_5();
-		NullCheck(L_28);
-		AssetBundle_Unload_m167529087(L_28, (bool)0, /*hidden argument*/NULL);
-		AssetBundleManifest_t1328741589 * L_29 = __this->get_U3CmanifestU3E__2_6();
-		String_t* L_30 = __this->get_assetbundleName_7();
-		NullCheck(L_29);
-		StringU5BU5D_t1642385972* L_31 = AssetBundleManifest_GetAllDependencies_m1021134089(L_29, L_30, /*hidden argument*/NULL);
-		__this->set_U3CdependentAssetBundlesU3E__2_8(L_31);
-		StringU5BU5D_t1642385972* L_32 = __this->get_U3CdependentAssetBundlesU3E__2_8();
-		NullCheck(L_32);
-		__this->set_U3CabsU3E__2_9(((AssetBundleU5BU5D_t2632285687*)SZArrayNew(AssetBundleU5BU5D_t2632285687_il2cpp_TypeInfo_var, (uint32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_32)->max_length)))))));
+		WWW_t2919945039 * L_40 = __this->get_U3CwwwManifestU3E__0_4();
+		NullCheck(L_40);
+		AssetBundle_t2054978754 * L_41 = WWW_get_assetBundle_m80031863(L_40, /*hidden argument*/NULL);
+		__this->set_U3CmanifestBundleU3E__2_5(L_41);
+		GameManager_t1384011863 * L_42 = __this->get_U24this_14();
+		NullCheck(L_42);
+		List_1_t1424099886 * L_43 = L_42->get_assetBundleList_9();
+		AssetBundle_t2054978754 * L_44 = __this->get_U3CmanifestBundleU3E__2_5();
+		NullCheck(L_43);
+		List_1_Add_m1415808294(L_43, L_44, /*hidden argument*/List_1_Add_m1415808294_MethodInfo_var);
+		AssetBundle_t2054978754 * L_45 = __this->get_U3CmanifestBundleU3E__2_5();
+		NullCheck(L_45);
+		Object_t1021602117 * L_46 = AssetBundle_LoadAsset_m2358606850(L_45, _stringLiteral1226701511, /*hidden argument*/NULL);
+		__this->set_U3CmanifestU3E__2_6(((AssetBundleManifest_t1328741589 *)CastclassSealed(L_46, AssetBundleManifest_t1328741589_il2cpp_TypeInfo_var)));
+		AssetBundle_t2054978754 * L_47 = __this->get_U3CmanifestBundleU3E__2_5();
+		NullCheck(L_47);
+		AssetBundle_Unload_m167529087(L_47, (bool)0, /*hidden argument*/NULL);
+		AssetBundleManifest_t1328741589 * L_48 = __this->get_U3CmanifestU3E__2_6();
+		String_t* L_49 = __this->get_assetbundleName_7();
+		NullCheck(L_48);
+		StringU5BU5D_t1642385972* L_50 = AssetBundleManifest_GetAllDependencies_m1021134089(L_48, L_49, /*hidden argument*/NULL);
+		__this->set_U3CdependentAssetBundlesU3E__2_8(L_50);
+		StringU5BU5D_t1642385972* L_51 = __this->get_U3CdependentAssetBundlesU3E__2_8();
+		NullCheck(L_51);
+		__this->set_U3CabsU3E__2_9(((AssetBundleU5BU5D_t2632285687*)SZArrayNew(AssetBundleU5BU5D_t2632285687_il2cpp_TypeInfo_var, (uint32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_51)->max_length)))))));
 		__this->set_U3CiU3E__3_10(0);
-		goto IL_0294;
+		goto IL_0319;
 	}
 
-IL_01d3:
+IL_0258:
 	{
-		String_t* L_33 = __this->get_U3CassetBundlePathU3E__0_1();
-		StringU5BU5D_t1642385972* L_34 = __this->get_U3CdependentAssetBundlesU3E__2_8();
-		int32_t L_35 = __this->get_U3CiU3E__3_10();
-		NullCheck(L_34);
-		int32_t L_36 = L_35;
-		String_t* L_37 = (L_34)->GetAt(static_cast<il2cpp_array_size_t>(L_36));
+		String_t* L_52 = __this->get_U3CassetBundlePathU3E__0_1();
+		StringU5BU5D_t1642385972* L_53 = __this->get_U3CdependentAssetBundlesU3E__2_8();
+		int32_t L_54 = __this->get_U3CiU3E__3_10();
+		NullCheck(L_53);
+		int32_t L_55 = L_54;
+		String_t* L_56 = (L_53)->GetAt(static_cast<il2cpp_array_size_t>(L_55));
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_38 = String_Concat_m2596409543(NULL /*static, unused*/, L_33, L_37, /*hidden argument*/NULL);
-		WWW_t2919945039 * L_39 = WWW_LoadFromCacheOrDownload_m3967609319(NULL /*static, unused*/, L_38, 0, /*hidden argument*/NULL);
-		__this->set_U3CdependentAssetU3E__4_11(L_39);
-		WWW_t2919945039 * L_40 = __this->get_U3CdependentAssetU3E__4_11();
-		__this->set_U24current_15(L_40);
-		bool L_41 = __this->get_U24disposing_16();
-		if (L_41)
+		String_t* L_57 = String_Concat_m2596409543(NULL /*static, unused*/, L_52, L_56, /*hidden argument*/NULL);
+		WWW_t2919945039 * L_58 = WWW_LoadFromCacheOrDownload_m3967609319(NULL /*static, unused*/, L_57, 0, /*hidden argument*/NULL);
+		__this->set_U3CdependentAssetU3E__4_11(L_58);
+		WWW_t2919945039 * L_59 = __this->get_U3CdependentAssetU3E__4_11();
+		__this->set_U24current_15(L_59);
+		bool L_60 = __this->get_U24disposing_16();
+		if (L_60)
 		{
-			goto IL_0212;
+			goto IL_0297;
 		}
 	}
 	{
 		__this->set_U24PC_17(3);
 	}
 
-IL_0212:
+IL_0297:
 	{
-		goto IL_03da;
+		goto IL_045f;
 	}
 
-IL_0217:
+IL_029c:
 	{
-		goto IL_0241;
+		goto IL_02c6;
 	}
 
-IL_021c:
+IL_02a1:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral4139914319, /*hidden argument*/NULL);
 		__this->set_U24current_15(NULL);
-		bool L_42 = __this->get_U24disposing_16();
-		if (L_42)
+		bool L_61 = __this->get_U24disposing_16();
+		if (L_61)
 		{
-			goto IL_023c;
+			goto IL_02c1;
 		}
 	}
 	{
 		__this->set_U24PC_17(4);
 	}
 
-IL_023c:
+IL_02c1:
 	{
-		goto IL_03da;
+		goto IL_045f;
 	}
 
-IL_0241:
+IL_02c6:
 	{
-		WWW_t2919945039 * L_43 = __this->get_U3CdependentAssetU3E__4_11();
-		NullCheck(L_43);
-		bool L_44 = WWW_get_isDone_m3240254121(L_43, /*hidden argument*/NULL);
-		if (!L_44)
+		WWW_t2919945039 * L_62 = __this->get_U3CdependentAssetU3E__4_11();
+		NullCheck(L_62);
+		bool L_63 = WWW_get_isDone_m3240254121(L_62, /*hidden argument*/NULL);
+		if (!L_63)
 		{
-			goto IL_021c;
+			goto IL_02a1;
 		}
 	}
 	{
-		AssetBundleU5BU5D_t2632285687* L_45 = __this->get_U3CabsU3E__2_9();
-		int32_t L_46 = __this->get_U3CiU3E__3_10();
-		WWW_t2919945039 * L_47 = __this->get_U3CdependentAssetU3E__4_11();
-		NullCheck(L_47);
-		AssetBundle_t2054978754 * L_48 = WWW_get_assetBundle_m80031863(L_47, /*hidden argument*/NULL);
-		NullCheck(L_45);
-		ArrayElementTypeCheck (L_45, L_48);
-		(L_45)->SetAt(static_cast<il2cpp_array_size_t>(L_46), (AssetBundle_t2054978754 *)L_48);
-		GameManager_t1384011863 * L_49 = __this->get_U24this_14();
-		NullCheck(L_49);
-		List_1_t1424099886 * L_50 = L_49->get_assetBundleList_9();
-		AssetBundleU5BU5D_t2632285687* L_51 = __this->get_U3CabsU3E__2_9();
-		int32_t L_52 = __this->get_U3CiU3E__3_10();
-		NullCheck(L_51);
-		int32_t L_53 = L_52;
-		AssetBundle_t2054978754 * L_54 = (L_51)->GetAt(static_cast<il2cpp_array_size_t>(L_53));
-		NullCheck(L_50);
-		List_1_Add_m1415808294(L_50, L_54, /*hidden argument*/List_1_Add_m1415808294_MethodInfo_var);
-		int32_t L_55 = __this->get_U3CiU3E__3_10();
-		__this->set_U3CiU3E__3_10(((int32_t)((int32_t)L_55+(int32_t)1)));
+		AssetBundleU5BU5D_t2632285687* L_64 = __this->get_U3CabsU3E__2_9();
+		int32_t L_65 = __this->get_U3CiU3E__3_10();
+		WWW_t2919945039 * L_66 = __this->get_U3CdependentAssetU3E__4_11();
+		NullCheck(L_66);
+		AssetBundle_t2054978754 * L_67 = WWW_get_assetBundle_m80031863(L_66, /*hidden argument*/NULL);
+		NullCheck(L_64);
+		ArrayElementTypeCheck (L_64, L_67);
+		(L_64)->SetAt(static_cast<il2cpp_array_size_t>(L_65), (AssetBundle_t2054978754 *)L_67);
+		GameManager_t1384011863 * L_68 = __this->get_U24this_14();
+		NullCheck(L_68);
+		List_1_t1424099886 * L_69 = L_68->get_assetBundleList_9();
+		AssetBundleU5BU5D_t2632285687* L_70 = __this->get_U3CabsU3E__2_9();
+		int32_t L_71 = __this->get_U3CiU3E__3_10();
+		NullCheck(L_70);
+		int32_t L_72 = L_71;
+		AssetBundle_t2054978754 * L_73 = (L_70)->GetAt(static_cast<il2cpp_array_size_t>(L_72));
+		NullCheck(L_69);
+		List_1_Add_m1415808294(L_69, L_73, /*hidden argument*/List_1_Add_m1415808294_MethodInfo_var);
+		int32_t L_74 = __this->get_U3CiU3E__3_10();
+		__this->set_U3CiU3E__3_10(((int32_t)((int32_t)L_74+(int32_t)1)));
 	}
 
-IL_0294:
+IL_0319:
 	{
-		int32_t L_56 = __this->get_U3CiU3E__3_10();
-		StringU5BU5D_t1642385972* L_57 = __this->get_U3CdependentAssetBundlesU3E__2_8();
-		NullCheck(L_57);
-		if ((((int32_t)L_56) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_57)->max_length)))))))
+		int32_t L_75 = __this->get_U3CiU3E__3_10();
+		StringU5BU5D_t1642385972* L_76 = __this->get_U3CdependentAssetBundlesU3E__2_8();
+		NullCheck(L_76);
+		if ((((int32_t)L_75) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_76)->max_length)))))))
 		{
-			goto IL_01d3;
+			goto IL_0258;
 		}
 	}
 	{
-		String_t* L_58 = __this->get_U3CassetBundlePathU3E__0_1();
-		String_t* L_59 = __this->get_assetbundleName_7();
+		String_t* L_77 = __this->get_U3CassetBundlePathU3E__0_1();
+		String_t* L_78 = __this->get_assetbundleName_7();
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_60 = String_Concat_m2596409543(NULL /*static, unused*/, L_58, L_59, /*hidden argument*/NULL);
-		WWW_t2919945039 * L_61 = WWW_LoadFromCacheOrDownload_m3967609319(NULL /*static, unused*/, L_60, 0, /*hidden argument*/NULL);
-		__this->set_U3CwwwPrefabU3E__2_12(L_61);
-		WWW_t2919945039 * L_62 = __this->get_U3CwwwPrefabU3E__2_12();
-		__this->set_U24current_15(L_62);
-		bool L_63 = __this->get_U24disposing_16();
-		if (L_63)
+		String_t* L_79 = String_Concat_m2596409543(NULL /*static, unused*/, L_77, L_78, /*hidden argument*/NULL);
+		WWW_t2919945039 * L_80 = WWW_LoadFromCacheOrDownload_m3967609319(NULL /*static, unused*/, L_79, 0, /*hidden argument*/NULL);
+		__this->set_U3CwwwPrefabU3E__2_12(L_80);
+		WWW_t2919945039 * L_81 = __this->get_U3CwwwPrefabU3E__2_12();
+		__this->set_U24current_15(L_81);
+		bool L_82 = __this->get_U24disposing_16();
+		if (L_82)
 		{
-			goto IL_02df;
+			goto IL_0364;
 		}
 	}
 	{
 		__this->set_U24PC_17(5);
 	}
 
-IL_02df:
+IL_0364:
 	{
-		goto IL_03da;
+		goto IL_045f;
 	}
 
-IL_02e4:
+IL_0369:
 	{
-		goto IL_030e;
+		goto IL_0393;
 	}
 
-IL_02e9:
+IL_036e:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
 		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1908516384, /*hidden argument*/NULL);
 		__this->set_U24current_15(NULL);
-		bool L_64 = __this->get_U24disposing_16();
-		if (L_64)
+		bool L_83 = __this->get_U24disposing_16();
+		if (L_83)
 		{
-			goto IL_0309;
+			goto IL_038e;
 		}
 	}
 	{
 		__this->set_U24PC_17(6);
 	}
 
-IL_0309:
+IL_038e:
 	{
-		goto IL_03da;
+		goto IL_045f;
 	}
 
-IL_030e:
+IL_0393:
 	{
-		WWW_t2919945039 * L_65 = __this->get_U3CwwwPrefabU3E__2_12();
-		NullCheck(L_65);
-		bool L_66 = WWW_get_isDone_m3240254121(L_65, /*hidden argument*/NULL);
-		if (!L_66)
-		{
-			goto IL_02e9;
-		}
-	}
-	{
-		WWW_t2919945039 * L_67 = __this->get_U3CwwwPrefabU3E__2_12();
-		NullCheck(L_67);
-		String_t* L_68 = WWW_get_error_m3092701216(L_67, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		bool L_69 = String_IsNullOrEmpty_m2802126737(NULL /*static, unused*/, L_68, /*hidden argument*/NULL);
-		if (L_69)
-		{
-			goto IL_0348;
-		}
-	}
-	{
-		WWW_t2919945039 * L_70 = __this->get_U3CwwwPrefabU3E__2_12();
-		NullCheck(L_70);
-		String_t* L_71 = WWW_get_error_m3092701216(L_70, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
-		Debug_Log_m920475918(NULL /*static, unused*/, L_71, /*hidden argument*/NULL);
-		goto IL_03d8;
-	}
-
-IL_0348:
-	{
-		WWW_t2919945039 * L_72 = __this->get_U3CwwwPrefabU3E__2_12();
-		NullCheck(L_72);
-		AssetBundle_t2054978754 * L_73 = WWW_get_assetBundle_m80031863(L_72, /*hidden argument*/NULL);
-		V_1 = L_73;
-		GameManager_t1384011863 * L_74 = __this->get_U24this_14();
-		NullCheck(L_74);
-		List_1_t1424099886 * L_75 = L_74->get_assetBundleList_9();
-		AssetBundle_t2054978754 * L_76 = V_1;
-		NullCheck(L_75);
-		List_1_Add_m1415808294(L_75, L_76, /*hidden argument*/List_1_Add_m1415808294_MethodInfo_var);
-		AssetBundle_t2054978754 * L_77 = V_1;
-		String_t* L_78 = __this->get_modleName_13();
-		NullCheck(L_77);
-		GameObject_t1756533147 * L_79 = AssetBundle_LoadAsset_TisGameObject_t1756533147_m3277303869(L_77, L_78, /*hidden argument*/AssetBundle_LoadAsset_TisGameObject_t1756533147_m3277303869_MethodInfo_var);
-		V_2 = L_79;
-		GameManager_t1384011863 * L_80 = __this->get_U24this_14();
-		GameObject_t1756533147 * L_81 = V_2;
-		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
-		GameObject_t1756533147 * L_82 = Object_Instantiate_TisGameObject_t1756533147_m3664764861(NULL /*static, unused*/, L_81, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3664764861_MethodInfo_var);
-		NullCheck(L_80);
-		L_80->set_m_loadedObject_4(L_82);
-		GameManager_t1384011863 * L_83 = __this->get_U24this_14();
-		NullCheck(L_83);
-		GameObject_t1756533147 * L_84 = L_83->get_m_loadedObject_4();
+		WWW_t2919945039 * L_84 = __this->get_U3CwwwPrefabU3E__2_12();
 		NullCheck(L_84);
-		ModelInteraction_t4187170511 * L_85 = GameObject_GetComponent_TisModelInteraction_t4187170511_m4281651395(L_84, /*hidden argument*/GameObject_GetComponent_TisModelInteraction_t4187170511_m4281651395_MethodInfo_var);
-		bool L_86 = Object_op_Equality_m3764089466(NULL /*static, unused*/, L_85, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
-		if (!L_86)
+		bool L_85 = WWW_get_isDone_m3240254121(L_84, /*hidden argument*/NULL);
+		if (!L_85)
 		{
-			goto IL_03af;
+			goto IL_036e;
 		}
 	}
 	{
-		GameManager_t1384011863 * L_87 = __this->get_U24this_14();
-		NullCheck(L_87);
-		GameObject_t1756533147 * L_88 = L_87->get_m_loadedObject_4();
-		NullCheck(L_88);
-		GameObject_AddComponent_TisModelInteraction_t4187170511_m4211110964(L_88, /*hidden argument*/GameObject_AddComponent_TisModelInteraction_t4187170511_m4211110964_MethodInfo_var);
+		WWW_t2919945039 * L_86 = __this->get_U3CwwwPrefabU3E__2_12();
+		NullCheck(L_86);
+		String_t* L_87 = WWW_get_error_m3092701216(L_86, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		bool L_88 = String_IsNullOrEmpty_m2802126737(NULL /*static, unused*/, L_87, /*hidden argument*/NULL);
+		if (L_88)
+		{
+			goto IL_03cd;
+		}
+	}
+	{
+		WWW_t2919945039 * L_89 = __this->get_U3CwwwPrefabU3E__2_12();
+		NullCheck(L_89);
+		String_t* L_90 = WWW_get_error_m3092701216(L_89, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, L_90, /*hidden argument*/NULL);
+		goto IL_045d;
 	}
 
-IL_03af:
+IL_03cd:
 	{
-		GameManager_t1384011863 * L_89 = __this->get_U24this_14();
-		GameManager_t1384011863 * L_90 = __this->get_U24this_14();
-		NullCheck(L_90);
-		bool L_91 = L_90->get_m_isCapture_10();
-		NullCheck(L_89);
-		GameManager_setParent_m4252675054(L_89, L_91, /*hidden argument*/NULL);
-		GameManager_t1384011863 * L_92 = __this->get_U24this_14();
-		NullCheck(L_92);
-		L_92->set_isLoaded_7((bool)1);
+		WWW_t2919945039 * L_91 = __this->get_U3CwwwPrefabU3E__2_12();
+		NullCheck(L_91);
+		AssetBundle_t2054978754 * L_92 = WWW_get_assetBundle_m80031863(L_91, /*hidden argument*/NULL);
+		V_2 = L_92;
+		GameManager_t1384011863 * L_93 = __this->get_U24this_14();
+		NullCheck(L_93);
+		List_1_t1424099886 * L_94 = L_93->get_assetBundleList_9();
+		AssetBundle_t2054978754 * L_95 = V_2;
+		NullCheck(L_94);
+		List_1_Add_m1415808294(L_94, L_95, /*hidden argument*/List_1_Add_m1415808294_MethodInfo_var);
+		AssetBundle_t2054978754 * L_96 = V_2;
+		String_t* L_97 = __this->get_modleName_13();
+		NullCheck(L_96);
+		GameObject_t1756533147 * L_98 = AssetBundle_LoadAsset_TisGameObject_t1756533147_m3277303869(L_96, L_97, /*hidden argument*/AssetBundle_LoadAsset_TisGameObject_t1756533147_m3277303869_MethodInfo_var);
+		V_3 = L_98;
+		GameManager_t1384011863 * L_99 = __this->get_U24this_14();
+		GameObject_t1756533147 * L_100 = V_3;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		GameObject_t1756533147 * L_101 = Object_Instantiate_TisGameObject_t1756533147_m3664764861(NULL /*static, unused*/, L_100, /*hidden argument*/Object_Instantiate_TisGameObject_t1756533147_m3664764861_MethodInfo_var);
+		NullCheck(L_99);
+		L_99->set_m_loadedObject_4(L_101);
+		GameManager_t1384011863 * L_102 = __this->get_U24this_14();
+		NullCheck(L_102);
+		GameObject_t1756533147 * L_103 = L_102->get_m_loadedObject_4();
+		NullCheck(L_103);
+		ModelInteraction_t4187170511 * L_104 = GameObject_GetComponent_TisModelInteraction_t4187170511_m4281651395(L_103, /*hidden argument*/GameObject_GetComponent_TisModelInteraction_t4187170511_m4281651395_MethodInfo_var);
+		bool L_105 = Object_op_Equality_m3764089466(NULL /*static, unused*/, L_104, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
+		if (!L_105)
+		{
+			goto IL_0434;
+		}
+	}
+	{
+		GameManager_t1384011863 * L_106 = __this->get_U24this_14();
+		NullCheck(L_106);
+		GameObject_t1756533147 * L_107 = L_106->get_m_loadedObject_4();
+		NullCheck(L_107);
+		GameObject_AddComponent_TisModelInteraction_t4187170511_m4211110964(L_107, /*hidden argument*/GameObject_AddComponent_TisModelInteraction_t4187170511_m4211110964_MethodInfo_var);
+	}
+
+IL_0434:
+	{
+		GameManager_t1384011863 * L_108 = __this->get_U24this_14();
+		GameManager_t1384011863 * L_109 = __this->get_U24this_14();
+		NullCheck(L_109);
+		bool L_110 = L_109->get_m_isCapture_10();
+		NullCheck(L_108);
+		GameManager_setParent_m4252675054(L_108, L_110, /*hidden argument*/NULL);
+		GameManager_t1384011863 * L_111 = __this->get_U24this_14();
+		NullCheck(L_111);
+		L_111->set_isLoaded_7((bool)1);
 		__this->set_U24PC_17((-1));
 	}
 
-IL_03d8:
+IL_045d:
 	{
 		return (bool)0;
 	}
 
-IL_03da:
+IL_045f:
 	{
 		return (bool)1;
 	}

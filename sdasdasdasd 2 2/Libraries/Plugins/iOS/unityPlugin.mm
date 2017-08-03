@@ -160,9 +160,8 @@
     NSString *path = [NSString stringWithFormat:@"%@/Documents/modelDownload/%@/", NSHomeDirectory(), name];
     if ([[NSFileManager defaultManager] fileExistsAtPath: path]) {
         
-        NSString *str1 = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil] firstObject];
         NSString *type = @"0";
-        NSDictionary *dic = @{@"type":type, @"path":[NSString stringWithFormat:@"%@/%@", path, str1], @"modelName":name};
+        NSDictionary *dic = @{@"type":type, @"path":[NSString stringWithFormat:@"%@%@", path, name], @"modelName":name};
         
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
         
@@ -205,10 +204,10 @@
                     NSLog(@"%d %d %ld", percentage, filesProcessed, numFiles);
                     if (percentage == 100) {
                         NSLog(@"解压完了");
-                        [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@/%@.zip", path, name] error:nil];
-                        NSString *str = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil] firstObject];
-                        NSLog(@"*****%@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[NSString stringWithFormat:@"%@/%@", path, str] error:nil]);
-                        NSDictionary *dic = @{@"type":@"0", @"path":[NSString stringWithFormat:@"%@/%@", path, str], @"modelName":name};
+                        [[NSFileManager defaultManager] removeItemAtPath:[NSString stringWithFormat:@"%@%@.zip", path, name] error:nil];
+                        NSLog(@"*****%@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[NSString stringWithFormat:@"%@", path] error:nil]);
+                        NSLog(@"&&&&&&&&%@", [NSString stringWithFormat:@"%@%@", path, name]);
+                        NSDictionary *dic = @{@"type":@"0", @"path":[NSString stringWithFormat:@"%@%@", path, name], @"modelName":name};
                         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
                         
                         NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
@@ -223,17 +222,6 @@
                 if (NO == ret) {
                     [zipManager UnzipCloseFile];
                 }
-                
-                
-                NSString *type = @"0";
-                
-                NSDictionary *dic = @{@"type":type, @"path":path, @"modelName":@"wudao_demo1"};
-                
-                NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
-                
-                NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"IdentifySucceed" object:nil];
-                UnitySendMessage("GameManager", "GiftInformation", [jsonStr UTF8String]);
             }
         }];
         _download = download;

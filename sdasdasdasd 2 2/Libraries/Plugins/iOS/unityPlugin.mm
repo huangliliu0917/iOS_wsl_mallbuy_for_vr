@@ -102,7 +102,7 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/%@.mp4",path, ID] ]) {
         
         NSString *type = @"1" ;
-        NSDictionary *dic = @{@"type":type, @"path":path, @"modelName":@"wudao_demo1"};
+        NSDictionary *dic = @{@"type":type, @"path":[NSString stringWithFormat:@"%@/%@.mp4",path, ID], @"modelName":@"wudao_demo1"};
         
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
         
@@ -138,7 +138,7 @@
             if ([[NSFileManager defaultManager] fileExistsAtPath:giftPath]) {
                 NSString *type = @"1";
                 
-                NSDictionary *dic = @{@"type":type, @"path":path, @"modelName":@"wudao_demo1"};
+                NSDictionary *dic = @{@"type":type, @"path":giftPath, @"modelName":@"wudao_demo1"};
                 
                 NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
                 
